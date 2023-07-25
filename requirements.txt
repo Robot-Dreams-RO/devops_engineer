@@ -1,0 +1,22 @@
+sphinx
+sphinx_rtd_theme
+sphinx-copybutton
+# rst2pdf
+
+# Testing dependencies
+pylint
+black
+# mypy
+
+# # Code in browser
+# jupyter
+
+# # Creating a cli application
+# click
+
+# # Creating a web crawler
+# requests
+# bs4
+
+# # Getting system uptime
+# uptime
