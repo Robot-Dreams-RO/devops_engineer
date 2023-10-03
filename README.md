@@ -30,7 +30,7 @@ Documentation is made using ``Sphinx``, to build it:
 To have documentation available on GitHub pages you need to copy the files from ``build/html`` to docs (limitation from gh-pages) then will pick the ``index.html``
 
 ```bash
-rm -rf docs/* && cp -R build/html/* docs/ && touch docs/.nojekyll
+make clean html && rm -rf docs/* && cp -R build/html/* docs/ && touch docs/.nojekyll
 ```
 
 To build the documentation for ``pdf`` or ``epub``, run

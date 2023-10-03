@@ -12,7 +12,7 @@ What is DevOps?
 
 *Imagine a restaurant. Developers are the chefs, they are making food, Operations Engineers are the waiters, they serve the food to the customers, the DevOps, and SREs are the guys that clean the floor, wash the vegetables, peel the potatoes, do all the jobs that are not glamourous but improve the process.*
 
-.. image:: ../diagrams/devops_merge.drawio.png
+.. image:: ../diagrams/devops-merge.png
   :width: 1200
   :alt: DevOps
 
@@ -52,7 +52,7 @@ Overall, DevOps helps organizations to deliver software faster, with higher qual
 
 It relies on **automation** (Python, Bash, Ansible, and Terraform) to enforce the best practices - deploy the code from git to the environment.
 
-.. image:: ../diagrams/new_devops.png
+.. image:: ../diagrams/devops.png
   :width: 1000
   :alt: DevOps Stages
 
@@ -87,7 +87,7 @@ Site Reliability Engine(SRE) vs DevOps Engineer
 "Explain Like I'm 5" (ELI5) DevOps Engineer vs SRE
 --------------------------------------------------
 
-.. image:: ../diagrams/dev_vs_ops.drawio.png
+.. image:: ../diagrams/dev-vs-ops.png
   :width: 1300
   :alt: CI/CD
 
@@ -117,7 +117,7 @@ _              distributed systems, and monitoring tools (Prometheus, Loki, Graf
 DevOps flavours
 ===============
 
-.. image:: ../diagrams/devops_flavors.drawio.png
+.. image:: ../diagrams/devops-flavors.png
   :width: 1700
   :alt: Flavors
 
@@ -137,7 +137,7 @@ Continuous delivery
 
 	Is a software development practice where code changes are automatically prepared for a production release. A pillar of modern application development, continuous delivery expands upon continuous integration by deploying all code changes to a testing environment and/or a production environment after the build stage. When properly implemented, developers will always have a deployment-ready build artifact that has passed through a standardized test process.
 
-.. image:: ../diagrams/ci_cd.drawio.png
+.. image:: ../diagrams/ci-cd.png
   :width: 2000
   :alt: CI/CD
 

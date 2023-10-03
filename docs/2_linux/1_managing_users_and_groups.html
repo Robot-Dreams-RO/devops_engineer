@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.1 Managing Users and Groups &mdash; DevOps 1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/max_width.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.2 File management" href="2_file_management.html" />
+    <link rel="prev" title="2.0 Linux" href="0_introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DevOps
+              <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Curriculum</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../00_curriculum/curriculum.html">Class Curriculum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to DevOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/0_foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/00_preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/1_devops.html">0.1 Introduction to DevOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/2_roadmap.html">0.2 DevOps Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/3_life_cycle.html">0.3 Software Development Lifecycle Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/4_scrum_agile.html">0.4 SCRUM Agile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/5_TODO.html">0.5 TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/0_computer_network.html">1.0 Computer and Network Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/1_how_code_works.html">1.1 How code works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/2_environments.html">1.2 Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/3_microservices.html">1.3 Microservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/4_introduction_to_linux.html">1.4 Introduction to Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/5_getting_around.html">1.5 Getting around</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/6_TODO.html">1.6 TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/7_setup_infra.html">1.7 Setup developing infrastructure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="0_introduction.html">2.0 Linux</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2.1 Managing Users and Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_file_management.html">2.2 File management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_managing_software.html">2.3 Managing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_service_management.html">2.4 Service Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_process_management.html">2.5 Process management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html#solutions-to-todos">Solutions to TODOs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/0_introduction.html">3.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/1_getting_started.html">3.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/2_data_structures_conditions.html">3.2 Data structures and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/3_to_script_or_to_alias.html">3.3 Working with aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/4_shell_style_guide.html">3.4 Shell Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/5_makefile.html">3.5 Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/6_utilities.html">3.6 Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/0_introduction.html">4.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/1_installation.html">4.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/2_data_structures.html">4.2 Variables and Data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/3_conditions_loops.html">4.3 Loops and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/4_libraries.html">4.4 Libraries and modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/5_functions.html">4.5 Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/6_classes.html">4.6 Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/7_yourfirstcli.html">4.7 Your first CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/8_documentation.html">4.8 Documenting your code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/9_rules.html">4.9 Python Language Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/10_files.html">4.10 Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unittesting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">10. TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/0_introduction.html">5.0 Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pipelines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../9_pipelines/0_introduction.html">0. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_pipelines/1_getting_started.html">1. Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_pipelines/2_python_cli.html">2. Python CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_pipelines/3_github.html">3. GitHub</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../12_project/introduction.html">12.0 Project</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DevOps</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">2.1 Managing Users and Groups</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/2_linux/1_managing_users_and_groups.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="managing-users-and-groups">
+<h1>2.1 Managing Users and Groups<a class="headerlink" href="#managing-users-and-groups" title="Link to this heading"></a></h1>
+<p>For an authorized person to gain access to the system, a user account must be created on the system. User and group account information is stored in several files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># User and group information</span>
+/etc/passwd
+
+<span class="c1"># Encrypted user passwords</span>
+/etc/shadow
+
+<span class="c1"># Group information</span>
+/etc/group
+
+<span class="c1"># Group passwords</span>
+/etc/gshadow
+</pre></div>
+</div>
+<section id="etc-passwd">
+<h2>/etc/passwd<a class="headerlink" href="#etc-passwd" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">/etc/passwd</span></code> file contains all user’s properties. Each line contains information about one user account. There are seven fields per line entry separated by a colon (:).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user_name:x:UID:GID:comments:home_directory:shell
+
+<span class="c1"># user_name: `/^[a-z0-9-*]+$/`. Should not use uppercase letters or special characters</span>
+<span class="c1"># x: password placeholder</span>
+<span class="c1"># UID: a unique number. UIDs between 0 and 999 are reserved for system accounts</span>
+<span class="c1"># GID: a number that corresponds with a group entry in /etc/group</span>
+<span class="c1"># comments: info about the user</span>
+<span class="c1"># home_directory: the default location is /home/user_name</span>
+<span class="c1"># shell: user&#39;s default shell</span>
+</pre></div>
+</div>
+</section>
+<section id="etc-shadow">
+<h2>/etc/shadow<a class="headerlink" href="#etc-shadow" title="Link to this heading"></a></h2>
+<p>This file stores the encrypted user’s password along with other info.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user_name:encrypted_passwords:lastchg_days:min_days:max_days:warn_days:inactive_days:disabled_days:
+
+<span class="c1"># user_name: `/^[a-z0-9-*]+$/`. Should not use uppercase letters or special characters</span>
+<span class="c1"># encrypted_passwords: May be empty. An exclamation mark shows that the user is locked</span>
+<span class="c1"># lastchg_days: number of days in epoch time since the password was changed</span>
+<span class="c1"># min_days: minimum number of days that must pass before the user can change the passwords</span>
+<span class="c1"># max_days: maximum number of days before the user gets password expiration warnings</span>
+<span class="c1"># warn_days**: number of days for which the user gets password expiration warnings</span>
+<span class="c1"># inactive_days: maximum number of days for user inactivity</span>
+<span class="c1"># disabled_days: number of days in epoch time after which the account expires</span>
+</pre></div>
+</div>
+<p>Most of the above parameters can be changed with <strong>password</strong>, <strong>usermod</strong>, and/or <strong>chage</strong> commands.</p>
+</section>
+<section id="etc-group">
+<h2>/etc/group<a class="headerlink" href="#etc-group" title="Link to this heading"></a></h2>
+<p>This file contains group information. Every user must be a member of at least one group, which is called <em>the primary group</em>. Additional groups may be created and users assigned to them.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>group_name:x:GID:user_list
+
+<span class="c1"># group_name: a unique group name</span>
+<span class="c1"># x: password placeholder. Usually, group passwords are not used. It may contain an encrypted password</span>
+<span class="c1"># GID: the group ID</span>
+<span class="c1"># user_list: a comma-delimited list of users assigned to the group. The user&#39;s primary group is defined in /etc/password</span>
+</pre></div>
+</div>
+</section>
+<section id="configuration-files">
+<h2>Configuration files<a class="headerlink" href="#configuration-files" title="Link to this heading"></a></h2>
+<p>The files mentioned above contain only user and group information and attributes. There are additional files/directories that configure default values for various attributes.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># default values for useradd command</span>
+/etc/default/useradd
+
+<span class="c1"># default values for groupadd command</span>
+/etc/login.defs
+
+<span class="c1"># default values for useradd command</span>
+/etc/skel/
+</pre></div>
+</div>
+</section>
+<section id="user-management">
+<h2>User management<a class="headerlink" href="#user-management" title="Link to this heading"></a></h2>
+<p>Normally user management is done via an external application, but to understand the flow we will do them manually.</p>
+<section id="create-a-new-user">
+<h3>Create a new user<a class="headerlink" href="#create-a-new-user" title="Link to this heading"></a></h3>
+<p>Create 2 new users: one unprivileged and one privileged that will be part of the unprivileged group.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a user named unprivileged_user</span>
+useradd<span class="w"> </span>unprivileged_user
+
+<span class="c1"># check the unprivileged_user, we will see that is part of a group called unprivileged_user</span>
+id<span class="w"> </span>unprivileged_user
+
+<span class="c1"># create an user named privileged_user part of the unprivileged_user group</span>
+useradd<span class="w"> </span>privileged_user<span class="w"> </span>-G<span class="w"> </span>unprivileged_user
+
+<span class="c1"># check the privileged_user we will see that has 2 groups:</span>
+<span class="c1"># primary group: privileged_user</span>
+<span class="c1"># secondary group: unprivileged_user</span>
+id<span class="w"> </span>privileged_user
+</pre></div>
+</div>
+<p>Creating 3 new groups, 3 new users, and share access.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get help for the groupadd command</span>
+groupadd<span class="w"> </span>--help
+
+<span class="c1"># Create 3 new groups: developers, operations, and devopsgroup</span>
+groupadd<span class="w"> </span>developers
+groupadd<span class="w"> </span>operations
+groupadd<span class="w"> </span>devopsgroup
+
+<span class="c1"># Get help for the useradd command</span>
+useradd<span class="w"> </span>--help
+
+<span class="c1"># Create 3 new users: dev, ops, and devops</span>
+useradd<span class="w"> </span>dev
+useradd<span class="w"> </span>ops
+useradd<span class="w"> </span>devops
+
+<span class="c1"># Get help for the usermod command</span>
+usermod<span class="w"> </span>--help
+
+<span class="c1"># Add devops user to the developers group, then append to the operations group</span>
+usermod<span class="w"> </span>-G<span class="w"> </span>developers<span class="w"> </span>devops
+usermod<span class="w"> </span>-aG<span class="w"> </span>operations<span class="w"> </span>devops
+
+<span class="c1"># Get help for the id command</span>
+id<span class="w"> </span>--help
+
+<span class="c1"># Check the devops user, we will see that has 3 groups: primary group: devops, secondary groups: developers, operations</span>
+id<span class="w"> </span>devops
+</pre></div>
+</div>
+<section id="set-a-password-for-the-newly-created-user">
+<h4>Set a password for the newly created user<a class="headerlink" href="#set-a-password-for-the-newly-created-user" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get help for the passwd command</span>
+passwd<span class="w"> </span>--help
+
+<span class="c1"># Set a password for the devops user</span>
+passwd<span class="w"> </span>devops
+
+<span class="c1"># Change user password expiry information</span>
+chage<span class="w"> </span>--help
+
+<span class="c1"># Change user password expiry information</span>
+<span class="c1"># -l: list password aging information</span>
+chage<span class="w"> </span>-l<span class="w"> </span>devops
+</pre></div>
+</div>
+</section>
+<section id="remove-users-and-groups">
+<h4>Remove users and groups<a class="headerlink" href="#remove-users-and-groups" title="Link to this heading"></a></h4>
+<p>When removing users that are part of a group, pay attention.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get help for the userdel command</span>
+userdel<span class="w"> </span>--help
+
+<span class="c1"># Remove the unprivileged_user</span>
+userdel<span class="w"> </span>-r<span class="w"> </span>unprivileged_user
+
+<span class="c1"># Remove the privileged_user</span>
+userdel<span class="w"> </span>-r<span class="w"> </span>privileged_user
+
+<span class="c1"># Get help for the groupdel command</span>
+groupdel<span class="w"> </span>--help
+
+<span class="c1"># Remove the unprivileged_user group</span>
+groupdel<span class="w"> </span>unprivileged_user
+
+<span class="c1"># Remove the privileged_user group</span>
+groupdel<span class="w"> </span>privileged_user
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>create a user named <em>alice</em> with UID and GID set to <em>3001</em></p></li>
+<li><p>create a user named <em>bob</em> with home directory in <em>/opt</em></p></li>
+<li><p>create a user named <em>john</em> with comment field set to <em>John Doe</em></p></li>
+<li><p>create a user named <em>minecraft</em> with:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>UID <em>9990</em></p></li>
+<li><p>GID <em>9990</em></p></li>
+<li><p>home directory in <em>/usr/games</em></p></li>
+<li><p>do not create the home directory</p></li>
+<li><p>no login privileges</p></li>
+<li><p>shell set to <em>/bin/false</em></p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>set a password for alice</p></li>
+<li><p>create a group named <em>datamanagement</em> with GID 9001</p></li>
+<li><p>add <em>alice</em> and <em>bob</em> to the <em>billing</em> group</p></li>
+<li><p>configure password aging for <em>alice</em> with <strong>chage</strong> command:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>password validity 31 days</p></li>
+<li><p>the user should receive warnings 7 days before password expiration</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>lock the <em>minecraft</em> account and password</p></li>
+<li><p>remove the <em>minecraft</em> account and home directory</p></li>
+<li><p>remove the <em>minecraft</em> group</p></li>
+<li><p>remove the <em>datamanagement</em> and <em>billing</em> group</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Passwords are like underwear. Change them often, don’t share them, and don’t leave them out for others to see.</p>
+</div>
+</section>
+<section id="solution-to-todos">
+<h2>Solution to TODOs<a class="headerlink" href="#solution-to-todos" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">useradd</span> <span class="pre">alice</span> <span class="pre">-u</span> <span class="pre">3001</span> <span class="pre">-g</span> <span class="pre">3001</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useradd</span> <span class="pre">bob</span> <span class="pre">-d</span> <span class="pre">/opt</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useradd</span> <span class="pre">john</span> <span class="pre">-c</span> <span class="pre">&quot;John</span> <span class="pre">Doe&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useradd</span> <span class="pre">minecraft</span> <span class="pre">-u</span> <span class="pre">9990</span> <span class="pre">-g</span> <span class="pre">9990</span> <span class="pre">-d</span> <span class="pre">/usr/games</span> <span class="pre">-m</span> <span class="pre">-s</span> <span class="pre">/bin/false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">passwd</span> <span class="pre">alice</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupadd</span> <span class="pre">datamanagement</span> <span class="pre">-g</span> <span class="pre">9001</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usermod</span> <span class="pre">-aG</span> <span class="pre">billing</span> <span class="pre">alice</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chage</span> <span class="pre">-M</span> <span class="pre">31</span> <span class="pre">-W</span> <span class="pre">7</span> <span class="pre">alice</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">passwd</span> <span class="pre">-l</span> <span class="pre">minecraft</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userdel</span> <span class="pre">-r</span> <span class="pre">minecraft</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupdel</span> <span class="pre">minecraft</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupdel</span> <span class="pre">billing</span> <span class="pre">&amp;&amp;</span> <span class="pre">groupdel</span> <span class="pre">datamanagement</span></code></p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="0_introduction.html" class="btn btn-neutral float-left" title="2.0 Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="2_file_management.html" class="btn btn-neutral float-right" title="2.2 File management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, skillab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

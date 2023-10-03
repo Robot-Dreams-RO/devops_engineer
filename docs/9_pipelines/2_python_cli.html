@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Python CLI &mdash; DevOps 1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/max_width.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. GitHub" href="3_github.html" />
+    <link rel="prev" title="1. Getting started" href="1_getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DevOps
+              <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Curriculum</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../00_curriculum/curriculum.html">Class Curriculum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to DevOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/0_foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/00_preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/1_devops.html">0.1 Introduction to DevOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/2_roadmap.html">0.2 DevOps Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/3_life_cycle.html">0.3 Software Development Lifecycle Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/4_scrum_agile.html">0.4 SCRUM Agile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/5_TODO.html">0.5 TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/0_computer_network.html">1.0 Computer and Network Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/1_how_code_works.html">1.1 How code works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/2_environments.html">1.2 Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/3_microservices.html">1.3 Microservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/4_introduction_to_linux.html">1.4 Introduction to Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/5_getting_around.html">1.5 Getting around</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/6_TODO.html">1.6 TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/7_setup_infra.html">1.7 Setup developing infrastructure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/0_introduction.html">2.0 Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/1_managing_users_and_groups.html">2.1 Managing Users and Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/2_file_management.html">2.2 File management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/3_managing_software.html">2.3 Managing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/4_service_management.html">2.4 Service Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/5_process_management.html">2.5 Process management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html#solutions-to-todos">Solutions to TODOs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/0_introduction.html">3.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/1_getting_started.html">3.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/2_data_structures_conditions.html">3.2 Data structures and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/3_to_script_or_to_alias.html">3.3 Working with aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/4_shell_style_guide.html">3.4 Shell Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/5_makefile.html">3.5 Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/6_utilities.html">3.6 Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/0_introduction.html">4.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/1_installation.html">4.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/2_data_structures.html">4.2 Variables and Data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/3_conditions_loops.html">4.3 Loops and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/4_libraries.html">4.4 Libraries and modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/5_functions.html">4.5 Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/6_classes.html">4.6 Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/7_yourfirstcli.html">4.7 Your first CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/8_documentation.html">4.8 Documenting your code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/9_rules.html">4.9 Python Language Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/10_files.html">4.10 Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unittesting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">10. TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/0_introduction.html">5.0 Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pipelines</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="0_introduction.html">0. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_getting_started.html">1. Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Python CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_github.html">3. GitHub</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../12_project/introduction.html">12.0 Project</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DevOps</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">2. Python CLI</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/9_pipelines/2_python_cli.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-cli">
+<h1>2. Python CLI<a class="headerlink" href="#python-cli" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A Python CLI (Command Line Interface) is a type of software application that provides a text-based interface for interacting with the computer’s operating system. The user interacts with the application using a terminal or command prompt, typing commands and receiving output in text form.</p>
+</div>
+<p>Python is a popular language for developing CLIs because of its simplicity, readability, and powerful libraries. With Python, you can quickly create a CLI that provides a convenient way to automate tasks, access data, or control other software applications.</p>
+<p>A Python CLI typically consists of the following components:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><strong>Argument parsing</strong>: The CLI takes user-supplied input in the form of command-line arguments, which are passed to the program when it is executed. A library such as argparse or click is used to parse these arguments and extract meaningful information from them.</p></li>
+<li><p><strong>Main logic</strong>: The main logic of the CLI is written in Python and implements the desired functionality. This logic can include reading and writing files, making API calls, or performing calculations.</p></li>
+<li><p><strong>Output</strong>: The CLI provides output in the form of text printed to the terminal. This output can be formatted in various ways to provide information to the user or to be consumed by other programs.</p></li>
+</ol>
+</div></blockquote>
+<p>By using Python to create a CLI, you can provide a convenient and efficient interface for performing tasks and accessing information. Whether you’re automating a workflow, analyzing data, or controlling a system, a Python CLI can be an effective tool.</p>
+<section id="example-1-code">
+<h2>Example 1 - code<a class="headerlink" href="#example-1-code" title="Link to this heading"></a></h2>
+<p>A Python CLI that uses the Click library to print a random string:</p>
+<p>Create a directory for your project:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cli
+├── init.py
+└── random_string_cli.py
+tests
+└── test_random_string_cli.py
+</pre></div>
+</div>
+</div></blockquote>
+<p>Update the <code class="docutils literal notranslate"><span class="pre">random_string_cli.py</span></code> file with the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Simple program that generates a random string based on the selected length.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">click</span>
+
+
+<span class="nd">@click</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;--string_length&quot;</span><span class="p">,</span> <span class="s2">&quot;-l&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Number of characters.&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">random_string</span><span class="p">(</span><span class="n">string_length</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Simple function that generates a random string based on the selected length.&quot;&quot;&quot;</span>
+    <span class="n">random_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">string_length</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">click</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="n">random_str</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">random_string</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This CLI uses the <code class="docutils literal notranslate"><span class="pre">click</span></code> library to create a command-line interface. The <code class="docutils literal notranslate"><span class="pre">click.command</span> <span class="pre">``decorator</span> <span class="pre">is</span> <span class="pre">used</span> <span class="pre">to</span> <span class="pre">define</span> <span class="pre">the</span> <span class="pre">``random_string</span></code> function as a command-line command.
+The <code class="docutils literal notranslate"><span class="pre">random_string</span></code> function generates a random string using the <code class="docutils literal notranslate"><span class="pre">random.choices</span></code> method from the random module, which selects 10 random characters from a string composed of letters and digits.
+The <code class="docutils literal notranslate"><span class="pre">click.echo</span></code> function is then used to print the random string to the console.</p>
+<section id="example-1-building-code-with-setup-py">
+<h3>Example 1 - Building code with setup.py<a class="headerlink" href="#example-1-building-code-with-setup-py" title="Link to this heading"></a></h3>
+<p>Building code in Python refers to the process of writing, testing, and packaging software written in the Python programming language. The following steps are involved in building code in Python:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Write the code: The first step in building code in Python is writing the code itself. This involves writing the desired functionality in Python, using the language’s syntax and libraries.</p></li>
+<li><p>Test the code: Once the code has been written, it is important to test it to ensure that it behaves as expected. This can involve writing unit tests, integration tests, or end-to-end tests to verify the code’s behavior.</p></li>
+<li><p>Package the code: If the code is intended to be used by others, it is typically packaged into a distribution package, such as a .tar.gz file, which makes it easy to distribute and install.</p></li>
+<li><p>Deploy the code: Finally, the code can be deployed, either to a production environment, such as a web server or a cloud instance or to a development environment, such as a local machine or a virtual environment, for testing and development.</p></li>
+</ol>
+</div></blockquote>
+<p>Building code in Python is made easy by the language’s simplicity, readability, and powerful libraries. With the right tools and processes in place, you can quickly and easily build and deploy robust, scalable code in Python.</p>
+<p>An example of a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file that installs the previous Python CLI code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">find_packages</span>
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;random_string_cli&#39;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.1&#39;</span><span class="p">,</span>
+    <span class="n">packages</span><span class="o">=</span><span class="n">find_packages</span><span class="p">(),</span>
+    <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;click&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;random_string_cli = cli.random_string_cli:random_string&#39;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>This <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file is used to package and distribute the Python CLI as a package that can be installed using the <code class="docutils literal notranslate"><span class="pre">pip</span></code> package manager.
+The <code class="docutils literal notranslate"><span class="pre">setup</span></code> function is used to define the package details, including the name, version, and dependencies. The <code class="docutils literal notranslate"><span class="pre">install_requires</span></code> parameter is used to specify the required dependencies, in this case, the <code class="docutils literal notranslate"><span class="pre">click</span></code> library.
+The <code class="docutils literal notranslate"><span class="pre">entry_points</span></code> parameter is used to define the console scripts, which are command-line executables that can be installed and run as standalone commands. In this example, the random_string function from the random_string_cli package is defined as a console script with the name random_string.</p>
+</section>
+<section id="example-1-building-code-with-poetry">
+<h3>Example 1 - Building code with poetry<a class="headerlink" href="#example-1-building-code-with-poetry" title="Link to this heading"></a></h3>
+<p>To build the above Python CLI using the poetry package management and build tool, you would need to follow these steps:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">poetry</span></code>: install it using <code class="docutils literal notranslate"><span class="pre">pip</span></code> by running the command <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">poetry</span></code>.</p></li>
+<li><p>Initialize a new <code class="docutils literal notranslate"><span class="pre">poetry</span></code> project: Navigate to the directory where you want to create your new project and run the command <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">init</span></code>. This will create a new poetry project and generate a <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file.</p></li>
+<li><p>Add dependencies: In this case, you will need to add the click library as a dependency. You can do this by adding the following line to your pyproject.toml file:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">project</span><span class="p">]</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;random_string_cli&quot;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;0.0.2&quot;</span>
+<span class="n">license</span> <span class="o">=</span> <span class="p">{</span><span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;LICENSE&quot;</span><span class="p">}</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;A small python cli that generates a random string&quot;</span>
+<span class="n">authors</span> <span class="o">=</span> <span class="p">[{</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;skillab&quot;</span><span class="p">,</span> <span class="n">email</span> <span class="o">=</span> <span class="s2">&quot;admin@skillab.com&quot;</span><span class="p">}]</span>
+
+<span class="n">dependencies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;click&quot;</span><span class="p">]</span>
+<span class="n">requires</span><span class="o">-</span><span class="n">python</span> <span class="o">=</span> <span class="s2">&quot;&gt;=3.10&quot;</span>
+
+<span class="p">[</span><span class="n">project</span><span class="o">.</span><span class="n">scripts</span><span class="p">]</span>
+<span class="n">random_string_cli</span> <span class="o">=</span> <span class="s2">&quot;cli.random_string_cli:random_string&quot;</span>
+
+<span class="p">[</span><span class="n">build</span><span class="o">-</span><span class="n">system</span><span class="p">]</span>
+<span class="n">requires</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;setuptools&gt;=50&quot;</span><span class="p">,</span> <span class="s2">&quot;wheel&quot;</span><span class="p">]</span>
+<span class="n">build</span><span class="o">-</span><span class="n">backend</span> <span class="o">=</span> <span class="s2">&quot;setuptools.build_meta&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Write your code: Write the code for your CLI in a new Python file, making sure to import click and use it to create your command line interface.</p></li>
+<li><p>Package your code: Use the poetry build command to package your code into a distribution package that can be installed by others.</p></li>
+<li><p>Install and run your CLI: You can now install your CLI using the poetry install command, and run it by executing the appropriate command in your terminal.</p></li>
+</ol>
+</div></blockquote>
+<p>By using poetry to manage your dependencies and build your code, you can streamline your development process and ensure that your code is easily installed and run by others.</p>
+</section>
+<section id="example-1-testing-code">
+<h3>Example 1 - Testing code<a class="headerlink" href="#example-1-testing-code" title="Link to this heading"></a></h3>
+<p>PyTest is a testing framework for Python that makes it easy to write and run tests for your code. The basic structure of a test written using PyTest is as follows:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Write a test function: A test function is a Python function that verifies the behavior of a specific piece of code. The test function uses the assert statement to verify that the code under the test behaves as expected.</p></li>
+<li><p>Name the test function: PyTest automatically discovers and executes test functions whose names start with <code class="docutils literal notranslate"><span class="pre">test_</span></code>.</p></li>
+<li><p>Run PyTest: To run PyTest, simply execute the pytest command in the directory containing your test functions. PyTest will discover and run all test functions, reporting any failures or errors.</p></li>
+<li><p>Verify test results: PyTest will report the results of the tests, indicating which tests passed and which tests failed. If a test fails, PyTest will report the values of the actual and expected results.</p></li>
+</ol>
+</div></blockquote>
+<p>In general, PyTest makes it easy to write tests for your code by providing a simple, expressive syntax and powerful test discovery and execution features. By using PyTest, you can quickly and easily verify the behavior of your code, ensuring that changes and additions do not break existing functionality.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">click.testing</span> <span class="kn">import</span> <span class="n">CliRunner</span>
+<span class="kn">from</span> <span class="nn">cli.random_string_cli</span> <span class="kn">import</span> <span class="n">random_string</span>
+
+<span class="n">runner</span> <span class="o">=</span> <span class="n">CliRunner</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">test_random_string</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">random_string</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="o">==</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>This test uses <code class="docutils literal notranslate"><span class="pre">PyTest</span></code> to test the random_string function from the random_string_cli module. The test function, test_random_string, uses the assert statement to verify that the result is a string, that its length is 10, and that it only contains characters from the set of letters and digits. PyTest automatically discovers and executes this test function when you run the pytest command in the same directory as this file. If any of the assert statements fail, PyTest will report the failure, including information about the values that were expected and actual.</p>
+</section>
+</section>
+<section id="example-2-code">
+<h2>Example 2 - code<a class="headerlink" href="#example-2-code" title="Link to this heading"></a></h2>
+<p>A Python CLI that uses the Click library to print information about the system.</p>
+<p>You can find the code in <code class="docutils literal notranslate"><span class="pre">source_code/python/cli</span></code>:</p>
+<p>Directory structure for the Python CLI code:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>devops_cli
+├── init.py
+├── cmds.py
+└── devops_cli.py
+tests
+└── test_devops_cli.py
+requirements.txt
+setup.py
+</pre></div>
+</div>
+</div></blockquote>
+<p>Create a new virtual environment for the project:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</pre></div>
+</div>
+</div></blockquote>
+<p>Activate the virtual environment:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</pre></div>
+</div>
+</div></blockquote>
+<p>Install the required dependencies:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</div></blockquote>
+<p>To install the code in the location where we have <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">``file,</span> <span class="pre">run</span> <span class="pre">the</span> <span class="pre">following</span> <span class="pre">command:</span> <span class="pre">``pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code> (-e stands for editable - it means that if you make changes to the code, you don’t need to reinstall it)</p>
+<p>To lint the code, run the following command: <code class="docutils literal notranslate"><span class="pre">pylint</span> <span class="pre">.</span></code> or <code class="docutils literal notranslate"><span class="pre">flake8</span> <span class="pre">.</span></code></p>
+<p>To check the static code analysis, run the following command: <code class="docutils literal notranslate"><span class="pre">mypy</span> <span class="pre">.</span></code></p>
+<p>To run the unit tests, run the following command: <code class="docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">.</span></code></p>
+</section>
+<section id="python-directory-layout">
+<h2>Python directory layout<a class="headerlink" href="#python-directory-layout" title="Link to this heading"></a></h2>
+<p>There are 2 directory structure alternative: <code class="docutils literal notranslate"><span class="pre">src</span> <span class="pre">layout</span></code> vs <code class="docutils literal notranslate"><span class="pre">flat</span> <span class="pre">layout</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">src</span> <span class="pre">layout</span></code>:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├── README.md
+├── noxfile.py
+├── pyproject.toml
+├── setup.py
+├── src/
+│    └── package_name/
+│       ├── __init__.py
+│       └── module.py
+└── tests/
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flat</span> <span class="pre">layout</span></code></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├── README.md
+├── noxfile.py
+├── pyproject.toml
+├── setup.py
+├── package_name/
+│   ├── __init__.py
+│   └── module.py
+└── tests/
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="1_getting_started.html" class="btn btn-neutral float-left" title="1. Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="3_github.html" class="btn btn-neutral float-right" title="3. GitHub" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, skillab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

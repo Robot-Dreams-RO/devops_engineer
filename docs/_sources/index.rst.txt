@@ -40,6 +40,89 @@ To be an efficient engineer you need to understand:
    0_introduction/00_preface
    0_introduction/1_devops
    0_introduction/2_roadmap
+   0_introduction/3_life_cycle
+   0_introduction/4_scrum_agile
+   0_introduction/5_TODO
+
+.. toctree::
+   :hidden:
+   :titlesonly:
+   :caption: Environments
+
+   1_environments/0_computer_network
+   1_environments/1_how_code_works.rst
+   1_environments/2_environments
+   1_environments/3_microservices
+   1_environments/4_introduction_to_linux
+   1_environments/5_getting_around
+   1_environments/6_TODO
+   1_environments/7_setup_infra
+
+.. toctree::
+   :hidden:
+   :titlesonly:
+   :caption: Linux
+
+   2_linux/0_introduction
+   2_linux/1_managing_users_and_groups
+   2_linux/2_file_management
+   2_linux/3_managing_software
+   2_linux/4_service_management
+   2_linux/5_process_management
+   2_linux/TODO
+
+.. toctree::
+   :hidden:
+   :titlesonly:
+   :caption: Scripting
+
+   3_scripting/0_introduction
+   3_scripting/1_getting_started
+   3_scripting/2_data_structures_conditions
+   3_scripting/3_to_script_or_to_alias
+   3_scripting/4_shell_style_guide
+   3_scripting/5_makefile
+   3_scripting/6_utilities
+   3_scripting/TODO
+
+.. toctree::
+   :hidden:
+   :titlesonly:
+   :caption: Python
+
+   4_python/0_introduction
+   4_python/1_installation
+   4_python/2_data_structures
+   4_python/3_conditions_loops
+   4_python/4_libraries
+   4_python/5_functions
+   4_python/6_classes
+   4_python/7_yourfirstcli
+   4_python/8_documentation
+   4_python/9_rules
+   4_python/10_files
+   4_python/11_rest_api
+   4_python/12_comprehensions
+   4_python/13_lambda
+   4_python/14_testing
+   4_python/15_packaging
+   4_python/TODO
+.. toctree::
+   :hidden:
+   :titlesonly:
+   :caption: Git
+
+   5_git/0_introduction
+
+.. toctree::
+   :hidden:
+   :titlesonly:
+   :caption: Pipelines
+
+   9_pipelines/0_introduction
+   9_pipelines/1_getting_started
+   9_pipelines/2_python_cli
+   9_pipelines/3_github
 
 .. toctree::
    :hidden:
