@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5.0 Introduction &mdash; DevOps 1 documentation</title>
+  <title>13.0 Mentality &mdash; DevOps 1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -23,8 +23,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="0. Introduction" href="../9_pipelines/0_introduction.html" />
-    <link rel="prev" title="10. TODO" href="../4_python/TODO.html" /> 
+    <link rel="next" title="13.1 Implementation" href="1_implementation.html" />
+    <link rel="prev" title="12.0 Project" href="../12_project/introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -118,8 +118,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">10. TODO</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Git</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5.0 Introduction</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/0_introduction.html">5.0 Introduction</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Pipelines</span></p>
 <ul>
@@ -133,10 +133,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../12_project/introduction.html">12.0 Project</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Craftsman best practices</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/0_mentality.html">13.0 Mentality</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/1_implementation.html">13.1 Implementation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/2_tools.html">13.2 Tools</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">13.0 Mentality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_implementation.html">13.1 Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_tools.html">13.2 Tools</a></li>
 </ul>
 
         </div>
@@ -153,9 +153,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">5.0 Introduction</li>
+      <li class="breadcrumb-item active">13.0 Mentality</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/5_git/0_introduction.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/13_craftsman_best_practices/0_mentality.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -163,106 +163,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="introduction">
-<h1>5.0 Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
-<section id="what-is-git">
-<h2>What is GIT?<a class="headerlink" href="#what-is-git" title="Link to this heading"></a></h2>
-<p>Git is a distributed version control system. This means that a local clone of the project is a complete version control repository. These fully-functional local repositories make it easy to work offline or remotely. Developers commit their work locally, and then sync their copy of the repository with the copy on the server. This paradigm differs from centralized version control where clients must synchronize code with a server before creating new versions of code.</p>
-<p>Every time work is saved, Git creates a <strong>commit</strong>. A commit is a snapshot of all files at a point in time. If a file has not changed from one commit to the next, Git uses the previously stored file.</p>
-<p><strong>Branches</strong>, which are lightweight pointers to work in progress, manage this separation. Once work created in a branch is finished, it can be merged back into the team’s main (or trunk) branch.</p>
+  <section id="mentality">
+<h1>13.0 Mentality<a class="headerlink" href="#mentality" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="../_images/mastery.png"><img alt="A picture generated using Midjourney about motivation, mentality and the path to mastery" src="../_images/mastery.png" style="width: 1000px;" /></a>
+<section id="jack-of-all-trades-master-of-none-but-oftentimes-better-than-a-master-of-one">
+<h2>1. Jack of all trades, master of none; but oftentimes better than a master of one<a class="headerlink" href="#jack-of-all-trades-master-of-none-but-oftentimes-better-than-a-master-of-one" title="Link to this heading"></a></h2>
+<p>A good programmer is like a hydra, they have many heads. You’re not supposed to think only in terms of your little piece of code, or just your tasks. You have to think like everyone else on your team : QA / DB Admin / Product Owner / Front End</p>
 </section>
-<section id="connect-to-github">
-<h2>Connect to GitHub<a class="headerlink" href="#connect-to-github" title="Link to this heading"></a></h2>
-<p>There are 2 ways to log in to GitHub:</p>
-<ul class="simple">
-<li><p>keys</p></li>
-<li><p>credentials (username and password)</p></li>
-</ul>
-<p>Generate the key from your local machine and upload it to GitHub</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># In a DevOps environment we want to have as much information as possible</span>
-ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;user@hostname&quot;</span>
-</pre></div>
-</div>
+<section id="you-build-it-you-own-it">
+<h2>2. You build it, you own it<a class="headerlink" href="#you-build-it-you-own-it" title="Link to this heading"></a></h2>
+<p>You don’t just submit a PR and once it’s done, you’re free to go. You are in charge of every piece of code that gets shipped. You build it, you test it (more on this later on), you ship it and you monitor it. And then, you continuously improve it if given the chance</p>
 </section>
-<section id="what-exactly-is-ed25519">
-<h2>What exactly is ed25519?<a class="headerlink" href="#what-exactly-is-ed25519" title="Link to this heading"></a></h2>
-<p>ed25519 is a new cryptography solution that provides the Edwards-curve Digital Signature Algorithm (EdDSA).</p>
-<p>Similarly, not all software solutions currently support ed25519, but SSH implementations in most modern operating systems do.</p>
-<section id="why-is-ed25519-key-a-good-idea">
-<h3>Why is ed25519 Key a Good Idea?<a class="headerlink" href="#why-is-ed25519-key-a-good-idea" title="Link to this heading"></a></h3>
-<p>When compared to the most common type of SSH key - RSA - ed25519 offers several interesting advantages:</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p>It is faster to generate and verify</p></li>
-<li><p>it is more secure collision resilience - that is, it is more resistant to hash-function collision attacks (types of attacks where large numbers of keys are generated with the hope of getting two different keys to have matching hashes)</p></li>
-<li><p>The keys are smaller, which means they are easier to transfer and copy/paste.</p></li>
-</ol>
-</div></blockquote>
-<p>Read the newly generated key</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>~/.ssh/id_ed25519.pub
-
-<span class="c1"># Upload the newly generated key to GitHub</span>
-<span class="c1"># https://github.com/settings/keys</span>
-
-<span class="c1"># Clone projects on your local machine</span>
-</pre></div>
-</div>
-<p>We will learn how to use the terminal, console version of git, how to use vim, and fix merge conflicts.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># install git</span>
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git
-
-<span class="c1"># verify that git is installed</span>
-git<span class="w"> </span>--version
-
-<span class="c1"># change directory to home</span>
-<span class="nb">cd</span><span class="w"> </span>~
-
-<span class="c1"># creates a directory</span>
-mkdir<span class="w"> </span>sandbox
-<span class="nb">cd</span><span class="w"> </span>sandbox
-
-<span class="c1"># download the project</span>
-
-git<span class="w"> </span>clone<span class="w"> </span>git@github.com:Robot-Dreams-RO/devops_engineer.git
-<span class="nb">cd</span><span class="w"> </span>git<span class="w"> </span><span class="c1"># change directory to project</span>
-git<span class="w"> </span>branch<span class="w"> </span>-a<span class="w"> </span><span class="c1"># check what branches are available</span>
-git<span class="w"> </span>checkout<span class="w"> </span>master<span class="w"> </span><span class="c1"># move to a different branch</span>
-git<span class="w"> </span>checkout<span class="w"> </span>develop<span class="w"> </span><span class="c1"># move back to develop</span>
-git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/yourName<span class="w"> </span><span class="c1"># create a new branch with your name</span>
-</pre></div>
-</div>
+<section id="the-master-presents-itself-when-the-student-is-ready">
+<h2>3. The master presents itself when the student is ready<a class="headerlink" href="#the-master-presents-itself-when-the-student-is-ready" title="Link to this heading"></a></h2>
+<p>There is no “my code”. There is no such thing as I in a team. Keep your eyes and ears open when receiving feedback. Even if it rattles your ego, listen and try to learn from what’s being said. This is the healthiest mentality an engineer can have</p>
 </section>
+<section id="kaizen">
+<h2>3. Kaizen<a class="headerlink" href="#kaizen" title="Link to this heading"></a></h2>
+<p>Learning never stops. Always be on the lookout to learn something (like this awesome course), to deepen your knowledge. It can be anything. A new project at work, a new language, a book, a course. The important thing is to set specific time daily to study. Mine is 10-11 am</p>
 </section>
-<section id="create-a-scripts-project">
-<h2>1. Create a scripts project<a class="headerlink" href="#create-a-scripts-project" title="Link to this heading"></a></h2>
-<p>Create a new project in your userspace named <code class="docutils literal notranslate"><span class="pre">scripts</span></code>. Press on the Kitten on the top left then new.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the new project</span>
-git<span class="w"> </span>clone<span class="w"> </span>git@github.com:&lt;USER&gt;/scripts.git
-
-<span class="c1"># Change the directory to your new repository</span>
-<span class="nb">cd</span><span class="w"> </span>scripts
-
-<span class="c1"># Config GitHub information</span>
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;MAIL&quot;</span>
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;&lt;USER&gt;&quot;</span>
-
-<span class="c1"># Create a new script</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;echo Hello World!&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>HelloWorld
-
-<span class="c1"># Add Hello World in it</span>
-<span class="c1"># Check the files that will be pushed to remote</span>
-git<span class="w"> </span>status
-
-<span class="c1"># Add the HelloWorld in git staging</span>
-git<span class="w"> </span>add<span class="w"> </span>HelloWorld
-
-<span class="c1"># Add a commit message</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
-
-<span class="c1"># Push the code</span>
-git<span class="w"> </span>push
-</pre></div>
-</div>
+<section id="be-a-boyscout">
+<h2>4. Be a boyscout<a class="headerlink" href="#be-a-boyscout" title="Link to this heading"></a></h2>
+<p>“Leave the place better than you’ve found it”. Whenever you work on a piece of code, if you see potential for improvement, go for it. While large projects bring about immense improvement, many small changes can optimise a system as well</p>
+</section>
+<section id="constantly-study-language">
+<h2>5. Constantly study language<a class="headerlink" href="#constantly-study-language" title="Link to this heading"></a></h2>
+<p>I’m not talking about programming languages. I’m talking about real language. You as engineers are supposed to be eloquent. How you speak is how you think, also how you write code. A programmer’s greatest challenge sometimes can be a variable name. Study language, become at least masters of English, since that’s the universal language of programming, for now.</p>
 </section>
 </section>
 
@@ -270,8 +196,8 @@ git<span class="w"> </span>push
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../4_python/TODO.html" class="btn btn-neutral float-left" title="10. TODO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../9_pipelines/0_introduction.html" class="btn btn-neutral float-right" title="0. Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../12_project/introduction.html" class="btn btn-neutral float-left" title="12.0 Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1_implementation.html" class="btn btn-neutral float-right" title="13.1 Implementation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

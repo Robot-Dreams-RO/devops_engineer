@@ -130,3 +130,12 @@ To be an efficient engineer you need to understand:
    :caption: Project
 
    12_project/introduction
+
+.. toctree::
+  :hidden:
+  :titlesonly:
+  :caption: Craftsman best practices
+
+  13_craftsman_best_practices/0_mentality
+  13_craftsman_best_practices/1_implementation
+  13_craftsman_best_practices/2_tools
