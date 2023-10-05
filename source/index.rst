@@ -125,6 +125,15 @@ To be an efficient engineer you need to understand:
    9_pipelines/3_github
 
 .. toctree::
+  :hidden:
+  :titlesonly:
+  :caption: Craftsman best practices
+
+  10_craftsman_best_practices/0_mentality
+  10_craftsman_best_practices/1_implementation
+  10_craftsman_best_practices/2_tools
+
+.. toctree::
    :hidden:
    :titlesonly:
    :caption: Project
