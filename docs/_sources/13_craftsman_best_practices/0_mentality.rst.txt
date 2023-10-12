@@ -41,3 +41,7 @@ Learning never stops. Always be on the lookout to learn something (like this awe
 ============================
 
 I'm not talking about programming languages. I'm talking about real language. You as engineers are supposed to be eloquent. How you speak is how you think, also how you write code. A programmer's greatest challenge sometimes can be a variable name. Study language, become at least masters of English, since that's the universal language of programming, for now.
+
+========================
+6. Don't upset your team
+========================
