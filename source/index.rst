@@ -107,12 +107,16 @@ To be an efficient engineer you need to understand:
    4_python/14_testing
    4_python/15_packaging
    4_python/TODO
+
 .. toctree::
    :hidden:
    :titlesonly:
    :caption: Git
 
    5_git/0_introduction
+   5_git/1_working_togheter
+   5_git/2_bestpractices
+   5_git/TODO
 
 .. toctree::
    :hidden:
@@ -123,6 +127,12 @@ To be an efficient engineer you need to understand:
    9_pipelines/1_getting_started
    9_pipelines/2_python_cli
    9_pipelines/3_github
+   9_pipelines/4_jenkins_introduction
+   9_pipelines/5_jenkins_architecture
+   9_pipelines/6_jenkins_getting_started
+   9_pipelines/9_best_practices
+   9_pipelines/TODO
+
 
 .. toctree::
    :hidden:

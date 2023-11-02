@@ -46,4 +46,6 @@ Creating your first workflow
 
         - run: echo "This job's status is ${{ job.status }}."
 
-More variables can be found in the `GitHub Actions context and expression syntax for GitHub Actions <https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions>`_.
+.. note::
+    
+    More variables can be found in the `GitHub Actions context and expression syntax for GitHub Actions <https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions>`_.
