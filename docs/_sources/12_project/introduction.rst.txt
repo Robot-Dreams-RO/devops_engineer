@@ -30,9 +30,11 @@ Project requirements
 
 .. note::
     
-    You need to build a traditional conversational bot using Python and Rasa
+    You need to build a traditional conversational bot using Python and oppenai.
 
-Building a chatbot with `Rasa` involves several steps, such as setting up the environment, creating the necessary files, training the bot, interacting with it, etc.
+Building a chatbot with `openai` involves several steps, such as setting up the environment, creating the necessary files, training the bot, interacting with it, etc.
+
+Documentation of how to connect with openai can be found here: https://platform.openai.com/docs/api-reference
 
 Before we can learn how to build a bot, we need to understand how to run a Linux server, automate installation of prerequisites of programming language, write the code itself, build, test, package, deploy, in Linux, Docker, Kubernetes and Cloud.
 
@@ -57,24 +59,17 @@ Phase 1 requirements
 
 1. After course 1 - 2:
 
-    - Configuring Linux Virtual Machine (VPS/VM)
-    - Login to the VPS using SSH
-    - Perform the minimum SSH security configuration
+    - Configuring a Linux machine with Python version 12 and libraries. Use Fedora or Ubuntu machine: ``docker run -it ubuntu:latest bash`` or ``docker run -it fedora:latest bash``
 
 1. After course 3:
 
-    - Write a bash / Makefile script that automatically installs the project dependencies on the VPS.
+    - Write a bash / Makefile script that automatically installs the project dependencies on the Linux Machine.
 
-1. After course 4 - 5:
+1. After course 4 - 6:
 
-    - Build the chatbot
-    - Build the /healthcheck endpoint
-    - Build the /version endpoint
-    - Build /init command to start a chat room
-
-1. After course 5 - 6:
-
-    - Create a webserver that makes the chatbot publicly accessible
+    - Build the chatbot using ``openai`` - that answers to questions using the ``/message`` endpoint 
+    - Build the ``/healthcheck`` endpoint - that returns the health of the chatbot
+    - Build the ``/version`` endpoint - that returns the version of the chatbot stored in a VERSION file on repository
 
 1. After course 7 - 8:
 
@@ -82,7 +77,7 @@ Phase 1 requirements
 
 1. After course 12:
 
-    - CI pipeline to be completed
+    - CI pipeline to be completed: pylint, mypy, pytest, coverage.
 
 1. After course 13:
 
@@ -111,5 +106,5 @@ Phase 2 requirements
 
 1. After course 23:
     - Write an Ansible playbook that:
-        - Configure the VPS
-        - Deploy the chatbot on the VPS using Kubernetes
+        - Configure the virtual machine
+        - Deploy the chatbot on the cloud using Kubernetes or Azure Functions
