@@ -121,6 +121,16 @@ To be an efficient engineer you need to understand:
 .. toctree::
    :hidden:
    :titlesonly:
+   :caption: Containers
+
+   7_containers/0_introduction
+   7_containers/1_installation
+   7_containers/2_helloworld
+   7_containers/3_workingwithdocker
+
+.. toctree::
+   :hidden:
+   :titlesonly:
    :caption: Pipelines
 
    9_pipelines/0_introduction
