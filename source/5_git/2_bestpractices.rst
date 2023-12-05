@@ -18,4 +18,9 @@
         - Feature branches [feature/]
         - Release branches [release/]
         - Hotfix branches [hotfix/]
+
+    .. image:: ../diagrams/sem_ver.png
+        :width: 1000 px
+        :alt: Semantic Versioning
+
 #. Back up your repository regularly.

@@ -21,7 +21,7 @@ In summary, a microservice is a small, independent service that focuses on a spe
     With a microservices architecture, an application is built as independent components that run each application process as a service. These services communicate via a well-defined interface using lightweight APIs. Services are built for business capabilities and each service performs a single function. Because they are independently run, each service can be updated, deployed, and scaled to meet the demand for specific functions of an application.
 
 .. image:: ../diagrams/microserviceVSmonolith.png
-  :width: 1000
+  :width: 1900 px
   :alt: microservice VS monolith
 
 The main difference between a monolithic and microservice architecture is how the application is structured and how the different parts of the system interact with each other.
@@ -29,6 +29,7 @@ The main difference between a monolithic and microservice architecture is how th
 Monolithic architecture is tightly coupled, which means that all the components of the system are closely linked and depend on each other, making it harder to change or update one component without affecting the others. Microservice architecture is loosely coupled, which means that the services are independent of each other and can be updated or changed without impacting the other parts of the system.
 
 Microservices have several advantages over monolithic architecture:
+
   #. They are easier to scale, as each service can be scaled independently.
   #. They are easier to test, as each service can be tested in isolation.
   #. They are easier to deploy, as each service can be deployed independently.

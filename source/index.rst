@@ -42,7 +42,7 @@ To be an efficient engineer you need to understand:
    0_introduction/2_roadmap
    0_introduction/3_life_cycle
    0_introduction/4_scrum_agile
-   0_introduction/5_TODO
+   0_introduction/TODO
 
 .. toctree::
    :hidden:
@@ -55,8 +55,9 @@ To be an efficient engineer you need to understand:
    1_environments/3_microservices
    1_environments/4_introduction_to_linux
    1_environments/5_getting_around
-   1_environments/6_TODO
-   1_environments/7_setup_infra
+   1_environments/6_setup_infra
+   1_environments/TODO
+   
 
 .. toctree::
    :hidden:
@@ -69,6 +70,10 @@ To be an efficient engineer you need to understand:
    2_linux/3_managing_software
    2_linux/4_service_management
    2_linux/5_process_management
+   2_linux/6_system_logging
+   2_linux/7_linux_file_systems
+   2_linux/8_terminal_tuning
+   2_linux/9_networking
    2_linux/TODO
 
 .. toctree::
@@ -121,27 +126,52 @@ To be an efficient engineer you need to understand:
 .. toctree::
    :hidden:
    :titlesonly:
-   :caption: Containers
+   :caption: DocOps
 
-   7_containers/0_introduction
-   7_containers/1_installation
-   7_containers/2_helloworld
-   7_containers/3_workingwithdocker
+   6_docs_as_code/0_introduction
+   6_docs_as_code/1_installation
+   6_docs_as_code/2_sphinx
+   6_docs_as_code/3_deploy_docs
+   6_docs_as_code/TODO
 
 .. toctree::
    :hidden:
    :titlesonly:
    :caption: Pipelines
 
-   9_pipelines/0_introduction
-   9_pipelines/1_getting_started
-   9_pipelines/2_python_cli
-   9_pipelines/3_github
-   9_pipelines/4_jenkins_introduction
-   9_pipelines/5_jenkins_architecture
-   9_pipelines/6_jenkins_getting_started
-   9_pipelines/9_best_practices
-   9_pipelines/TODO
+   7_pipelines/0_introduction
+   7_pipelines/1_getting_started
+   7_pipelines/2_python_cli
+   7_pipelines/3_github
+   7_pipelines/4_jenkins_introduction
+   7_pipelines/5_jenkins_architecture
+   7_pipelines/6_jenkins_getting_started
+   7_pipelines/9_best_practices
+   7_pipelines/TODO
+
+
+.. toctree::
+   :hidden:
+   :titlesonly:
+   :caption: Containers
+
+   8_containers/0_introduction
+   8_containers/1_installation
+   8_containers/2_helloworld
+   8_containers/3_workingwithdocker
+   8_containers/4_usingdockerfile
+   8_containers/5_management
+   8_containers/6_orchestration
+   8_containers/7_test
+   8_containers/TODO
+
+.. toctree::
+   :hidden:
+   :titlesonly:
+   :caption: Kubernetes
+
+   9_kubernetes/00_abstract.rst
+   9_kubernetes/0_introduction
 
 
 .. toctree::

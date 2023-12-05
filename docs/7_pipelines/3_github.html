@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.3 GitHub &mdash; DevOps 1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/max_width.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7.4 Introduction to Jenkins" href="4_jenkins_introduction.html" />
+    <link rel="prev" title="7.2 Python CLI" href="2_python_cli.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DevOps
+              <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Curriculum</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../00_curriculum/curriculum.html">Class Curriculum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to DevOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/0_foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/00_preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/1_devops.html">0.1 Introduction to DevOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/2_roadmap.html">0.2 DevOps Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/3_life_cycle.html">0.3 Software Development Lifecycle Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/4_scrum_agile.html">0.4 SCRUM Agile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/TODO.html">0.5 TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/0_computer_network.html">1.0 Computer and Network Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/1_how_code_works.html">1.1 How code works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/2_environments.html">1.2 Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/3_microservices.html">1.3 Microservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/4_introduction_to_linux.html">1.4 Introduction to Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/5_getting_around.html">1.5 Getting around</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/6_setup_infra.html">1.7 Setup developing infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/0_introduction.html">2.0 Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/1_managing_users_and_groups.html">2.1 Managing Users and Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/2_file_management.html">2.2 File management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/3_managing_software.html">2.3 Managing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/4_service_management.html">2.4 Service Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/5_process_management.html">2.5 Process management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/6_system_logging.html">2.6 System logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/7_linux_file_systems.html">2.7 Linux File Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/8_terminal_tuning.html">2.8 Terminal tuning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/9_networking.html">2.9 Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html#solutions-to-todos">Solutions to TODOs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/0_introduction.html">3.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/1_getting_started.html">3.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/2_data_structures_conditions.html">3.2 Data structures and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/3_to_script_or_to_alias.html">3.3 Working with aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/4_shell_style_guide.html">3.4 Shell Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/5_makefile.html">3.5 Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/6_utilities.html">3.6 Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/0_introduction.html">4.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/1_installation.html">4.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/2_data_structures.html">4.2 Variables and Data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/3_conditions_loops.html">4.3 Loops and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/4_libraries.html">4.4 Libraries and modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/5_functions.html">4.5 Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/6_classes.html">4.6 Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/7_yourfirstcli.html">4.7 Your first CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/8_documentation.html">4.8 Documenting your code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/9_rules.html">4.9 Python Language Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/10_files.html">4.10 Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unittesting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/0_introduction.html">5.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/1_working_togheter.html">5.1 Working together on Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/2_bestpractices.html">5.1 Best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DocOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/0_introduction.html">6.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/1_installation.html">6.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/2_sphinx.html">6.2 What is Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/3_deploy_docs.html">6.3 Deploy Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pipelines</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="0_introduction.html">7.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_getting_started.html">7.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_python_cli.html">7.2 Python CLI</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7.3 GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_jenkins_introduction.html">7.4 Introduction to Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_jenkins_architecture.html">7.5 Jenkins Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_jenkins_getting_started.html">7.6 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_best_practices.html">7.7 Continuous Integration Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Containers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/0_introduction.html">8.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/1_installation.html">8.1 Windows installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/2_helloworld.html">8.2 Running “Hello World”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/3_workingwithdocker.html">8.3 Working with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/4_usingdockerfile.html">8.4 Using Dockerfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/5_management.html">8.5 Container management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/6_orchestration.html">8.6 Container orchestration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/7_test.html">8.7 Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kubernetes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/00_abstract.html">9.00 Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/0_introduction.html">9.0 Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../12_project/introduction.html">12.0 Project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Craftsman best practices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/0_mentality.html">13.0 Mentality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/1_implementation.html">13.1 Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/2_tools.html">13.2 Tools</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DevOps</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">7.3 GitHub</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/7_pipelines/3_github.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="github">
+<h1>7.3 GitHub<a class="headerlink" href="#github" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that enables developers to automate their software development workflows directly from their GitHub repository.</p>
+</div>
+<p>With GitHub Actions, developers can create custom workflows, called “actions,” that automate tasks such as building, testing, and deploying code. These workflows can be triggered by events such as code pushes, pull requests, or scheduled cron jobs.</p>
+<p>Topics to be covered in this chapter:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Github Actions workflows and actions</p></li>
+<li><p>Github Actions runners and self-hosted runners</p></li>
+<li><p>Github Actions secrets</p></li>
+<li><p>Github Actions artifacts</p></li>
+<li><p>Github Actions environments</p></li>
+<li><p>Jobs and steps</p></li>
+</ul>
+</div></blockquote>
+<p>Some key features of GitHub Actions include:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Automated Workflows: Automating tasks such as building, testing, and deploying code with custom workflows.</p></li>
+<li><p>GitHub Integration: Triggering workflows from GitHub events, such as code pushes or pull requests, and accessing GitHub data in workflows.</p></li>
+<li><p>Third-Party Integrations: Integrating with popular tools and services, such as Docker, Kubernetes, AWS, and more.</p></li>
+<li><p>Container-Based: Running workflows in isolated containers, providing a clean and consistent environment for each job.</p></li>
+<li><p>Community-Driven: Access to a large library of open-source actions, as well as the ability to share and reuse custom actions within the GitHub community.</p></li>
+</ol>
+</div></blockquote>
+<p>GitHub Actions provides a simple and efficient way to automate software development workflows, making it easier to build, test, and deploy code directly from GitHub.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># This workflow will install Python dependencies, run tests, and lint with a single version of Python</span>
+name:<span class="w"> </span>Python<span class="w"> </span>application
+
+on:
+push:
+<span class="w">    </span>branches:<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;main&quot;</span><span class="w"> </span><span class="o">]</span>
+pull_request:
+<span class="w">    </span>branches:<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;main&quot;</span><span class="w"> </span><span class="o">]</span>
+
+permissions:
+contents:<span class="w"> </span><span class="nb">read</span>
+
+jobs:
+test_python:
+<span class="w">    </span>runs-on:<span class="w"> </span>ubuntu-latest
+<span class="w">    </span>steps:
+<span class="w">    </span>-<span class="w"> </span>uses:<span class="w"> </span>actions/checkout@v3
+
+<span class="w">    </span>-<span class="w"> </span>name:<span class="w"> </span>Set<span class="w"> </span>up<span class="w"> </span>Python<span class="w"> </span><span class="m">3</span>.10
+<span class="w">    </span>uses:<span class="w"> </span>actions/setup-python@v3
+<span class="w">    </span>with:
+<span class="w">        </span>python-version:<span class="w"> </span><span class="s2">&quot;3.10&quot;</span>
+
+<span class="w">    </span>-<span class="w"> </span>name:<span class="w"> </span>Install<span class="w"> </span>dependencies
+<span class="w">    </span>working-directory:<span class="w"> </span>source_code/pipelines
+<span class="w">    </span>shell:<span class="w"> </span>bash
+<span class="w">    </span>run:<span class="w"> </span><span class="p">|</span>
+<span class="w">        </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+<span class="w">        </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="w">    </span>-<span class="w"> </span>name:<span class="w"> </span>Lint<span class="w"> </span>with<span class="w"> </span>pylint
+<span class="w">    </span>working-directory:<span class="w"> </span>source_code/pipelines
+<span class="w">    </span>shell:<span class="w"> </span>bash
+<span class="w">    </span>run:<span class="w"> </span>pylint<span class="w"> </span>cli/
+
+<span class="w">    </span>-<span class="w"> </span>name:<span class="w"> </span>Check<span class="w"> </span>with<span class="w"> </span>mypy
+<span class="w">    </span>working-directory:<span class="w"> </span>source_code/pipelines
+<span class="w">    </span>shell:<span class="w"> </span>bash
+<span class="w">    </span>run:<span class="w"> </span>mypy<span class="w"> </span>cli/
+
+<span class="w">    </span>-<span class="w"> </span>name:<span class="w"> </span>Test<span class="w"> </span>with<span class="w"> </span>pytest
+<span class="w">    </span>working-directory:<span class="w"> </span>source_code/pipelines
+<span class="w">    </span>shell:<span class="w"> </span>bash
+<span class="w">    </span>run:<span class="w"> </span>pytest
+</pre></div>
+</div>
+<p>A GitHub Actions workflow is composed of a series of events and actions.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Events: Events are triggers that start a workflow, such as a push to the repository, opening a pull request, or scheduling a cron job.</p></li>
+<li><p>Actions: Actions are individual tasks that make up the workflow, such as checking out code from the repository, building and testing code, or deploying code to a production environment.</p></li>
+</ol>
+</div></blockquote>
+<p>A workflow is defined in a YAML file in the .github/workflows directory of a GitHub repository. The structure of a GitHub Actions workflow typically includes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Name: A unique name for the workflow that identifies it in the GitHub Actions interface.</p></li>
+<li><p>On: The event that triggers the workflow, such as a push to the repository or opening a pull request.</p></li>
+<li><p>Jobs: One or more jobs that make up the workflow, each with its own set of steps.</p></li>
+<li><p>Steps: The individual tasks, or steps, that make up a job. Steps can be individual shell commands or calls to predefined actions from the GitHub Actions marketplace or other sources.</p></li>
+<li><p>Conditionals: Optional logic that determines whether a step or job should be run, based on conditions such as the success or failure of previous steps or the value of environment variables.</p></li>
+</ol>
+</div></blockquote>
+<p>This workflow runs whenever the code is pushed to the main branch of the repository. It consists of one job, “build,” that runs on an Ubuntu virtual machine and performs four steps: checking out the code, setting up Node.js, installing dependencies, and building and testing the code.</p>
+<section id="workflows-vs-actions">
+<h2>Workflows vs Actions<a class="headerlink" href="#workflows-vs-actions" title="Link to this heading"></a></h2>
+<p>A workflow is a configurable automated process made up of one or more jobs. Workflows are defined in YAML files, which are stored in the <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code> directory of a repository.</p>
+<p>An action is a reusable unit of code that can be used in a workflow. Actions are the smallest portable building block of a workflow. Actions can be written in JavaScript, TypeScript, or any other language that can be packaged in a Docker container.</p>
+<p>A workflow can use actions defined in the same repository, a public repository, or a published Docker container image.</p>
+</section>
+<section id="directory-structure">
+<h2>Directory structure<a class="headerlink" href="#directory-structure" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>GitHub Actions workflow</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.github/workflows/
+├── build.yml
+└── deploy.yml
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>GitHub Actions action</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.github/actions/actionName
+├──action.yml
+├── Dockerfile
+├── index.js
+└── package.json
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="workflow-syntax">
+<h2>Workflow syntax<a class="headerlink" href="#workflow-syntax" title="Link to this heading"></a></h2>
+<p>A workflow is defined in a YAML file in the <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code> directory of a GitHub repository.</p>
+<p>The structure of a GitHub Actions workflow typically includes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><strong>Name</strong>: A unique name for the workflow that identifies it in the GitHub Actions interface.</p></li>
+<li><p><strong>On</strong>: The event that triggers the workflow, such as a push to the repository or opening a pull request.</p></li>
+<li><p><strong>Jobs</strong>: One or more jobs that make up the workflow, each with its own set of steps.</p></li>
+<li><p><strong>Steps</strong>: The individual tasks, or steps, that make up a job. Steps can be individual shell commands or calls to predefined actions from the GitHub Actions marketplace or other sources.</p></li>
+<li><p><strong>Conditionals</strong>: Optional logic that determines whether a step or job should be run, based on conditions such as the success or failure of previous steps or the value of environment variables.</p></li>
+</ol>
+</div></blockquote>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Python package</span>
+
+<span class="c1"># runs on push and pull request to master (keep in mind that most of the default branches would be blocked for pushing directly to master)</span>
+<span class="nt">on</span><span class="p">:</span>
+<span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;master&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;master&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="nt">build</span><span class="p">:</span>
+
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">fail-fast</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">matrix</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;3.9&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;3.10&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;3.11&quot;</span><span class="p p-Indicator">]</span>
+
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python ${{ matrix.python-version }}</span>
+<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v3</span>
+<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ matrix.python-version }}</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">python -m pip install --upgrade pip</span>
+<span class="w">        </span><span class="no">python -m pip install flake8 pytest</span>
+<span class="w">        </span><span class="no">if [ -f requirements.txt ]; then pip install -r requirements.txt; fi</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Lint with flake8</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no"># stop the build if there are Python syntax errors or undefined names</span>
+<span class="w">        </span><span class="no">flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics</span>
+<span class="w">        </span><span class="no"># exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide</span>
+<span class="w">        </span><span class="no">flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test with pytest</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">pytest</span>
+</pre></div>
+</div>
+<p>or an workflow that uses the next action as a step:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Python application with Action</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;main&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;main&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="nt">workflow_dispatch</span><span class="p">:</span>
+
+<span class="nt">permissions</span><span class="p">:</span>
+<span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="nt">test_python</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">matrix</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;3.8&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;3.9&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;3.10&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;3.11&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/actions/testing</span>
+<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">python-version:${{ matrix.python-version }}</span>
+</pre></div>
+</div>
+</section>
+<section id="action-syntax">
+<h2>Action syntax<a class="headerlink" href="#action-syntax" title="Link to this heading"></a></h2>
+<p>An action is defined in a YAML file in the <code class="docutils literal notranslate"><span class="pre">.github/actions/actionName/action.yaml</span></code> directory of a GitHub repository.</p>
+<p>The structure of a GitHub Actions action typically includes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><strong>Name</strong>: A unique name for the action that identifies it in the GitHub Actions interface.</p></li>
+<li><p><strong>Inputs</strong>: A list of inputs that can be passed to the action.</p></li>
+<li><p><strong>Outputs</strong>: A list of outputs that can be returned from the action.</p></li>
+<li><p><strong>Runs</strong>: The runtime environment for the action, such as a Docker container or JavaScript runtime.</p></li>
+<li><p><strong>Steps</strong>: The individual tasks, or steps, that make up the action. Steps can be individual shell commands or calls to predefined actions from the GitHub Actions marketplace or other sources.</p></li>
+</ol>
+</div></blockquote>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Python</span><span class="nv"> </span><span class="s">Test</span><span class="nv"> </span><span class="s">Action&#39;</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Action</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">setup,</span><span class="nv"> </span><span class="s">lint,</span><span class="nv"> </span><span class="s">type-check</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Python</span><span class="nv"> </span><span class="s">application&#39;</span>
+
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="nt">python_version</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Python</span><span class="nv"> </span><span class="s">version&#39;</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.11&#39;</span>
+
+<span class="nt">runs</span><span class="p">:</span>
+<span class="nt">using</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;composite&quot;</span>
+<span class="nt">steps</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python 3.10</span>
+<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span>
+<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ inputs.python_version }}</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">    </span><span class="nt">working-directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source_code/pipelines</span>
+<span class="w">    </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">python -m pip install --upgrade pip</span>
+<span class="w">        </span><span class="no">pip install -r requirements.txt</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Lint with pylint</span>
+<span class="w">    </span><span class="nt">working-directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source_code/pipelines</span>
+<span class="w">    </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pylint cli/</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check with mypy</span>
+<span class="w">    </span><span class="nt">working-directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source_code/pipelines</span>
+<span class="w">    </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mypy cli/</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test with pytest</span>
+<span class="w">    </span><span class="nt">working-directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source_code/pipelines</span>
+<span class="w">    </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pytest</span>
+</pre></div>
+</div>
+</section>
+<section id="triggering">
+<h2>Triggering<a class="headerlink" href="#triggering" title="Link to this heading"></a></h2>
+<p>There are several ways to trigger a workflow run:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><strong>Push</strong>: A workflow can be triggered by a push to the repository. This is the default trigger for a workflow.</p></li>
+<li><p><strong>Pull Request</strong>: A workflow can be triggered by a pull request to the repository.</p></li>
+<li><p><strong>Schedule</strong>: A workflow can be triggered on a schedule, using cron syntax.</p></li>
+<li><p><strong>Webhook</strong>: A workflow can be triggered by a webhook, such as a GitHub App.</p></li>
+<li><p><strong>External</strong>: A workflow can be triggered by an external event, such as a Docker image being pushed to a registry.</p></li>
+<li><p><strong>On Demand</strong>: A workflow can be triggered manually from the GitHub Actions interface.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="workflow-templates">
+<h2>Workflow templates<a class="headerlink" href="#workflow-templates" title="Link to this heading"></a></h2>
+<p>GitHub provides a number of workflow templates that can be used to quickly create a workflow for common tasks, such as building and testing code, deploying code to a production environment, or publishing a Docker image.</p>
+<p>Workflow templates can be accessed from the GitHub Actions interface or from the GitHub Actions Marketplace.</p>
+</section>
+<section id="github-secrets">
+<h2>Github Secrets<a class="headerlink" href="#github-secrets" title="Link to this heading"></a></h2>
+<p>Managing secrets (passwords, tokens, certificates, keys) is a challenging problem in software development. Secrets can be used to grant access to resources, such as databases, APIs, and cloud services, and should be kept secure at all times.</p>
+<p>GitHub Actions provides a way to securely store and access secrets, using the GitHub Actions interface or the GitHub API.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In most companies this feature is avoided because most of the time there are requirements to use a third party tool like Hashicorp Vault or Kubernetes Secrets to manage secrets inside of company network.</p>
+</div>
+</section>
+<section id="github-runners">
+<h2>Github Runners<a class="headerlink" href="#github-runners" title="Link to this heading"></a></h2>
+<p>There are 2 types of workers:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><strong>GitHub-hosted runners</strong>: GitHub provides a set of virtual machines that are pre-configured with a variety of software environments. These runners are available to use for free, each account has certain ammounts of minutes per month.</p></li>
+<li><p><strong>Self-hosted runners</strong>: You can host your own runners on your own machines, using a variety of operating systems and architectures. Self-hosted runners can be used for free, but require more setup and maintenance.</p></li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="2_python_cli.html" class="btn btn-neutral float-left" title="7.2 Python CLI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="4_jenkins_introduction.html" class="btn btn-neutral float-right" title="7.4 Introduction to Jenkins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, skillab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

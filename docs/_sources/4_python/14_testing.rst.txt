@@ -2,6 +2,10 @@
 4.14 Testing and Unittesting
 ############################
 
+.. image:: ../diagrams/testing_pyramid.png
+  :width: 1500 px
+  :alt: Testing Pyramid
+
 Unit tests are a type of automated tests that focus on verifying the smallest "unit" of code in isolation, typically a function or method in an object-oriented system. The primary goal is to validate that each unit of the software performs as designed.
 
 ====================================

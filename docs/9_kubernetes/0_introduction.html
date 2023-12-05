@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9.0 Introduction &mdash; DevOps 1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/max_width.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12.0 Project" href="../12_project/introduction.html" />
+    <link rel="prev" title="9.00 Abstract" href="00_abstract.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DevOps
+              <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Curriculum</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../00_curriculum/curriculum.html">Class Curriculum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to DevOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/0_foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/00_preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/1_devops.html">0.1 Introduction to DevOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/2_roadmap.html">0.2 DevOps Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/3_life_cycle.html">0.3 Software Development Lifecycle Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/4_scrum_agile.html">0.4 SCRUM Agile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/TODO.html">0.5 TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/0_computer_network.html">1.0 Computer and Network Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/1_how_code_works.html">1.1 How code works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/2_environments.html">1.2 Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/3_microservices.html">1.3 Microservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/4_introduction_to_linux.html">1.4 Introduction to Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/5_getting_around.html">1.5 Getting around</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/6_setup_infra.html">1.7 Setup developing infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/0_introduction.html">2.0 Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/1_managing_users_and_groups.html">2.1 Managing Users and Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/2_file_management.html">2.2 File management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/3_managing_software.html">2.3 Managing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/4_service_management.html">2.4 Service Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/5_process_management.html">2.5 Process management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/6_system_logging.html">2.6 System logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/7_linux_file_systems.html">2.7 Linux File Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/8_terminal_tuning.html">2.8 Terminal tuning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/9_networking.html">2.9 Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html#solutions-to-todos">Solutions to TODOs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/0_introduction.html">3.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/1_getting_started.html">3.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/2_data_structures_conditions.html">3.2 Data structures and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/3_to_script_or_to_alias.html">3.3 Working with aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/4_shell_style_guide.html">3.4 Shell Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/5_makefile.html">3.5 Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/6_utilities.html">3.6 Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/0_introduction.html">4.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/1_installation.html">4.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/2_data_structures.html">4.2 Variables and Data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/3_conditions_loops.html">4.3 Loops and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/4_libraries.html">4.4 Libraries and modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/5_functions.html">4.5 Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/6_classes.html">4.6 Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/7_yourfirstcli.html">4.7 Your first CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/8_documentation.html">4.8 Documenting your code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/9_rules.html">4.9 Python Language Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/10_files.html">4.10 Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unittesting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/0_introduction.html">5.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/1_working_togheter.html">5.1 Working together on Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/2_bestpractices.html">5.1 Best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DocOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/0_introduction.html">6.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/1_installation.html">6.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/2_sphinx.html">6.2 What is Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/3_deploy_docs.html">6.3 Deploy Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pipelines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/0_introduction.html">7.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/1_getting_started.html">7.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/2_python_cli.html">7.2 Python CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/3_github.html">7.3 GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/4_jenkins_introduction.html">7.4 Introduction to Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/5_jenkins_architecture.html">7.5 Jenkins Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/6_jenkins_getting_started.html">7.6 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/9_best_practices.html">7.7 Continuous Integration Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Containers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/0_introduction.html">8.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/1_installation.html">8.1 Windows installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/2_helloworld.html">8.2 Running “Hello World”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/3_workingwithdocker.html">8.3 Working with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/4_usingdockerfile.html">8.4 Using Dockerfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/5_management.html">8.5 Container management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/6_orchestration.html">8.6 Container orchestration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/7_test.html">8.7 Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kubernetes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="00_abstract.html">9.00 Abstract</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9.0 Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../12_project/introduction.html">12.0 Project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Craftsman best practices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/0_mentality.html">13.0 Mentality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/1_implementation.html">13.1 Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/2_tools.html">13.2 Tools</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DevOps</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">9.0 Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/9_kubernetes/0_introduction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1>9.0 Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<section id="container">
+<h2>Container<a class="headerlink" href="#container" title="Link to this heading"></a></h2>
+<p>A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.</p>
+</section>
+<section id="container-images">
+<h2>Container images<a class="headerlink" href="#container-images" title="Link to this heading"></a></h2>
+<p>A container image is a lightweight, standalone, executable package of software (blueprint) that includes everything needed to run an application: code, runtime, system tools, system libraries, and settings. Container images are built from one or more layers, with each layer representing a specific component of the image.</p>
+<p>Container images allow us to confine the application code, its runtime, and all of its dependencies in a pre-defined format. This makes it easy to deploy and run applications in a consistent manner across different environments.</p>
+<p>Container images are stored in a registry, such as DockerHub, Artifactory, Harbor, Amazon Elastic Container Registry, Azure Container Registry, and can be pulled from the registry and run as containers on a host. They are designed to be portable and can be run on any host that supports the container runtime.</p>
+</section>
+<section id="containers-runtime">
+<h2>Containers runtime<a class="headerlink" href="#containers-runtime" title="Link to this heading"></a></h2>
+<p>A container runtime is the software that executes containers and manages container images on a node. Here are some of the key container runtimes compatible with Kubernetes:</p>
+<ol class="arabic simple">
+<li><p><strong>Docker</strong>: Perhaps the most well-known container runtime, Docker was the default runtime for Kubernetes for a long time. It uses containerd and runc underneath.</p></li>
+<li><p><strong>containerd</strong>: An industry-standard core container runtime. It is available as a daemon for Linux and Windows, which can manage the complete container lifecycle of its host system: image transfer and storage, container execution and supervision, low-level storage, and network attachments, etc.</p></li>
+<li><p><strong>CRI-O</strong>: An implementation of the Kubernetes Container Runtime Interface (CRI) that enables using OCI (Open Container Initiative) compatible runtimes. It’s a lightweight alternative to Docker, designed specifically for Kubernetes.</p></li>
+<li><p><strong>Kata Containers</strong>: A runtime that provides strong isolation by running each container in a lightweight virtual machine. It combines the speed and efficiency of containers with the security of VMs.</p></li>
+<li><p><strong>gVisor</strong>: A container runtime developed by Google that provides an additional layer of isolation between running containers and the host operating system. gVisor implements a user-space kernel, providing a sandboxed environment for the container processes.</p></li>
+<li><p><strong>Firecracker</strong>: Created by AWS, Firecracker is used for running multi-tenant container workloads. It’s designed to be lightweight and offer fast startup times, making it suitable for serverless computing.</p></li>
+<li><p><strong>LXC/LXD</strong>: LXC (Linux Containers) is an older Linux container runtime, while LXD is a container “hypervisor” that manages LXC containers. They offer a different approach to container management and are known for their strong support for system containers (as opposed to application containers).</p></li>
+<li><p><strong>runC</strong> (OCI): The default OCI (Open Container Initiative) runtime for Kubernetes. It’s a lightweight, portable container runtime that implements the OCI runtime specification.</p></li>
+</ol>
+</section>
+<section id="container-orchestrators">
+<h2>Container Orchestrators<a class="headerlink" href="#container-orchestrators" title="Link to this heading"></a></h2>
+<p>Container Orchestrators are responsible for managing the lifecycle of containers, including starting, stopping, and restarting them. They also provide a set of APIs for interacting with the cluster, such as creating and deleting Pods, Services, and Deployments.</p>
+<p>List of container orchestrators:</p>
+<ol class="arabic simple">
+<li><p><strong>Kubernetes</strong>: An open-source container orchestrator that automates the deployment, scaling, and management of containerized applications. It provides a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.</p></li>
+<li><p><strong>Docker Swarm</strong>: A container orchestrator that allows you to deploy and manage containers on a cluster of Docker hosts. It provides a set of APIs for interacting with the cluster, such as creating and deleting services, scaling services up and down, and updating services.</p></li>
+<li><p><strong>Apache Mesos</strong>: A distributed systems kernel that abstracts CPU, memory, storage, and other compute resources away from machines (physical or virtual), enabling fault-tolerant and elastic distributed systems to easily be built and run effectively.</p></li>
+<li><p><strong>Nomad</strong>: A distributed, highly available, datacenter-aware cluster and application scheduler designed to support the modern datacenter with support for long-running services, batch jobs, and much more.</p></li>
+<li><p><strong>Amazon ECS</strong>: A container orchestrator that allows you to run Docker containers on a cluster of EC2 instances. It provides a set of APIs for interacting with the cluster, such as creating and deleting services, scaling services up and down, and updating services.</p></li>
+<li><p><strong>Azure Container Instances</strong>: A container orchestrator that allows you to run Docker containers on a cluster of Azure VMs. It provides a set of APIs for interacting with the cluster, such as creating and deleting services, scaling services up and down, and updating services.</p></li>
+<li><p><strong>Google Kubernetes Engine</strong>: A container orchestrator that allows you to run Docker containers on a cluster of Google Compute Engine instances. It provides a set of APIs for interacting with the cluster, such as creating and deleting services, scaling services up and down, and updating services.</p></li>
+<li><p><strong>OpenShift</strong>: A container orchestrator that allows you to run Docker containers on a cluster of OpenShift nodes. It provides a set of APIs for interacting with the cluster, such as creating and deleting services, scaling services up and down, and updating services.</p></li>
+<li><p><strong>Rancher</strong>: A container orchestrator that allows you to run Docker containers on a cluster of Rancher nodes. It provides a set of APIs for interacting with the cluster, such as creating and deleting services, scaling services up and down, and updating services.</p></li>
+<li><p><strong>Cloud Foundry</strong>: A container orchestrator that allows you to run Docker containers on a cluster of Cloud Foundry nodes. It provides a set of APIs for interacting with the cluster, such as creating and deleting services, scaling services up and down, and updating services.</p></li>
+</ol>
+</section>
+<section id="why-to-use-container-orchestrators">
+<h2>Why to use Container Orchestrators?<a class="headerlink" href="#why-to-use-container-orchestrators" title="Link to this heading"></a></h2>
+<p>While we can manully manage containers, it’s not a scalable solution. Container orchestrators are designed to automate the deployment, scaling, and management of containerized applications. They provide a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.</p>
+<p>Container orchestrators are also designed to be highly scalable, allowing organizations to manage large numbers of containers across multiple hosts. They provide a unified view of the cluster and ensure that the desired state of the cluster is maintained, while the worker node components provide the computational resources necessary to run containers and Pods.</p>
+<p>Container orchestrators can:</p>
+<ol class="arabic simple">
+<li><p>Automate the deployment, scaling, and management of containerized applications.</p></li>
+<li><p>Provide a set of abstractions and built-in features for defining, deploying, and scaling containerized applications.</p></li>
+<li><p>Provide a set of APIs for interacting with the cluster.</p></li>
+<li><p>Provide a unified view of the cluster and ensure that the desired state of the cluster is maintained.</p></li>
+<li><p>Provide the computational resources necessary to run containers and Pods.</p></li>
+<li><p>Group containers into logical units (Pods) and manage them as a single unit.</p></li>
+<li><p>Allow implementation of security policies and access control.</p></li>
+</ol>
+</section>
+<section id="kubernetes">
+<h2>Kubernetes<a class="headerlink" href="#kubernetes" title="Link to this heading"></a></h2>
+<p>Kubernetes is an open-source container orchestrator that automates the deployment, scaling, and management of containerized applications. It provides a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>TL;DR</strong> Kubernetes is a platform AND an ecosystem for managing containerized applications.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Kubernetes is an open-source container orchestration system for automating the deployment, scaling, and management of containerized applications. It is designed to provide a platform-agnostic way to manage and orchestrate containers, whether they are running on-premises or in the cloud.</p>
+</div>
+<p>Kubernetes is an application orchestrator.</p>
+<p>Docker and Kubernetes have worked well together since the beginning of Kubernetes.
+Docker builds applications into container images and can run them as containers.
+Kubernetes can’t do either of those. Instead, it sits at a higher level and orchestrates
+things.</p>
+<p>Containerd (pronounced “container dee”) has replaced Docker as the default container runtime in most Kubernetes clusters. However, containerd is a stripped-down version of Docker that’s optimized for Kubernetes. As such, all container images created by Docker will continue to work on Kubernetes. In fact, both Docker and Kubernetes work with containers that support the Open Containers Initiative (OCI) specification.</p>
+</section>
+<section id="why-is-named-kubernetes">
+<h2>Why is named Kubernetes?<a class="headerlink" href="#why-is-named-kubernetes" title="Link to this heading"></a></h2>
+<p>You will hear that Kubernetes comes from Borg and Omega systems, made by Google, in a way it’s true the codebase shares some of the DNA with those systems, but it’s not a fork of them. Kubernetes is a new project, built from scratch, and it’s not an open-source version of Borg or Omega.</p>
+<p>For a very long time, Google has been operating containers at scale, processing billions of containers each week. These containerized apps were orchestrated by two in-house technologies dubbed Borg and Omega.
+The key is that although each of the three is distinct, they are all connected.</p>
+<p>Actually, several of the individuals responsible for creating Borg and Omega were and are currently active with Kubernetes. Therefore, even though Kubernetes was created from scratch, it makes extensive use of the knowledge gained through Borg and Omega at Google.</p>
+<p>2014 saw the donation of the open-source project Kubernetes to the CNCF. Version 1.0 arrived back in July 2015, and as of this writing, we are well into version 1.20 and averaging three major releases per year. It is released under the Apache 2.0 license.</p>
+<p>The name “Kubernetes” (koo-ber-net-eez) comes from the Greek word meaning Helmsman the person who steers a ship. This theme is reflected in the logo, which isthe wheel (helm control) of a ship.</p>
+<a class="reference internal image-reference" href="../_images/kubernetes.png"><img alt="K8s Logo" src="../_images/kubernetes.png" style="width: 400px;" /></a>
+<p>Kubernetes was originally going to be called <code class="docutils literal notranslate"><span class="pre">Seven</span> <span class="pre">of</span> <span class="pre">Nine</span></code> by some of the developers. If you are familiar with Star Trek, you will be aware that <code class="docutils literal notranslate"><span class="pre">Seven</span> <span class="pre">of</span> <span class="pre">Nine</span></code> is a Borg drone that the crew of the USS Voyager, led by Captain Kathryn Janeway, managed to save. Sadly, it couldn’t have been dubbed Seven of Nine due to copyright constraints. The designers subtly referenced Seven of Nine by giving the emblem seven spokes.
+Before continuing, just one more thing regarding the name. It is frequently abbreviated to “K8s” (pronounced “kates”). The eight characters between the letters “K” and “s” are replaced with the number 8.</p>
+</section>
+<section id="high-level-kubernetes-architecture">
+<h2>High level Kubernetes architecture<a class="headerlink" href="#high-level-kubernetes-architecture" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../_images/kubernetesArch.png"><img alt="K8s Arch" src="../_images/kubernetesArch.png" style="width: 1200px;" /></a>
+<p>From high up in the sky, Kubernetes is</p>
+<ul class="simple">
+<li><p>a cluster to run applications on (replaces the VMs and physical servers)</p></li>
+<li><p>an orchastrator to manage the cluster (replaces the hypervisor)</p></li>
+</ul>
+<section id="kubernetes-as-a-cluster">
+<h3>Kubernetes as a cluster<a class="headerlink" href="#kubernetes-as-a-cluster" title="Link to this heading"></a></h3>
+<p>A K8s cluster consists of control plane (master node) and data plane (worker/slave nodes).</p>
+<p>The control plane manages the cluster and the worker nodes. It is responsible for maintaining the desired state of the cluster, such as which applications are running and where they are running. It also handles scheduling, scaling, and updating applications.</p>
+<p>The data plane is where the applications run. It consists of one or more worker nodes, which are responsible for running the applications and providing the computational resources necessary to run them.</p>
+</section>
+<section id="kubernetes-as-an-orchastrator">
+<h3>Kubernetes as an orchastrator<a class="headerlink" href="#kubernetes-as-an-orchastrator" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An orchastrator is a tool that automates the deployment, scaling, and management of  applications.</p>
+</div>
+<p>An Kubernetes orchastrator is a tool that automates the deployment, scaling, and management of containerized applications. It provides a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.</p>
+</section>
+</section>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<p>Kubernetes provides a set of abstractions for defining, deploying, and scaling containerized applications, including:</p>
+<ol class="arabic simple">
+<li><p><strong>Pods</strong>: The smallest and simplest unit in the Kubernetes object model, a pod represents a single process or container running in a cluster.</p></li>
+<li><p><strong>Replication Controllers</strong>: Responsible for ensuring that a specified number of replicas of a pod are running at any given time.</p></li>
+<li><p><strong>Service</strong>: An abstraction that defines a logical set of pods and a policy by which to access them.</p></li>
+<li><p><strong>Deployments</strong>: An abstraction that provides declarative updates for Pods and Replication Controllers.</p></li>
+<li><p>Kubernetes also provides a set of built-in features such as <strong>self-healing</strong>, <strong>discorvery and load balancing</strong>, <strong>storage orchastration</strong>, <strong>secret management</strong>, and <strong>rolling updates</strong>, which help to ensure that the applications running on the cluster are always available and up-to-date.</p></li>
+</ol>
+</section>
+<section id="how-kubernetes-works">
+<h2>How Kubernetes works?<a class="headerlink" href="#how-kubernetes-works" title="Link to this heading"></a></h2>
+<p>Kubernetes also provides a set of APIs for interacting with the cluster, and it can be easily integrated with a variety of tools and services, such as monitoring, logging, and security.</p>
+<p>Kubernetes is widely adopted in the industry for its ability to handle complex, large-scale deployments, it’s also a cloud-agnostic, and it can run on most cloud providers as well as on-premises. Its wide adoption also means that there’s a large and active community that is constantly working on improving and adding new features to the system.</p>
+<p>In summary, Kubernetes is an open-source container orchestration system that automates the deployment, scaling, and management of containerized applications. It provides a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster. It is widely adopted in the industry for its ability to handle complex, large-scale deployments and its cloud-agnostic nature.</p>
+<p>The Kubernetes architecture consists of several components that work together to manage and orchestrate containers in a cluster. The components can be divided into two categories: control plane components and worker node components.</p>
+<ol class="arabic">
+<li><p>Control Plane Components:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>API Server: The central component that exposes the Kubernetes API and serves as the control plane for the cluster. ALL COMMUNICATIONS GO THROUGH API SERVER!!!</p></li>
+<li><p>etcd: A distributed key-value store that stores the configuration data for the cluster.</p></li>
+<li><p>Controller Manager: Manages the various controllers, such as the Replication Controller, that work to maintain the desired state of the cluster.</p></li>
+<li><p>Scheduler: Assigns Pods to worker nodes based on the resource requirements and constraints defined in the Pod specification.</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Worker Node Components:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Kubelet: An agent that runs on each worker node, responsible for ensuring that containers are running and healthy.</p></li>
+<li><p>Container runtime: The software responsible for managing containers on the node, such as Docker or Containerd.</p></li>
+<li><p>kube-proxy: A network proxy that runs on each worker node and provides network connectivity to Pods.</p></li>
+<li><p>Kubernetes Objects: Kubernetes uses a declarative model to represent the desired state of the cluster. Kubernetes objects are persistent entities in the Kubernetes system that represent the desired state of the cluster, such as Pods, Services, and Deployments.</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<p>In addition, Kubernetes also includes several optional components, such as the Kubernetes Dashboard, which provides a graphical interface for managing the cluster, and add-on components, such as ingress controllers, which provide additional functionality for the cluster.</p>
+<p>The Kubernetes architecture is designed to be highly scalable, allowing organizations to manage large numbers of containers across multiple worker nodes. The control plane components work together to provide a unified view of the cluster and to ensure that the desired state of the cluster is maintained, while the worker node components provide the computational resources necessary to run containers and Pods.</p>
+</section>
+<section id="pods">
+<h2>Pods<a class="headerlink" href="#pods" title="Link to this heading"></a></h2>
+<p>A Kubernetes pod is the <strong>smallest and simplest unit</strong> in the Kubernetes object model. It is a group of one or more containers that are deployed together on the same host and share the same network namespace.</p>
+<p>A pod provides a <strong>single IP address</strong> and a <strong>single hostname</strong> for all of its containers, allowing them to communicate with each other as if they were on the same host. Pods also share the same storage volumes and can access the same environment variables.</p>
+<p>Pods are designed to be ephemeral and disposable, meaning that they can be created and deleted as needed. They are also scalable, as multiple replicas of a pod can be created to handle increased traffic or load.</p>
+<p>Pods are the building blocks of Kubernetes applications, and they are used to deploy, scale, and manage the containers that make up an application. They are managed by the Kubernetes controller, which ensures that the desired number of replicas are running and healthy at all times.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Guidelines issued by the Inclusive Naming Initiative (inclusivenaming.org) promote responsible language and tries to avoid harmful terms.</p>
+<p><a class="reference external" href="https://inclusivenaming.org/word-lists/tier-1/">https://inclusivenaming.org/word-lists/tier-1/</a></p>
+</div>
+<p>Container Orchestrator’s distributions:</p>
+<ol class="arabic simple">
+<li><p>Docker Enterprise</p></li>
+<li><p>Google Anthos</p></li>
+<li><p>Azure Kubernetes Service</p></li>
+<li><p>Amazon Elastic Kubernetes Service</p></li>
+<li><p>Rancher</p></li>
+<li><p>Red Hat OpenShift</p></li>
+<li><p>VMware Tanzu</p></li>
+<li><p>SUSE Rancher</p></li>
+<li><p>Canonical Charmed Kubernetes</p></li>
+<li><p>IBM Cloud Paks</p></li>
+<li><p>Platform9 Managed Kubernetes</p></li>
+<li><p>Mirantis Kubernetes Engine</p></li>
+<li><p>Nutanix Karbon</p></li>
+<li><p>D2iQ Konvoy</p></li>
+<li><p>Oracle Container Engine for Kubernetes</p></li>
+<li><p>IBM Cloud Kubernetes Service</p></li>
+<li><p>DigitalOcean Kubernetes</p></li>
+<li><p>Linode Kubernetes Engine</p></li>
+<li><p>Alibaba Cloud Container Service for Kubernetes</p></li>
+<li><p>Tencent Kubernetes Engine</p></li>
+<li><p>Huawei Cloud Container Engine</p></li>
+<li><p>OVH Managed Kubernetes</p></li>
+</ol>
+</section>
+<section id="why-use-kubernetes">
+<h2>Why use Kubernetes?<a class="headerlink" href="#why-use-kubernetes" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Kubernetes is an open-source container <strong>orchestration</strong> system that automates the deployment, scaling, and management of containerized applications.</p></li>
+<li><p>Kubernetes provides a set of <strong>abstractions</strong> and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.</p></li>
+<li><p>Kubernetes is widely <strong>adopted</strong> in the industry for its ability to handle complex, large-scale deployments and its cloud-agnostic nature.</p></li>
+</ol>
+</section>
+<section id="cloud-native-computing-foundation-cncf">
+<h2>Cloud Native Computing Foundation (CNCF)<a class="headerlink" href="#cloud-native-computing-foundation-cncf" title="Link to this heading"></a></h2>
+<p>The Cloud Native Computing Foundation (CNCF) is one of the largest sub-projects hosted by the Linux Foundation. CNCF aims to accelerate the adoption of containers, microservices, and cloud-native applications.</p>
+<p>CNCF hosts a multitude of projects, with more to be added in the future. CNCF provides resources to each of the projects, but, at the same time, each project continues to operate independently under its pre-existing governance structure and with its existing maintainers.</p>
+<p>Projects within CNCF are categorized based on their maturity levels:</p>
+<ul class="simple">
+<li><p>Sandbox</p></li>
+<li><p>Incubating</p></li>
+<li><p>Graduated</p></li>
+</ul>
+<p>Popular graduated projects:</p>
+<ol class="arabic simple">
+<li><p>Kubernetes container orchestrator</p></li>
+<li><p>etcd distributed key-value store</p></li>
+<li><p>CoreDNS DNS server</p></li>
+<li><p>containerd container runtime</p></li>
+<li><p>Envoy cloud native proxy</p></li>
+<li><p>Fluentd for unified logging</p></li>
+<li><p>Harbor registry</p></li>
+<li><p>Helm package management for Kubernetes</p></li>
+<li><p>Linkerd service mesh for Kubernetes</p></li>
+<li><p>Open Policy Agent policy engine</p></li>
+<li><p>Prometheus monitoring system and time series DB</p></li>
+<li><p>Rook cloud native storage orchestrator for Kubernetes</p></li>
+</ol>
+<p>Key incubating projects:</p>
+<ol class="arabic simple">
+<li><p>argo workflow engine for Kubernetes</p></li>
+<li><p>Buildpacks.io builds application images</p></li>
+<li><p>CRI-O container runtime</p></li>
+<li><p>Contour ingress controller for Kubernetes</p></li>
+<li><p>gRPC for remote procedure call (RPC)</p></li>
+<li><p>CNI for Linux containers networking</p></li>
+<li><p>flux continuous delivery for Kubernetes</p></li>
+<li><p>Knative serverless containers in Kubernetes</p></li>
+<li><p>KubeVirt Kubernetes based Virtual Machine manager</p></li>
+<li><p>Notary for data security</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="00_abstract.html" class="btn btn-neutral float-left" title="9.00 Abstract" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../12_project/introduction.html" class="btn btn-neutral float-right" title="12.0 Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, skillab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

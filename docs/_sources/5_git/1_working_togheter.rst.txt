@@ -2,13 +2,13 @@
 5.1 Working together on Git
 ###########################
 
-###################
+===================
 Markdown cheetsheet
-###################
+===================
 
-================
+++++++++++++++++
 Creating headers
-================
+++++++++++++++++
 
 .. code-block:: bash
 
@@ -36,9 +36,9 @@ Creating headers
 
     _You **can** combine them_
 
-=====
++++++
 Lists
-=====
++++++
 
 Unordered lists:
 
@@ -60,27 +60,27 @@ Ordered lists:
        1. Item 3a
        1. Item 3b
 
-=====
++++++
 Links
-=====
++++++
 
 .. code-block:: bash
 
     http://github.com - automatic!
     [GitHub](http://github.com)
 
-======
+++++++
 Images
-======
+++++++
 
 .. code-block:: bash
 
     ![GitHub Logo](/images/logo.png)
     Format: ![Alt Text](url)
 
-============================
+++++++++++++++++++++++++++++
 Code and Syntax Highlighting
-============================
+++++++++++++++++++++++++++++
 
 .. code-block:: bash
 
@@ -113,9 +113,9 @@ Code and Syntax Highlighting
             state: latest
     ```
 
-======
+++++++
 Tables
-======
+++++++
 
 .. code-block:: bash
 
@@ -151,9 +151,9 @@ I would like to have in the presentation:
     #. what would you like more?
     #. what would you like less
 
-======
+++++++
 How to
-======
+++++++
 
 .. code-block:: bash
 
@@ -174,9 +174,9 @@ How to
 
     git push
 
-=======================
++++++++++++++++++++++++
 Solving merge conflicts
-=======================
++++++++++++++++++++++++
 
 To resolve a Git merge conflict, follow these steps:
 
