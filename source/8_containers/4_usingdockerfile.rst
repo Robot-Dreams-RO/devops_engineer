@@ -37,9 +37,9 @@ Create a file called ``Dockerfile`` where we will print
     # instantiate a container based on created image using tag hello and remove it after run(-rm)
     docker run --rm hello
 
-================
-Deploy webserver
-================
+=================
+Deploy web server
+=================
 
 Create a file ``index.html``
 
@@ -83,10 +83,10 @@ And a file ``Dockerfile``
     # copy the location from explorer
     # change directory to the location
 
-    docker build -t webserver .
+    docker build -t web_server .
 
     # build the created image with a tag (-t) hello from current location (.)
-    docker container run -p 8080:80 --name webserver -d webserver
+    docker container run -p 8080:80 --name web_server -d web_server
 
 =====================
 Building a Dockerfile

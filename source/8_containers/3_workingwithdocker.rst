@@ -18,7 +18,7 @@ We're run multiple time this command: run a interactive bash session in a new fe
 
 .. code-block:: bash
 
-    docker run --name freedora -it fedora bash
+    docker run --name fedora -it fedora bash
 
 =======================
 Working with docker cli
@@ -46,7 +46,7 @@ The name of the image has to be unique, we can run it with ``--name`` to specify
 
 .. code-block:: sh
 
-    docker run --name localPostgress -p 55432:5432 -e POSTGRES_USER=postgresUser -e POSTGRES_PASSWORD=postgresPass -e POSTGRES_DB=postgresDB -d postgres
+    docker run --name localPostgres -p 55432:5432 -e POSTGRES_USER=postgresUser -e POSTGRES_PASSWORD=postgresPass -e POSTGRES_DB=postgresDB -d postgres
 
     # --name = name of the container [ has to be unique ]
     # -p = port of the container [ we have to specify the mapping from outside to inside of the container external_port:internal_port ]
@@ -74,9 +74,9 @@ From PostgreSQL explorer (is now a tab) - Add Connection.
 
     Select DB postgresDB
 
-    Display name: localPostgress
+    Display name: localPostgres
 
-Right click on the localPostgress -> New Query. You can copy the entire script and run parts of it by selecting and pressing F5.
+Right click on the localPostgres -> New Query. You can copy the entire script and run parts of it by selecting and pressing F5.
 
 .. code-block:: sql
 

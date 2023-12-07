@@ -12,7 +12,7 @@
 
 There's always the temptation to just start building things, but the truth is that's actually counter productive
 
-#. First, write down how the data structures should look like (payload, tables), try to visualise the system
+#. First, write down how the data structures should look like (payload, tables), try to visualize the system
 #. If needed, build or draw some diagrams about how the systems will communicate (no need to specify at an API level)
 #. Only then, when you've agreed upon a general structure of the implementation do you get to actually start working on it
 

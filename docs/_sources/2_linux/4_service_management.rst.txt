@@ -43,7 +43,7 @@ systemd introduces the concept of **systemd units** and there are several types,
 Unit Type  Description
 =========  =================================================================================================================================
 Target     A group of units that defines a synchronization point which is used at boot time to start the system in a particular state
-Service    A unit of this type starts, stops, restarts or reloads a service daemon such as Apache webserver
+Service    A unit of this type starts, stops, restarts or reloads a service daemon such as Apache web server
 Socket     A unit of this type activates a service when the service receives incoming traffic on a listening socket
 Device     A unit of this type implements device-based activation such as a device driver
 Mount      A unit of this type controls the file-system mount point

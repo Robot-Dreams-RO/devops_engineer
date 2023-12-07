@@ -117,7 +117,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unittesting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unit Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">TODO</a></li>
 </ul>
@@ -230,8 +230,8 @@ docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </
 </pre></div>
 </div>
 </section>
-<section id="deploy-webserver">
-<h2>Deploy webserver<a class="headerlink" href="#deploy-webserver" title="Link to this heading"></a></h2>
+<section id="deploy-web-server">
+<h2>Deploy web server<a class="headerlink" href="#deploy-web-server" title="Link to this heading"></a></h2>
 <p>Create a file <code class="docutils literal notranslate"><span class="pre">index.html</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;!doctype<span class="w"> </span>html&gt;
 &lt;html<span class="w"> </span><span class="nv">lang</span><span class="o">=</span><span class="s2">&quot;en&quot;</span>&gt;
@@ -268,10 +268,10 @@ COPY<span class="w"> </span>index.html<span class="w"> </span>/usr/share/nginx/h
 <span class="c1"># copy the location from explorer</span>
 <span class="c1"># change directory to the location</span>
 
-docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>webserver<span class="w"> </span>.
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>web_server<span class="w"> </span>.
 
 <span class="c1"># build the created image with a tag (-t) hello from current location (.)</span>
-docker<span class="w"> </span>container<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>--name<span class="w"> </span>webserver<span class="w"> </span>-d<span class="w"> </span>webserver
+docker<span class="w"> </span>container<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>--name<span class="w"> </span>web_server<span class="w"> </span>-d<span class="w"> </span>web_server
 </pre></div>
 </div>
 </section>

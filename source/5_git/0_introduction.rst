@@ -90,7 +90,7 @@ We will learn how to use the terminal, console version of git, how to use vim, a
 1. Create a scripts project
 ===========================
 
-Create a new project in your userspace named ``scripts``. Press on the Kitten on the top left then new.
+Create a new project in your user space named ``scripts``. Press on the Kitten on the top left then new.
 
 .. code-block:: bash
 

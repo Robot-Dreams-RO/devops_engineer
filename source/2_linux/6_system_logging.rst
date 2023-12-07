@@ -45,7 +45,7 @@ Journalctl
 
 Logs are usually dispersed throughout the system, handled by different daemons and processes, and can be fairly difficult to interpret when they span multiple applications.
 
-Systemd attempts to address these issues by providing a centralized management solution for logging all kernel and userland processes. The system that collects and manages these logs is known as the **journal**.
+Systemd attempts to address these issues by providing a centralized management solution for logging all kernel and user space processes. The system that collects and manages these logs is known as the **journal**.
 
 ===========
 Cheat sheet

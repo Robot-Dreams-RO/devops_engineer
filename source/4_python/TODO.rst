@@ -6,7 +6,7 @@ TODO
 Task 1
 ======
 
-Create a script ``wikipython.py`` that:
+Create a script ``wikiPython.py`` that:
 
     - reads a Wikipedia page: ``https://en.wikipedia.org/wiki/Python_(genus)`` (use ``requests`` command)
     - extracts Species elements - python name (what kind of pythons are there) (use ``BeautifulSoup``)

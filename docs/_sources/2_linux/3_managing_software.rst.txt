@@ -50,7 +50,7 @@ TODO
     
     Installing new software
     
-    There are lots of different ways to install software on Linux systems. Installing directly from your distro's official software repositories is the safest option, but sometimes the application or version you want simply isn't available that way. When installing via any other mechanism, make sure you're getting the files from an official source for the project in question. |
+    There are lots of different ways to install software on Linux systems. Installing directly from your distros official software repositories is the safest option, but sometimes the application or version you want simply isn't available that way. When installing via any other mechanism, make sure you're getting the files from an official source for the project in question. |
 
 .. warning::
 

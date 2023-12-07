@@ -110,7 +110,7 @@ Your file system should now look similar to this
     ├── .gitignore
     ├── Makefile
     ├── make.bat
-    └── requirments.txt
+    └── requirements.txt
 
 We have a top-level docs directory in the main project directory. Inside this is:
 

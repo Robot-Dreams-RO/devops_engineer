@@ -57,7 +57,7 @@ Read more about the Python conventions in https://peps.python.org/pep-0008/
 
 Function names should be lowercase, with words separated by underscores as necessary to improve readability.
 
-Is prefered ``def function_name():`` not ``def functionName():``.
+Is preferred ``def function_name():`` not ``def functionName():``.
 
 .. code-block:: python
    
@@ -190,7 +190,7 @@ Methods available for strings:
    'islower', # returns True if all characters in the string are lower case
    'isnumeric', # returns True if all characters in the string are numeric
    'isprintable', # returns True if all characters in the string are printable
-   'isspace', # returns True if all characters in the string are whitespaces
+   'isspace', # returns True if all characters in the string are white spaces
    'istitle', # returns True if the string follows the rules of a title
    'isupper', # returns True if all characters in the string are upper case
    'join', # joins the elements of an iterable to the end of the string

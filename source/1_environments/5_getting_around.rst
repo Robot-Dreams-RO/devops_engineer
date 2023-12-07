@@ -201,10 +201,10 @@ These are referred to as :
 	# Create a list of the existing files
 	# > replace the content
 
-	ls > listoffiles
+	ls > listOfFiles
 	# >> append to the content
 
-	ls >> listoffiles
+	ls >> listOfFiles
 
 -------------
 Reading files
@@ -230,7 +230,7 @@ Reading files
 	# Reading the content of multiple files and redirecting the output to a new file
 	cat t* > combined.txt
 
-	cat listoffiles >> combined.txt
+	cat listOfFiles >> combined.txt
 
 	cat combined.txt
 
@@ -279,9 +279,9 @@ The final action that we can perform is to direct the output of one application 
 
 	mkdir dir1 dir2
 
-	cp listoffiles dir1
+	cp listOfFiles dir1
 
-	cp dir1/listoffiles dir2
+	cp dir1/listOfFiles dir2
 
 	rm -rf dir1
 

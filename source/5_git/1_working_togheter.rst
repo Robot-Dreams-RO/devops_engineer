@@ -2,9 +2,9 @@
 5.1 Working together on Git
 ###########################
 
-===================
-Markdown cheetsheet
-===================
+====================
+Markdown cheat sheet
+====================
 
 ++++++++++++++++
 Creating headers

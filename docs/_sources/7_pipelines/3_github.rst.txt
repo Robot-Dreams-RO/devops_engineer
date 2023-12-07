@@ -313,5 +313,5 @@ Github Runners
 
 There are 2 types of workers:
     
-    #. **GitHub-hosted runners**: GitHub provides a set of virtual machines that are pre-configured with a variety of software environments. These runners are available to use for free, each account has certain ammounts of minutes per month.
+    #. **GitHub-hosted runners**: GitHub provides a set of virtual machines that are pre-configured with a variety of software environments. These runners are available to use for free, each account has certain amounts of minutes per month.
     #. **Self-hosted runners**: You can host your own runners on your own machines, using a variety of operating systems and architectures. Self-hosted runners can be used for free, but require more setup and maintenance.

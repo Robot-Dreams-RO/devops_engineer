@@ -15,7 +15,7 @@ On the PostgreSQL instance:
 Task 2
 ======
 
-Based on `docker_examples/deploy_webserver` update the ``index.html`` with your name, job, age, hobby, and favorite picture.
+Based on `docker_examples/deploy_web_server` update the ``index.html`` with your name, job, age, hobby, and favorite picture.
 
 ======
 Task 3

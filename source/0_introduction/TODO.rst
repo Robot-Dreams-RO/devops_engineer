@@ -140,7 +140,7 @@ Answers
 
 **Explanation:**
 
-	- Meantime to failure recovery(Average time taken to recover from a failure) is default metric used all over software world, and it mesure time to recover from failure. 
+	- Meantime to failure recovery(Average time taken to recover from a failure) is default metric used all over software world, and it measure time to recover from failure. 
 	- Deployment frequency(The frequency in which the deployment occurs) is how often deployment occurs, it's rarely used metric but it's used in combination with failed deployments to calculate Percentage of failed deployments.
 	- Percentage of failed deployments is the number of times the deployment fails. 
 	- Number of failed HTTP connections it's a metric used to measure availability of the application.
@@ -184,10 +184,10 @@ Answers
 
 **Explanation:** 
 
-	- Continous integration means that our code is being automaticaly packaged and tested on every commit.
-	- Continous delivery means that our code is being automaticaly packaged and tested on every commit and it's ready to be deployed to production.
-	- Continous deployment means that our code is being automaticaly packaged and tested on every commit and it's automaticaly deployed to production.
-	- Continous monitoring means that we are monitoring our application and infrastructure to become proactive and prevent failures or reactive by having enough information to fix the problem fast.
+	- Continuos integration means that our code is being automatically packaged and tested on every commit.
+	- Continuos delivery means that our code is being automatically packaged and tested on every commit and it's ready to be deployed to production.
+	- Continuos deployment means that our code is being automatically packaged and tested on every commit and it's automatically deployed to production.
+	- Continuos monitoring means that we are monitoring our application and infrastructure to become proactive and prevent failures or reactive by having enough information to fix the problem fast.
 
 7.
 **Answer:** c. Accountability

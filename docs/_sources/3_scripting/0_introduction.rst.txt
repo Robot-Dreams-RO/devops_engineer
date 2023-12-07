@@ -77,7 +77,7 @@ What are the differences between the shells?
 * ``screen`` - is a terminal multiplexer. It allows you to access a screen terminal session from multiple terminals. It is useful for running more than one command-line program at the same time. It is also useful for disconnecting from a computer but keeping a shell session active, which prevents programs from being interrupted if the network connection is lost.
 
 ========================
-What is POSIX Complient?
+What is POSIX Compliant?
 ========================
 
 POSIX is a family of standards specified by the IEEE for maintaining compatibility between operating systems. POSIX defines the application programming interface (API), along with command line shells and utility interfaces, for software compatibility with variants of Unix and other operating systems.

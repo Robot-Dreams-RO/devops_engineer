@@ -72,7 +72,7 @@ List of container orchestrators:
 Why to use Container Orchestrators?
 ===================================
 
-While we can manully manage containers, it's not a scalable solution. Container orchestrators are designed to automate the deployment, scaling, and management of containerized applications. They provide a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.
+While we can manually manage containers, it's not a scalable solution. Container orchestrators are designed to automate the deployment, scaling, and management of containerized applications. They provide a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.
 
 Container orchestrators are also designed to be highly scalable, allowing organizations to manage large numbers of containers across multiple hosts. They provide a unified view of the cluster and ensure that the desired state of the cluster is maintained, while the worker node components provide the computational resources necessary to run containers and Pods.
 
@@ -128,7 +128,7 @@ Actually, several of the individuals responsible for creating Borg and Omega wer
 
 2014 saw the donation of the open-source project Kubernetes to the CNCF. Version 1.0 arrived back in July 2015, and as of this writing, we are well into version 1.20 and averaging three major releases per year. It is released under the Apache 2.0 license.
 
-The name “Kubernetes” (koo-ber-net-eez) comes from the Greek word meaning Helmsman the person who steers a ship. This theme is reflected in the logo, which isthe wheel (helm control) of a ship.
+The name “Kubernetes” (koo-ber-net-eez) comes from the Greek word meaning Helmsman the person who steers a ship. This theme is reflected in the logo, which is the wheel (helm control) of a ship.
 
 .. image:: ../diagrams/kubernetes.png
   :alt: K8s Logo
@@ -148,7 +148,7 @@ High level Kubernetes architecture
 From high up in the sky, Kubernetes is 
 
 - a cluster to run applications on (replaces the VMs and physical servers)
-- an orchastrator to manage the cluster (replaces the hypervisor)
+- an orchestrator to manage the cluster (replaces the hypervisor)
 
 +++++++++++++++++++++++
 Kubernetes as a cluster
@@ -161,14 +161,14 @@ The control plane manages the cluster and the worker nodes. It is responsible fo
 The data plane is where the applications run. It consists of one or more worker nodes, which are responsible for running the applications and providing the computational resources necessary to run them.
 
 +++++++++++++++++++++++++++++
-Kubernetes as an orchastrator
+Kubernetes as an orchestrator
 +++++++++++++++++++++++++++++
 
 .. note:: 
 
-    An orchastrator is a tool that automates the deployment, scaling, and management of  applications.
+    An orchestrator is a tool that automates the deployment, scaling, and management of  applications.
 
-An Kubernetes orchastrator is a tool that automates the deployment, scaling, and management of containerized applications. It provides a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.
+An Kubernetes orchestrator is a tool that automates the deployment, scaling, and management of containerized applications. It provides a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.
 
 ===========
 Description
@@ -180,7 +180,7 @@ Kubernetes provides a set of abstractions for defining, deploying, and scaling c
 #. **Replication Controllers**: Responsible for ensuring that a specified number of replicas of a pod are running at any given time.
 #. **Service**: An abstraction that defines a logical set of pods and a policy by which to access them.
 #. **Deployments**: An abstraction that provides declarative updates for Pods and Replication Controllers.
-#. Kubernetes also provides a set of built-in features such as **self-healing**, **discorvery and load balancing**, **storage orchastration**, **secret management**, and **rolling updates**, which help to ensure that the applications running on the cluster are always available and up-to-date.
+#. Kubernetes also provides a set of built-in features such as **self-healing**, **discovery and load balancing**, **storage orchestration**, **secret management**, and **rolling updates**, which help to ensure that the applications running on the cluster are always available and up-to-date.
 
 =====================
 How Kubernetes works?

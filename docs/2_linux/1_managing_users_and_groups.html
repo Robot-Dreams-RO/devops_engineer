@@ -117,7 +117,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unittesting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unit Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">TODO</a></li>
 </ul>
@@ -234,11 +234,11 @@
 <section id="etc-shadow">
 <h2>/etc/shadow<a class="headerlink" href="#etc-shadow" title="Link to this heading"></a></h2>
 <p>This file stores the encrypted user’s password along with other info.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user_name:encrypted_passwords:lastchg_days:min_days:max_days:warn_days:inactive_days:disabled_days:
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>user_name:encrypted_passwords:last_changed_days:min_days:max_days:warn_days:inactive_days:disabled_days:
 
 <span class="c1"># user_name: `/^[a-z0-9-*]+$/`. Should not use uppercase letters or special characters</span>
 <span class="c1"># encrypted_passwords: May be empty. An exclamation mark shows that the user is locked</span>
-<span class="c1"># lastchg_days: number of days in epoch time since the password was changed</span>
+<span class="c1"># last_changed_days: number of days in epoch time since the password was changed</span>
 <span class="c1"># min_days: minimum number of days that must pass before the user can change the passwords</span>
 <span class="c1"># max_days: maximum number of days before the user gets password expiration warnings</span>
 <span class="c1"># warn_days**: number of days for which the user gets password expiration warnings</span>
@@ -387,7 +387,7 @@ groupdel<span class="w"> </span>privileged_user
 </div></blockquote>
 </li>
 <li><p>set a password for alice</p></li>
-<li><p>create a group named <em>datamanagement</em> with GID 9001</p></li>
+<li><p>create a group named <em>dataManagement</em> with GID 9001</p></li>
 <li><p>add <em>alice</em> and <em>bob</em> to the <em>billing</em> group</p></li>
 <li><p>configure password aging for <em>alice</em> with <strong>chage</strong> command:</p>
 <blockquote>
@@ -400,7 +400,7 @@ groupdel<span class="w"> </span>privileged_user
 <li><p>lock the <em>minecraft</em> account and password</p></li>
 <li><p>remove the <em>minecraft</em> account and home directory</p></li>
 <li><p>remove the <em>minecraft</em> group</p></li>
-<li><p>remove the <em>datamanagement</em> and <em>billing</em> group</p></li>
+<li><p>remove the <em>dataManagement</em> and <em>billing</em> group</p></li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -415,13 +415,13 @@ groupdel<span class="w"> </span>privileged_user
 <li><p><code class="docutils literal notranslate"><span class="pre">useradd</span> <span class="pre">john</span> <span class="pre">-c</span> <span class="pre">&quot;John</span> <span class="pre">Doe&quot;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useradd</span> <span class="pre">minecraft</span> <span class="pre">-u</span> <span class="pre">9990</span> <span class="pre">-g</span> <span class="pre">9990</span> <span class="pre">-d</span> <span class="pre">/usr/games</span> <span class="pre">-m</span> <span class="pre">-s</span> <span class="pre">/bin/false</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">passwd</span> <span class="pre">alice</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groupadd</span> <span class="pre">datamanagement</span> <span class="pre">-g</span> <span class="pre">9001</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupadd</span> <span class="pre">dataManagement</span> <span class="pre">-g</span> <span class="pre">9001</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">usermod</span> <span class="pre">-aG</span> <span class="pre">billing</span> <span class="pre">alice</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">chage</span> <span class="pre">-M</span> <span class="pre">31</span> <span class="pre">-W</span> <span class="pre">7</span> <span class="pre">alice</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">passwd</span> <span class="pre">-l</span> <span class="pre">minecraft</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">userdel</span> <span class="pre">-r</span> <span class="pre">minecraft</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">groupdel</span> <span class="pre">minecraft</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groupdel</span> <span class="pre">billing</span> <span class="pre">&amp;&amp;</span> <span class="pre">groupdel</span> <span class="pre">datamanagement</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupdel</span> <span class="pre">billing</span> <span class="pre">&amp;&amp;</span> <span class="pre">groupdel</span> <span class="pre">dataManagement</span></code></p></li>
 </ol>
 </section>
 </section>

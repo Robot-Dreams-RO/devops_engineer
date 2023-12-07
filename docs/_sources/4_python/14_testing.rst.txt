@@ -1,6 +1,6 @@
-############################
-4.14 Testing and Unittesting
-############################
+#############################
+4.14 Testing and Unit Testing
+#############################
 
 .. image:: ../diagrams/testing_pyramid.png
   :width: 1500 px

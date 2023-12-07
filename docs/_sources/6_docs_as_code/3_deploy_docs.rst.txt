@@ -2,9 +2,9 @@
 6.3 Deploy Documentation
 ########################
 
-1. Create a new project named ``docs-as-code`` into your userspace (the link will be ``https://github.com/YOURUSERNAME/docs-as-code``)
+1. Create a new project named ``docs-as-code`` into your user space (the link will be ``https://github.com/YOUR_USERNAME/docs-as-code``)
 
-2. Clone to project locally using ``git clone git@github.com:YOURUSERNAME/docs-as-code.git``
+2. Clone to project locally using ``git clone git@github.com:YOUR_USERNAME/docs-as-code.git``
 
 3. Change the directory to the newly cloned project ``cd docs-as-code``
 

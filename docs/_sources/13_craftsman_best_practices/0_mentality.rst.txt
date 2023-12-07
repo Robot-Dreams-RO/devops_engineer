@@ -30,11 +30,11 @@ There is no "my code". There is no such thing as I in a team. Keep your eyes and
 
 Learning never stops. Always be on the lookout to learn something (like this awesome course), to deepen your knowledge. It can be anything. A new project at work, a new language, a book, a course. The important thing is to set specific time daily to study. Mine is 10-11 am
 
-================
-4. Be a boyscout
-================
+=================
+4. Be a Boy Scout
+=================
 
-"Leave the place better than you've found it". Whenever you work on a piece of code, if you see potential for improvement, go for it. While large projects bring about immense improvement, many small changes can optimise a system as well
+"Leave the place better than you've found it". Whenever you work on a piece of code, if you see potential for improvement, go for it. While large projects bring about immense improvement, many small changes can optimize a system as well
 
 ============================
 5. Constantly study language

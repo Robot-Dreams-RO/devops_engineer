@@ -117,7 +117,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unittesting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unit Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">TODO</a></li>
 </ul>
@@ -245,7 +245,7 @@
 </section>
 <section id="why-to-use-container-orchestrators">
 <h2>Why to use Container Orchestrators?<a class="headerlink" href="#why-to-use-container-orchestrators" title="Link to this heading"></a></h2>
-<p>While we can manully manage containers, it’s not a scalable solution. Container orchestrators are designed to automate the deployment, scaling, and management of containerized applications. They provide a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.</p>
+<p>While we can manually manage containers, it’s not a scalable solution. Container orchestrators are designed to automate the deployment, scaling, and management of containerized applications. They provide a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.</p>
 <p>Container orchestrators are also designed to be highly scalable, allowing organizations to manage large numbers of containers across multiple hosts. They provide a unified view of the cluster and ensure that the desired state of the cluster is maintained, while the worker node components provide the computational resources necessary to run containers and Pods.</p>
 <p>Container orchestrators can:</p>
 <ol class="arabic simple">
@@ -283,7 +283,7 @@ things.</p>
 The key is that although each of the three is distinct, they are all connected.</p>
 <p>Actually, several of the individuals responsible for creating Borg and Omega were and are currently active with Kubernetes. Therefore, even though Kubernetes was created from scratch, it makes extensive use of the knowledge gained through Borg and Omega at Google.</p>
 <p>2014 saw the donation of the open-source project Kubernetes to the CNCF. Version 1.0 arrived back in July 2015, and as of this writing, we are well into version 1.20 and averaging three major releases per year. It is released under the Apache 2.0 license.</p>
-<p>The name “Kubernetes” (koo-ber-net-eez) comes from the Greek word meaning Helmsman the person who steers a ship. This theme is reflected in the logo, which isthe wheel (helm control) of a ship.</p>
+<p>The name “Kubernetes” (koo-ber-net-eez) comes from the Greek word meaning Helmsman the person who steers a ship. This theme is reflected in the logo, which is the wheel (helm control) of a ship.</p>
 <a class="reference internal image-reference" href="../_images/kubernetes.png"><img alt="K8s Logo" src="../_images/kubernetes.png" style="width: 400px;" /></a>
 <p>Kubernetes was originally going to be called <code class="docutils literal notranslate"><span class="pre">Seven</span> <span class="pre">of</span> <span class="pre">Nine</span></code> by some of the developers. If you are familiar with Star Trek, you will be aware that <code class="docutils literal notranslate"><span class="pre">Seven</span> <span class="pre">of</span> <span class="pre">Nine</span></code> is a Borg drone that the crew of the USS Voyager, led by Captain Kathryn Janeway, managed to save. Sadly, it couldn’t have been dubbed Seven of Nine due to copyright constraints. The designers subtly referenced Seven of Nine by giving the emblem seven spokes.
 Before continuing, just one more thing regarding the name. It is frequently abbreviated to “K8s” (pronounced “kates”). The eight characters between the letters “K” and “s” are replaced with the number 8.</p>
@@ -294,7 +294,7 @@ Before continuing, just one more thing regarding the name. It is frequently abbr
 <p>From high up in the sky, Kubernetes is</p>
 <ul class="simple">
 <li><p>a cluster to run applications on (replaces the VMs and physical servers)</p></li>
-<li><p>an orchastrator to manage the cluster (replaces the hypervisor)</p></li>
+<li><p>an orchestrator to manage the cluster (replaces the hypervisor)</p></li>
 </ul>
 <section id="kubernetes-as-a-cluster">
 <h3>Kubernetes as a cluster<a class="headerlink" href="#kubernetes-as-a-cluster" title="Link to this heading"></a></h3>
@@ -302,13 +302,13 @@ Before continuing, just one more thing regarding the name. It is frequently abbr
 <p>The control plane manages the cluster and the worker nodes. It is responsible for maintaining the desired state of the cluster, such as which applications are running and where they are running. It also handles scheduling, scaling, and updating applications.</p>
 <p>The data plane is where the applications run. It consists of one or more worker nodes, which are responsible for running the applications and providing the computational resources necessary to run them.</p>
 </section>
-<section id="kubernetes-as-an-orchastrator">
-<h3>Kubernetes as an orchastrator<a class="headerlink" href="#kubernetes-as-an-orchastrator" title="Link to this heading"></a></h3>
+<section id="kubernetes-as-an-orchestrator">
+<h3>Kubernetes as an orchestrator<a class="headerlink" href="#kubernetes-as-an-orchestrator" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>An orchastrator is a tool that automates the deployment, scaling, and management of  applications.</p>
+<p>An orchestrator is a tool that automates the deployment, scaling, and management of  applications.</p>
 </div>
-<p>An Kubernetes orchastrator is a tool that automates the deployment, scaling, and management of containerized applications. It provides a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.</p>
+<p>An Kubernetes orchestrator is a tool that automates the deployment, scaling, and management of containerized applications. It provides a set of abstractions and built-in features for defining, deploying, and scaling containerized applications, as well as a set of APIs for interacting with the cluster.</p>
 </section>
 </section>
 <section id="description">
@@ -319,7 +319,7 @@ Before continuing, just one more thing regarding the name. It is frequently abbr
 <li><p><strong>Replication Controllers</strong>: Responsible for ensuring that a specified number of replicas of a pod are running at any given time.</p></li>
 <li><p><strong>Service</strong>: An abstraction that defines a logical set of pods and a policy by which to access them.</p></li>
 <li><p><strong>Deployments</strong>: An abstraction that provides declarative updates for Pods and Replication Controllers.</p></li>
-<li><p>Kubernetes also provides a set of built-in features such as <strong>self-healing</strong>, <strong>discorvery and load balancing</strong>, <strong>storage orchastration</strong>, <strong>secret management</strong>, and <strong>rolling updates</strong>, which help to ensure that the applications running on the cluster are always available and up-to-date.</p></li>
+<li><p>Kubernetes also provides a set of built-in features such as <strong>self-healing</strong>, <strong>discovery and load balancing</strong>, <strong>storage orchestration</strong>, <strong>secret management</strong>, and <strong>rolling updates</strong>, which help to ensure that the applications running on the cluster are always available and up-to-date.</p></li>
 </ol>
 </section>
 <section id="how-kubernetes-works">

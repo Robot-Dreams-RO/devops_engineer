@@ -44,11 +44,11 @@ This file stores the encrypted user's password along with other info.
 
 .. code-block:: bash
 
-    user_name:encrypted_passwords:lastchg_days:min_days:max_days:warn_days:inactive_days:disabled_days:
+    user_name:encrypted_passwords:last_changed_days:min_days:max_days:warn_days:inactive_days:disabled_days:
 
     # user_name: `/^[a-z0-9-*]+$/`. Should not use uppercase letters or special characters
     # encrypted_passwords: May be empty. An exclamation mark shows that the user is locked
-    # lastchg_days: number of days in epoch time since the password was changed
+    # last_changed_days: number of days in epoch time since the password was changed
     # min_days: minimum number of days that must pass before the user can change the passwords
     # max_days: maximum number of days before the user gets password expiration warnings
     # warn_days**: number of days for which the user gets password expiration warnings
@@ -212,7 +212,7 @@ TODO
     f. shell set to */bin/false*
 
 5. set a password for alice
-6. create a group named *datamanagement* with GID 9001
+6. create a group named *dataManagement* with GID 9001
 7. add *alice* and *bob* to the *billing* group
 8. configure password aging for *alice* with **chage** command:
     
@@ -222,7 +222,7 @@ TODO
 9. lock the *minecraft* account and password 
 10. remove the *minecraft* account and home directory
 11. remove the *minecraft* group
-12. remove the *datamanagement* and *billing* group
+12. remove the *dataManagement* and *billing* group
 
 .. warning::
 
@@ -237,10 +237,10 @@ Solution to TODOs
 3. ``useradd john -c "John Doe"``
 4. ``useradd minecraft -u 9990 -g 9990 -d /usr/games -m -s /bin/false``
 5. ``passwd alice``
-6. ``groupadd datamanagement -g 9001``
+6. ``groupadd dataManagement -g 9001``
 7. ``usermod -aG billing alice``
 8. ``chage -M 31 -W 7 alice``
 9. ``passwd -l minecraft``
 10. ``userdel -r minecraft``
 11. ``groupdel minecraft``
-12. ``groupdel billing && groupdel datamanagement``
+12. ``groupdel billing && groupdel dataManagement``

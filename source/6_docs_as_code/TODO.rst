@@ -2,7 +2,7 @@
 TODO
 ####
 
-1. Create a new project in your userspace with documentation for a new language. Language examples: ``go``, ``kotlin``, ``scala``, ``rust``, ``groovy``, ``ruby``
+1. Create a new project in your user space with documentation for a new language. Language examples: ``go``, ``kotlin``, ``scala``, ``rust``, ``groovy``, ``ruby``
 
 2. Setup the DocOps approach using ``sphinx``
 

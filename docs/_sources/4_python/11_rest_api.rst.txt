@@ -45,7 +45,7 @@ Problems
 
 7. **Dependency on External Services**: If the API service is down, so is the part of your application that relies on it.
 
-    **Solution**: aImplement a fallback mechanism or caching to provide limited functionality even when the API is unavilable.
+    **Solution**: aImplement a fallback mechanism or caching to provide limited functionality even when the API is unavailable.
 
 ===============================================
 Libraries for Working with REST APIs in Python:

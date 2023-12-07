@@ -7,7 +7,7 @@ Microservices vs Monolithic Architecture
 ========================================
 
 .. image:: ../diagrams/microserviceVSmonolith.png
-  :width: 1500 px
+  :width: 1900 px
   :alt: microservice VS monolith
 
 ++++++++++++++++++++++
@@ -55,15 +55,15 @@ TODO
 
 We have this monolithic application, and we want to move to microservices. How do we do it?
 
-.. image:: ../diagrams/decomponsing.png
-  :alt: Decomponsing
+.. image:: ../diagrams/decomposing.png
+  :alt: Decomposing
   :width: 500 px
 
 +++++++++++++++++++++++
 Problems to think about
 +++++++++++++++++++++++
 
-- Christmas is comming and we need to scale up our application
+- Christmas is coming and we need to scale up our application
 - Company decided that they want to outsource marketing to another company
 - We want to start allowing users to pay in 12 installments and we need to get a banking license, we need to share date with regulators
 - We want to deliver a mobile application

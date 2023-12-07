@@ -95,7 +95,7 @@ Everything you learned about functions also applies to methods; the only differe
 
 ``__init__`` is a special method called a constructor that Python calls when you create a new instance of this class. 
 
-Other special methods include ``__str__``, ``__eq__``, and ``__len__``. Ycou can override these methods to customize how they work with your objets.
+Other special methods include ``__str__``, ``__eq__``, and ``__len__``. You can override these methods to customize how they work with your objects.
 
 ================
 Buzzwords of OOP

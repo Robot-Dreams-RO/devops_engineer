@@ -16,25 +16,25 @@
 "Explain Like I'm 5" (ELI5) of SDLC
 ===================================
 
-.. image:: ../diagrams/treehouse.png
+.. image:: ../diagrams/tree_house.png
   :width: 1000
   :alt: Build an application in the cloud
 
-Imagine you want to build a treehouse. Here are the stages you might go through, similar to the stages in software lifecycle management:
+Imagine you want to build a tree house. Here are the stages you might go through, similar to the stages in software lifecycle management:
 
-    #. **Requirements Analysis**: You talk to your friends about what they want in the treehouse - a rope ladder, a window, or maybe even a slide. You figure out what you need to make it the best treehouse for everyone.
+    #. **Requirements Analysis**: You talk to your friends about what they want in the tree house - a rope ladder, a window, or maybe even a slide. You figure out what you need to make it the best tree house for everyone.
 
-    #. **Design**: Now you sketch out what the treehouse is going to look like and where all the parts will go.
+    #. **Design**: Now you sketch out what the tree house is going to look like and where all the parts will go.
 
-    #. **Development**: This is when you get out your tools and start building the treehouse according to your design.
+    #. **Development**: This is when you get out your tools and start building the tree house according to your design.
 
     #. **Testing**: Before you let your friends in, you need to make sure it's safe. You check if the ladder is sturdy, the floor doesn't creak, and the slide works. If you find anything wrong, you fix it.
 
-    #. **Deployment**: Finally, the treehouse is ready. You and your friends start using it for your club meetings or just to hang out.
+    #. **Deployment**: Finally, the tree house is ready. You and your friends start using it for your club meetings or just to hang out.
 
     #. **Maintenance**: Over time, you might need to fix a loose board or paint a wall. You also listen to your friends if they have any cool new ideas, like adding a flag or a secret trapdoor, and then you add those.
 
-    #. **Retirement**: One day, when you guys are older and don't use the treehouse anymore, you might decide to take it down or maybe remodel it for someone else to use.
+    #. **Retirement**: One day, when you guys are older and don't use the tree house anymore, you might decide to take it down or maybe remodel it for someone else to use.
 
 ===============================
 Software Development Life Cycle

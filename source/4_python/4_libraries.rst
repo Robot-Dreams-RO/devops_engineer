@@ -96,7 +96,7 @@ How do we know if a library is trusted:
     
 How to check:
 
-    - check the github page: how many commiters and mainters, how many issues and PR, how many updates, when was last commit
+    - check the github page: how many committees and maintainers, how many issues and PR, how many updates, when was last commit
     - check a tool like https://debricked.com/select/
 
 =============================

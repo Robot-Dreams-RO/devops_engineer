@@ -7,7 +7,7 @@ Task 1
 ======
 
 Create documentation for a new language:
-    #. Create a new project ``learn_languagename`` example ``learn_go`` in your userspace
+    #. Create a new project ``learn_language_name`` example ``learn_go`` in your user space
     #. Add a new file README.md
     #. Update file with information:
 

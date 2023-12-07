@@ -147,7 +147,7 @@ Answers
 **Explanation:**
 
     a. **Containers are more secure than virtual machines.** - Are isolated from the host system and other containers, if you get root access to a ephemere container it doesn't give you root access on the VM
-    b. **Containers are more portable than virtual machines.** - Have all the dependecies in the container
+    b. **Containers are more portable than virtual machines.** - Have all the dependencies in the container
     c. **Containers are more lightweight than virtual machines.** - The container OS has a smaller footprint and less features.
     d. **Containers are more scalable than virtual machines.** - Due to orchestration tools like Kubernetes, Docker Swarm you can easily scale your containers.
 
@@ -158,7 +158,7 @@ Answers
     
     a. **Docker** - Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
     b. **Podman** - Podman is a daemonless container engine for developing, managing, and running OCI Containers on your Linux System. Containers can either be run as root or in rootless mode. Simply put: alias docker=podman.
-    c. **LXC** - LXC is a userspace interface for the Linux kernel containment features. Through a powerful API and simple tools, it lets Linux users easily create and manage system or application containers.
+    c. **LXC** - LXC is a user space interface for the Linux kernel containment features. Through a powerful API and simple tools, it lets Linux users easily create and manage system or application containers.
     d. **rkt** - rkt is a pod-native container engine for Linux. It is composable, secure, and built on standards.
     e. **LXD** - LXD is a next generation system container manager. It offers a user experience similar to virtual machines but using Linux containers instead. It's image based with pre-made images available for a wide number of Linux distributions and is built around a very powerful, yet pretty simple, REST API.
 

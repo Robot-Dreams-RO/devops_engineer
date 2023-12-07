@@ -79,7 +79,7 @@ Creating, adding permission and opening the file
 Task 1
 ======
 
-Create a script ``wikipython`` that reads a Wikipedia page - https://en.wikipedia.org/wiki/Python_(genus) (use ``curl`` command)
+Create a script ``wikiPython`` that reads a Wikipedia page - https://en.wikipedia.org/wiki/Python_(genus) (use ``curl`` command)
 
     #. extracts Species elements - python name (what kind of pythons are there) - use ``grep``
     #. save the output the to a new file 

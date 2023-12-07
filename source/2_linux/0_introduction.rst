@@ -36,7 +36,7 @@ If you don't understand what a command does, check the manual page first or help
 
 .. note::
 
-    When you don't know what do to, google the problem, if you don't know what to seach, read the documentation :).
+    When you don't know what do to, google the problem, if you don't know what to search, read the documentation :).
 
 =======================
 Why are we using Linux?

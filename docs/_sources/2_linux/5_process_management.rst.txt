@@ -91,7 +91,7 @@ Process Cheat sheet
 	command &
 
 	# detach command from tty and run it in the background
-	# send stdout and sterr to the cmd.log file
+	# send stdout and stderr to the cmd.log file
 	nohup command 2>&1 > cmd.log &
 
 	# allows you to execute a command or program periodically and also shows your output on the screen which means that you will be able to see the program output in time. By default, watch re-runs the command/program every 2 seconds. The interval can be easily changed to meet your requirements.
