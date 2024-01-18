@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9.3 Creating a Deployment &mdash; DevOps 1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/max_width.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.4 ArgoCD" href="4_argocd.html" />
+    <link rel="prev" title="9.2 Helm charts" href="2_helm.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DevOps
+              <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Curriculum</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../00_curriculum/curriculum.html">Class Curriculum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to DevOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/0_foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/00_preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/1_devops.html">0.1 Introduction to DevOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/2_roadmap.html">0.2 DevOps Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/3_life_cycle.html">0.3 Software Development Lifecycle Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/4_scrum_agile.html">0.4 SCRUM Agile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/TODO.html">0.5 TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/0_computer_network.html">1.0 Computer and Network Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/1_how_code_works.html">1.1 How code works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/2_environments.html">1.2 Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/3_microservices.html">1.3 Microservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/4_introduction_to_linux.html">1.4 Introduction to Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/5_getting_around.html">1.5 Getting around</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/6_setup_infra.html">1.7 Setup developing infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/0_introduction.html">2.0 Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/1_managing_users_and_groups.html">2.1 Managing Users and Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/2_file_management.html">2.2 File management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/3_managing_software.html">2.3 Managing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/4_service_management.html">2.4 Service Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/5_process_management.html">2.5 Process management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/6_system_logging.html">2.6 System logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/7_linux_file_systems.html">2.7 Linux File Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/8_terminal_tuning.html">2.8 Terminal tuning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/9_networking.html">2.9 Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html#solutions-to-todos">Solutions to TODOs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/0_introduction.html">3.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/1_getting_started.html">3.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/2_data_structures_conditions.html">3.2 Data structures and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/3_to_script_or_to_alias.html">3.3 Working with aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/4_shell_style_guide.html">3.4 Shell Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/5_makefile.html">3.5 Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/6_utilities.html">3.6 Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/0_introduction.html">4.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/1_installation.html">4.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/2_data_structures.html">4.2 Variables and Data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/3_conditions_loops.html">4.3 Loops and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/4_libraries.html">4.4 Libraries and modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/5_functions.html">4.5 Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/6_classes.html">4.6 Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/7_yourfirstcli.html">4.7 Your first CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/8_documentation.html">4.8 Documenting your code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/9_rules.html">4.9 Python Language Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/10_files.html">4.10 Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unit Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/0_introduction.html">5.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/1_working_togheter.html">5.1 Working together on Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/2_bestpractices.html">5.1 Best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DocOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/0_introduction.html">6.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/1_installation.html">6.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/2_sphinx.html">6.2 What is Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/3_deploy_docs.html">6.3 Deploy Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pipelines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/0_introduction.html">7.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/1_getting_started.html">7.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/2_python_cli.html">7.2 Python CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/3_github.html">7.3 GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/4_jenkins_introduction.html">7.4 Introduction to Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/5_jenkins_architecture.html">7.5 Jenkins Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/6_jenkins_getting_started.html">7.6 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/9_best_practices.html">7.7 Continuous Integration Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Containers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/0_introduction.html">8.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/1_installation.html">8.1 Windows installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/2_helloworld.html">8.2 Running “Hello World”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/3_workingwithdocker.html">8.3 Working with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/4_usingdockerfile.html">8.4 Using Dockerfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/5_management.html">8.5 Container management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/6_orchestration.html">8.6 Container orchestration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/7_test.html">8.7 Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kubernetes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="00_abstract.html">9.00 Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0_introduction.html">9.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_gettingstarted.html">9.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_helm.html">9.2  Helm charts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9.3 Creating a Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_argocd.html">9.4 ArgoCD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_swarm_vs_k8s.html">9.5 Docker Swarm vs Kubernetes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../12_project/introduction.html">12.0 Project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Craftsman best practices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/0_mentality.html">13.0 Mentality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/1_implementation.html">13.1 Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/2_tools.html">13.2 Tools</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DevOps</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">9.3 Creating a Deployment</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/9_kubernetes/3_deployments.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-a-deployment">
+<h1>9.3 Creating a Deployment<a class="headerlink" href="#creating-a-deployment" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="../_images/KubernetesDeployment.png"><img alt="K8s Deployment" src="../_images/KubernetesDeployment.png" style="width: 500px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A Kubernetes Deployment is a declarative way to manage the desired state of a group of containers. A Deployment defines the desired state of your application, including the number of replicas you want to run and the configuration of the containers.</p>
+</div>
+<p>The Deployment ensures that the desired state is always maintained, even if worker nodes in the cluster fail. If a node fails, the Deployment automatically replaces the containers running on that node with new containers on another node.</p>
+<p>A Deployment also provides other benefits, such as rolling updates and rollbacks. A rolling update allows you to update your application without downtime, by gradually replacing old replicas with new ones. If there is an issue with the update, you can easily roll back to the previous version of your application.</p>
+<p>To create a Deployment, you need to provide a YAML file that defines the desired state of your application, including the number of replicas, the image for the containers, and the desired state of the containers. You can then use the Kubernetes command line interface (CLI) to create the Deployment.</p>
+<p>A Kubernetes Deployment is a powerful tool that provides a simple and reliable way to manage the desired state of your applications in a cluster, allowing you to easily scale, update, and manage your applications.</p>
+<p>Create a new file <code class="docutils literal notranslate"><span class="pre">nginx-deployment.yaml</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apiVersion:<span class="w"> </span>apps/v1
+kind:<span class="w"> </span>Deployment
+metadata:
+<span class="w">    </span>name:<span class="w"> </span>nginx-deployment
+<span class="w">    </span>namespace:<span class="w"> </span>nginx
+<span class="w">    </span>labels:
+<span class="w">        </span>app:<span class="w"> </span>nginx
+spec:
+<span class="w">    </span>replicas:<span class="w"> </span><span class="m">3</span>
+<span class="w">    </span>selector:
+<span class="w">        </span>matchLabels:
+<span class="w">            </span>app:<span class="w"> </span>nginx
+<span class="w">    </span>template:
+<span class="w">        </span>metadata:
+<span class="w">            </span>labels:
+<span class="w">                </span>app:<span class="w"> </span>nginx
+<span class="w">        </span>spec:
+<span class="w">            </span>containers:
+<span class="w">            </span>-<span class="w"> </span>name:<span class="w"> </span>nginx
+<span class="w">              </span>image:<span class="w"> </span>nginx:1.14.2
+<span class="w">              </span>ports:
+<span class="w">              </span>-<span class="w"> </span>containerPort:<span class="w"> </span><span class="m">80</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>nginx-deployment.yaml
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>linux_user@linux_machine:~/sandbox<span class="w"> </span>$<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>deployments
+NAME<span class="w">               </span>READY<span class="w">   </span>UP-TO-DATE<span class="w">   </span>AVAILABLE<span class="w">   </span>AGE
+nginx-deployment<span class="w">   </span><span class="m">3</span>/3<span class="w">     </span><span class="m">3</span><span class="w">            </span><span class="m">3</span><span class="w">           </span>4m14s
+</pre></div>
+</div>
+<p>Find out more:
+.. code-block:: bash</p>
+<blockquote>
+<div><p>kubectl describe deployments</p>
+</div></blockquote>
+<p>Updating running deployments</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span><span class="nb">set</span><span class="w"> </span>image<span class="w"> </span>deployment/nginx-deployment<span class="w"> </span><span class="nv">nginx</span><span class="o">=</span>nginx:1.16.1
+<span class="c1"># or</span>
+kubectl<span class="w"> </span>edit<span class="w"> </span>deployment/nginx-deployment
+
+<span class="c1"># Roll the update</span>
+kubectl<span class="w"> </span>rollout<span class="w"> </span>status<span class="w"> </span>deployment/nginx-deployment
+</pre></div>
+</div>
+<section id="what-means-everything">
+<h2>What means everything?<a class="headerlink" href="#what-means-everything" title="Link to this heading"></a></h2>
+<p>A Kubernetes Deployment is a resource object in Kubernetes that provides a declarative way to manage and update applications. It ensures that a specified number of replicas of your application are running and handles updates and rollbacks of your application with minimal disruption. Here’s an explanation of the key components and structure of a Kubernetes Deployment:</p>
+<section id="apiversion">
+<h3>apiVersion<a class="headerlink" href="#apiversion" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apiVersion:<span class="w"> </span>apps/v1
+</pre></div>
+</div>
+<p>apiVersion is the version of the Kubernetes API that you’re using to create this object. This is required and should be the first line in the YAML file.</p>
+</section>
+<section id="kind">
+<h3>kind<a class="headerlink" href="#kind" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kind:<span class="w"> </span>Deployment
+</pre></div>
+</div>
+<p>kind is the type of object you want to create, there are:</p>
+<ol class="arabic simple">
+<li><p><strong>Pod</strong>: <code class="docutils literal notranslate"><span class="pre">kind:</span> <span class="pre">Pod</span></code> indicates that the manifest defines a Pod, which is the smallest deployable unit in Kubernetes. Pods can contain one or more containers that share the same network namespace.</p></li>
+<li><p><strong>Service</strong>: <code class="docutils literal notranslate"><span class="pre">kind:</span> <span class="pre">Service</span></code> indicates that the manifest defines a Service, which provides networking and load balancing to a set of Pods. Services are used to expose applications within or outside the cluster.</p></li>
+<li><p><strong>Deployment</strong>: <code class="docutils literal notranslate"><span class="pre">kind:</span> <span class="pre">Deployment</span></code> indicates that the manifest defines a Deployment resource, which is used to manage the deployment and scaling of Pods. Deployments are often used to ensure that a specified number of replica Pods are running.</p></li>
+<li><p><strong>ConfigMap</strong>: <code class="docutils literal notranslate"><span class="pre">kind:</span> <span class="pre">ConfigMap</span></code> represents a ConfigMap resource that holds configuration data in key-value pairs, which can be mounted into Pods as volumes or used as environment variables.</p></li>
+<li><p><strong>Secret</strong>: <code class="docutils literal notranslate"><span class="pre">kind:</span> <span class="pre">Secret</span></code> represents a Secret resource used to store sensitive information, such as passwords or API keys, securely within the cluster.</p></li>
+<li><p><strong>Namespace</strong>: <code class="docutils literal notranslate"><span class="pre">kind:</span> <span class="pre">Namespace</span></code> indicates the creation of a Namespace, which is a virtual cluster within a physical cluster, used to isolate and organize resources.</p></li>
+<li><p><strong>ServiceAccount</strong>: <code class="docutils literal notranslate"><span class="pre">kind:</span> <span class="pre">ServiceAccount</span></code> defines a ServiceAccount resource, which is used to grant permissions and access control to Pods in a cluster.</p></li>
+<li><p><strong>PersistentVolume</strong>: <code class="docutils literal notranslate"><span class="pre">kind:</span> <span class="pre">PersistentVolume</span></code> and PersistentVolumeClaim: <code class="docutils literal notranslate"><span class="pre">kind:</span> <span class="pre">PersistentVolumeClaim</span></code> are used to define storage-related resources for persistent storage.</p></li>
+<li><p><strong>Ingress</strong>: <code class="docutils literal notranslate"><span class="pre">kind:</span> <span class="pre">Ingress</span></code> represents an Ingress resource, used to configure external access to services within the cluster, typically for HTTP routing.</p></li>
+<li><p><strong>CustomResourceDefinition</strong> (CRD): <code class="docutils literal notranslate"><span class="pre">kind:</span> <span class="pre">CustomResourceDefinition</span></code> is used to define custom resource types in Kubernetes, allowing you to extend the Kubernetes API with your own custom resources.</p></li>
+</ol>
+</section>
+<section id="metadata">
+<h3>Metadata<a class="headerlink" href="#metadata" title="Link to this heading"></a></h3>
+<p>This section contains information about the Deployment itself, such as its name, labels, and annotations. Labels are used for selecting and grouping resources, while annotations are used to store non-identifying information.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>metadata:
+name:<span class="w"> </span>my-deployment
+labels:
+<span class="w">    </span>app:<span class="w"> </span>my-app
+annotations:
+<span class="w">    </span>description:<span class="w"> </span>This<span class="w"> </span>is<span class="w"> </span>my<span class="w"> </span>deployment.
+</pre></div>
+</div>
+</section>
+<section id="spec">
+<h3>Spec<a class="headerlink" href="#spec" title="Link to this heading"></a></h3>
+<p>The spec section defines the desired state of the Deployment. It includes:</p>
+<ol class="arabic simple">
+<li><p>Replicas: The number of desired replicas (instances) of the application to maintain. It ensures that the specified number of pods is running at all times.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spec:
+replicas:<span class="w"> </span><span class="m">3</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Selector: Specifies how to select the Pods controlled by this Deployment. Labels are used for selecting the Pods to be managed.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>selector:
+matchLabels:
+<span class="w">    </span>app:<span class="w"> </span>my-app
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Template: Defines the template for creating new Pods when scaling or updating the Deployment. It includes the container(s) definition, pod labels, and annotations.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>template:
+metadata:
+<span class="w">    </span>labels:
+<span class="w">    </span>app:<span class="w"> </span>my-app
+spec:
+<span class="w">    </span>containers:
+<span class="w">    </span>-<span class="w"> </span>name:<span class="w"> </span>my-container
+<span class="w">        </span>image:<span class="w"> </span>my-app-image:v1
+</pre></div>
+</div>
+</section>
+<section id="strategy">
+<h3>Strategy<a class="headerlink" href="#strategy" title="Link to this heading"></a></h3>
+<p>This section defines the update strategy for the Deployment, including how to roll out new versions of your application and how many Pods to replace at a time. The most common strategy is “RollingUpdate.”</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>strategy:
+type:<span class="w"> </span>RollingUpdate
+rollingUpdate:
+<span class="w">    </span>maxUnavailable:<span class="w"> </span><span class="m">1</span>
+<span class="w">    </span>maxSurge:<span class="w"> </span><span class="m">1</span>
+
+<span class="c1"># maxUnavailable: Specifies the maximum number of Pods that can be unavailable during an update.</span>
+<span class="c1"># maxSurge: Specifies the maximum number of new Pods that can be created during an update.</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>MinReadySeconds: This option specifies the minimum number of seconds a newly created Pod must be ready before considering it available.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>minReadySeconds:<span class="w"> </span><span class="m">5</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Paused: This field allows you to pause and resume the deployment of new updates.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>paused:<span class="w"> </span><span class="nb">false</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>ProgressDeadlineSeconds: It specifies the maximum time in seconds for the deployment to make progress. If progress is not made within this time frame, the deployment is considered failed.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>progressDeadlineSeconds:<span class="w"> </span><span class="m">600</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Revision History Limit: Defines the number of old ReplicaSets to retain. This can be useful for rolling back to a previous version.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>revisionHistoryLimit:<span class="w"> </span><span class="m">10</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Status: The status section is not specified in the Deployment manifest but is automatically generated by Kubernetes. It provides information about the current state of the Deployment, such as the number of desired replicas, available replicas, and conditions.</p></li>
+</ol>
+<p>Here’s a complete example of a Kubernetes Deployment YAML manifest:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apiVersion:<span class="w"> </span>apps/v1
+kind:<span class="w"> </span>Deployment
+metadata:
+<span class="w">    </span>name:<span class="w"> </span>my-deployment<span class="w">                    </span><span class="c1"># Name of the Deployment</span>
+<span class="w">    </span>labels:
+<span class="w">        </span>app:<span class="w"> </span>my-app<span class="w">                         </span><span class="c1"># Labels for identifying the Deployment</span>
+<span class="w">    </span>annotations:
+<span class="w">        </span>description:<span class="w"> </span>This<span class="w"> </span>is<span class="w"> </span>my<span class="w"> </span>deployment.<span class="w"> </span><span class="c1"># Annotations for additional metadata</span>
+spec:
+<span class="w">    </span>replicas:<span class="w"> </span><span class="m">3</span><span class="w">                           </span><span class="c1"># Number of desired replica Pods</span>
+<span class="w">    </span>selector:
+<span class="w">        </span>matchLabels:
+<span class="w">        </span>app:<span class="w"> </span>my-app<span class="w">                       </span><span class="c1"># Select Pods with this label</span>
+<span class="w">    </span>template:
+<span class="w">        </span>metadata:
+<span class="w">        </span>labels:
+<span class="w">            </span>app:<span class="w"> </span>my-app<span class="w">                     </span><span class="c1"># Labels for Pods created by this template</span>
+<span class="w">        </span>annotations:
+<span class="w">            </span>app-version:<span class="w"> </span>v1.0.0<span class="w">             </span><span class="c1"># Annotations for additional metadata in Pods</span>
+<span class="w">        </span>spec:
+<span class="w">        </span>containers:
+<span class="w">            </span>-<span class="w"> </span>name:<span class="w"> </span>my-container<span class="w">            </span><span class="c1"># Container name</span>
+<span class="w">            </span>image:<span class="w"> </span>nginx:latest<span class="w">           </span><span class="c1"># Docker image to use</span>
+<span class="w">            </span>ports:
+<span class="w">                </span>-<span class="w"> </span>containerPort:<span class="w"> </span><span class="m">80</span><span class="w">         </span><span class="c1"># Port to expose in the container</span>
+<span class="w">            </span>env:
+<span class="w">                </span>-<span class="w"> </span>name:<span class="w"> </span>ENV_VAR1<span class="w">             </span><span class="c1"># Environment variable 1</span>
+<span class="w">                </span>value:<span class="w"> </span>value1
+<span class="w">                </span>-<span class="w"> </span>name:<span class="w"> </span>ENV_VAR2<span class="w">             </span><span class="c1"># Environment variable 2</span>
+<span class="w">                </span>value:<span class="w"> </span>value2
+<span class="w">            </span>resources:
+<span class="w">                </span>limits:
+<span class="w">                </span>cpu:<span class="w"> </span><span class="s2">&quot;0.5&quot;</span><span class="w">                </span><span class="c1"># CPU limit</span>
+<span class="w">                </span>memory:<span class="w"> </span><span class="s2">&quot;512Mi&quot;</span><span class="w">            </span><span class="c1"># Memory limit</span>
+<span class="w">                </span>requests:
+<span class="w">                </span>cpu:<span class="w"> </span><span class="s2">&quot;0.25&quot;</span><span class="w">               </span><span class="c1"># CPU request</span>
+<span class="w">                </span>memory:<span class="w"> </span><span class="s2">&quot;256Mi&quot;</span><span class="w">           </span><span class="c1"># Memory request</span>
+<span class="w">            </span>readinessProbe:
+<span class="w">                </span>httpGet:
+<span class="w">                </span>path:<span class="w"> </span>/healthcheck<span class="w">          </span><span class="c1"># Path to check for readiness</span>
+<span class="w">                </span>port:<span class="w"> </span><span class="m">80</span>
+<span class="w">                </span>initialDelaySeconds:<span class="w"> </span><span class="m">5</span><span class="w">      </span><span class="c1"># Delay before starting the probe</span>
+<span class="w">                </span>periodSeconds:<span class="w"> </span><span class="m">10</span><span class="w">           </span><span class="c1"># Interval between probes</span>
+<span class="w">            </span>livenessProbe:
+<span class="w">                </span>httpGet:
+<span class="w">                </span>path:<span class="w"> </span>/healthcheck<span class="w">          </span><span class="c1"># Path to check for liveness</span>
+<span class="w">                </span>port:<span class="w"> </span><span class="m">80</span>
+<span class="w">                </span>initialDelaySeconds:<span class="w"> </span><span class="m">15</span><span class="w">     </span><span class="c1"># Delay before starting the probe</span>
+<span class="w">                </span>periodSeconds:<span class="w"> </span><span class="m">20</span><span class="w">           </span><span class="c1"># Interval between probes</span>
+<span class="w">            </span>volumeMounts:
+<span class="w">                </span>-<span class="w"> </span>name:<span class="w"> </span>data-volume<span class="w">         </span><span class="c1"># Volume name</span>
+<span class="w">                </span>mountPath:<span class="w"> </span>/data<span class="w">          </span><span class="c1"># Mount path in the container</span>
+strategy:
+<span class="w">    </span>type:<span class="w"> </span>RollingUpdate<span class="w">                </span><span class="c1"># Deployment update strategy</span>
+<span class="w">    </span>rollingUpdate:
+<span class="w">    </span>maxUnavailable:<span class="w"> </span><span class="m">1</span><span class="w">               </span><span class="c1"># Maximum unavailable Pods during update</span>
+<span class="w">    </span>maxSurge:<span class="w"> </span><span class="m">1</span><span class="w">                     </span><span class="c1"># Maximum surge Pods during update</span>
+minReadySeconds:<span class="w"> </span><span class="m">5</span><span class="w">                  </span><span class="c1"># Minimum time a new Pod must be ready before success</span>
+paused:<span class="w"> </span><span class="nb">false</span><span class="w">                       </span><span class="c1"># Whether the Deployment is paused</span>
+progressDeadlineSeconds:<span class="w"> </span><span class="m">600</span><span class="w">        </span><span class="c1"># Maximum time for Deployment progress</span>
+revisionHistoryLimit:<span class="w"> </span><span class="m">10</span><span class="w">            </span><span class="c1"># Maximum number of old ReplicaSets to retain</span>
+templateGeneration:<span class="w"> </span><span class="m">1</span><span class="w">               </span><span class="c1"># Template generation number</span>
+progressDeadlineSeconds:<span class="w"> </span><span class="m">600</span><span class="w">        </span><span class="c1"># Maximum time for Deployment progress</span>
+</pre></div>
+</div>
+<p>This Deployment definition creates and manages three replicas of a containerized application named “my-app” using the specified image, and it ensures that the application remains available and updated according to the defined strategy.</p>
+</section>
+</section>
+<section id="container-registry-and-image-pulling">
+<h2>Container Registry and Image Pulling<a class="headerlink" href="#container-registry-and-image-pulling" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A container registry(DockerHub) is a repository for storing container images, such as Docker images. It allows you to store and distribute container images, which are used to create containers. A container registry is a key component of any container-based application, as it allows you to store and share container images with your team and the wider community.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>At home we can use DockerHub, but in a production environment we need to use a private registry like AWS ECR, Azure Container Registry, Google Container Registry, Harbor.</p>
+</div>
+<p>Why do we need private registries?</p>
+<ol class="arabic simple">
+<li><p>Security: Private registries allow you to control access to your container images, ensuring that only authorized users can access them. This is important for protecting sensitive information, such as passwords and API keys, which may be stored in your container images! There is a chance that people will do mistakes and push sensitive information to the repository, so it is better to have a private registry.</p></li>
+<li><p>Performance: Private registries allow you to store your container images closer to your production environment, which can improve performance and reduce latency.</p></li>
+<li><p>Compliance: Private registries allow you to comply with regulations and policies that require you to store your container images in a specific location or region.</p></li>
+<li><p>Cost: Private registries allow you to reduce costs by storing your container images in a more cost-effective location, such as a private cloud or on-premises data center.</p></li>
+<li><p>Reliability: Private registries allow you to store your container images in a more reliable location, such as a private cloud or on-premises data center, which can improve reliability and reduce downtime.</p></li>
+<li><p>Control: Private registries allow you to control access to your container images, ensuring that only authorized users can access them. This is important for protecting sensitive information, such as passwords and API keys, which may be stored in your container images.</p></li>
+<li><p>Flexibility: Private registries allow you to store your container images in a more flexible location, such as a private cloud or on-premises data center, which can improve flexibility and reduce downtime.</p></li>
+</ol>
+<section id="what-is-harbor">
+<h3>What is Harbor?<a class="headerlink" href="#what-is-harbor" title="Link to this heading"></a></h3>
+<p>Harbor offers an open-source solution for self-hosting a container image registry. It is a project within the Cloud Native Computing Foundation (CNCF). Harbor puts security and compliance at the center of its design, with features like access policies and roles, vulnerability scanning, and image signing.</p>
+<p>With minimal configuration, Harbor integrates with tools like the Docker command-line interface (CLI) and kubectl. From the Docker CLI, you can log in to your Harbor registry to securely push and pull images. Kubernetes tools can likewise securely authenticate with your Harbor registry and allow you to deploy containers directly from images stored in the registry.</p>
+</section>
+<section id="harbor-vs-docker-hub-why-use-harbor">
+<h3>Harbor vs Docker Hub: Why Use Harbor?<a class="headerlink" href="#harbor-vs-docker-hub-why-use-harbor" title="Link to this heading"></a></h3>
+<p>The most significant distinction between Harbor and Docker Hub is that Harbor can be self-hosted. By self-hosting Harbor, you gain a degree of control over things like compliance and access that you lack with a service like Docker Hub and other external cloud-hosted solutions.</p>
+<p>Harbor also comes with a suite of features that can enhance security and compliance. These features come with fine-grained controls for you to configure your registry.</p>
+<p>To help decide which registry to use, consider these trade-offs:</p>
+<p>Docker Hub provides an accessible registry with plenty of existing images to leverage. However, you lose a degree of control over the data and you do not get the same robust security and compliance features.</p>
+<p>Harbor centers on securing your images, with a suite of features to control access and roles and to mitigate vulnerabilities. Because it is self-hosted, Harbor has an initial setup and requires on-going system administration and maintenance.</p>
+</section>
+<section id="installation-on-kubernetes">
+<h3>Installation on Kubernetes<a class="headerlink" href="#installation-on-kubernetes" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Harbor can be installed on a single node or on a cluster of nodes</p>
+</div>
+<p>Easiest way to install Harbor on Kubernetes is to use Helm Charts. So you google for <code class="docutils literal notranslate"><span class="pre">harbor</span> <span class="pre">helm</span> <span class="pre">chart</span></code> and hopefully you will find the official Helm Chart for Harbor.</p>
+<p>In this case we will use the official Helm Chart for Harbor: <a class="reference external" href="https://github.com/goharbor/harbor-helm">https://github.com/goharbor/harbor-helm</a></p>
+<ol class="arabic simple">
+<li><p>Add Harbor Helm Chart Repository</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>harbor<span class="w"> </span>https://helm.goharbor.io
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Create a Namespace for Harbor</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>harbor
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Install Harbor using Helm</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>install<span class="w"> </span>harbor<span class="w"> </span>harbor/harbor<span class="w"> </span>--namespace<span class="w"> </span>harbor<span class="w"> </span>--set<span class="w"> </span><span class="nv">harborAdminPassword</span><span class="o">=</span>H@rb0rAdm
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Access Harbor</p></li>
+</ol>
+<p>After the installation is complete, Harbor should be accessible via a service on your Kubernetes cluster.
+By default most of the charts are running is ClusterIP, so you need to change the service type to NodePort or LoadBalancer or port-forward the service.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>service<span class="w"> </span>--namespace<span class="w"> </span>harbor
+
+kubectl<span class="w"> </span>port-forward<span class="w"> </span>svc/harbor-portal<span class="w"> </span>--namespace<span class="w"> </span>harbor<span class="w"> </span><span class="m">8080</span>:80
+</pre></div>
+</div>
+<p>Open a browser and go to <code class="docutils literal notranslate"><span class="pre">http://localhost:8080</span></code></p>
+<ol class="arabic simple" start="5">
+<li><p>Configure Harbor:</p></li>
+</ol>
+<p>Once you access Harbor, you will need to log in (credentials admin and password).
+After logging in, change the default password and configure Harbor according to your requirements.</p>
+<p>To remove the installation:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>uninstall<span class="w"> </span>harbor<span class="w"> </span>--namespace<span class="w"> </span>harbor
+kubectl<span class="w"> </span>delete<span class="w"> </span>ns<span class="w"> </span>harbor
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="2_helm.html" class="btn btn-neutral float-left" title="9.2 Helm charts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="4_argocd.html" class="btn btn-neutral float-right" title="9.4 ArgoCD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, skillab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

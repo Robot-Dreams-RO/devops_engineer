@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9.1 Getting started &mdash; DevOps 1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/max_width.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.2 Helm charts" href="2_helm.html" />
+    <link rel="prev" title="9.0 Introduction" href="0_introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DevOps
+              <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Curriculum</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../00_curriculum/curriculum.html">Class Curriculum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to DevOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/0_foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/00_preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/1_devops.html">0.1 Introduction to DevOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/2_roadmap.html">0.2 DevOps Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/3_life_cycle.html">0.3 Software Development Lifecycle Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/4_scrum_agile.html">0.4 SCRUM Agile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/TODO.html">0.5 TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/0_computer_network.html">1.0 Computer and Network Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/1_how_code_works.html">1.1 How code works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/2_environments.html">1.2 Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/3_microservices.html">1.3 Microservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/4_introduction_to_linux.html">1.4 Introduction to Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/5_getting_around.html">1.5 Getting around</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/6_setup_infra.html">1.7 Setup developing infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/0_introduction.html">2.0 Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/1_managing_users_and_groups.html">2.1 Managing Users and Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/2_file_management.html">2.2 File management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/3_managing_software.html">2.3 Managing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/4_service_management.html">2.4 Service Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/5_process_management.html">2.5 Process management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/6_system_logging.html">2.6 System logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/7_linux_file_systems.html">2.7 Linux File Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/8_terminal_tuning.html">2.8 Terminal tuning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/9_networking.html">2.9 Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html#solutions-to-todos">Solutions to TODOs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/0_introduction.html">3.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/1_getting_started.html">3.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/2_data_structures_conditions.html">3.2 Data structures and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/3_to_script_or_to_alias.html">3.3 Working with aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/4_shell_style_guide.html">3.4 Shell Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/5_makefile.html">3.5 Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/6_utilities.html">3.6 Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/0_introduction.html">4.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/1_installation.html">4.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/2_data_structures.html">4.2 Variables and Data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/3_conditions_loops.html">4.3 Loops and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/4_libraries.html">4.4 Libraries and modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/5_functions.html">4.5 Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/6_classes.html">4.6 Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/7_yourfirstcli.html">4.7 Your first CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/8_documentation.html">4.8 Documenting your code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/9_rules.html">4.9 Python Language Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/10_files.html">4.10 Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unit Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/0_introduction.html">5.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/1_working_togheter.html">5.1 Working together on Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/2_bestpractices.html">5.1 Best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DocOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/0_introduction.html">6.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/1_installation.html">6.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/2_sphinx.html">6.2 What is Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/3_deploy_docs.html">6.3 Deploy Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pipelines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/0_introduction.html">7.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/1_getting_started.html">7.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/2_python_cli.html">7.2 Python CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/3_github.html">7.3 GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/4_jenkins_introduction.html">7.4 Introduction to Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/5_jenkins_architecture.html">7.5 Jenkins Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/6_jenkins_getting_started.html">7.6 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/9_best_practices.html">7.7 Continuous Integration Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Containers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/0_introduction.html">8.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/1_installation.html">8.1 Windows installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/2_helloworld.html">8.2 Running “Hello World”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/3_workingwithdocker.html">8.3 Working with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/4_usingdockerfile.html">8.4 Using Dockerfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/5_management.html">8.5 Container management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/6_orchestration.html">8.6 Container orchestration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/7_test.html">8.7 Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kubernetes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="00_abstract.html">9.00 Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0_introduction.html">9.0 Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_helm.html">9.2  Helm charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_deployments.html">9.3 Creating a Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_argocd.html">9.4 ArgoCD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_swarm_vs_k8s.html">9.5 Docker Swarm vs Kubernetes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../12_project/introduction.html">12.0 Project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Craftsman best practices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/0_mentality.html">13.0 Mentality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/1_implementation.html">13.1 Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/2_tools.html">13.2 Tools</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DevOps</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">9.1 Getting started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/9_kubernetes/1_gettingstarted.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>9.1 Getting started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h1>
+<section id="docker-desktop-kubernetes">
+<h2>Docker Desktop Kubernetes<a class="headerlink" href="#docker-desktop-kubernetes" title="Link to this heading"></a></h2>
+<p>Docker Desktop Kubernetes is a built-in Kubernetes orchestrator available only on Docker Desktop for Mac and Docker Desktop for Windows. When you enable Docker Desktop Kubernetes, you get a local Kubernetes cluster that you can use for testing and developing your applications.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Docker Desktop Kubernetes is not supported for production environments.</p>
+</div>
+<p>Docker Desktop Kubernetes uses the same Docker CLI and Docker Compose CLI used for development. You do not need to learn new APIs or commands. In addition, Docker Desktop Kubernetes leverages the Docker Compose CLI to deploy your applications. You can use the Docker CLI to deploy applications to Kubernetes, deploy and manage Swarm services, and manage local Kubernetes clusters.</p>
+<p>To enable it on Windows - top right corner select Settings -&gt; the Kubernetes tab -&gt; Enable Kubernetes -&gt; Apply &amp; Restart.</p>
+</section>
+<section id="rancher-desktop">
+<h2>Rancher Desktop<a class="headerlink" href="#rancher-desktop" title="Link to this heading"></a></h2>
+<p>Rancher Desktop is a desktop application that runs on macOS, Windows, and Linux. It provides a native desktop application experience for managing and using Kubernetes clusters. Rancher Desktop includes kubectl, Helm, and Docker CLI, so you can use the same tools you use today to work with Kubernetes. Rancher Desktop also includes a built-in Kubernetes cluster that you can use for development and testing.</p>
+<p>To install Rancher Desktop on Windows, download the latest version from the Rancher Desktop releases page <a class="reference external" href="https://rancherdesktop.io/">https://rancherdesktop.io/</a>. Double-click the Rancher Desktop installer to install it.</p>
+</section>
+<section id="using-kubectl">
+<h2>Using kubectl<a class="headerlink" href="#using-kubectl" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">kubectl</span></code> is the main Kubernetes command-line tool. It’s what you’ll use for most Kubernetes management tasks, and we use it extensively in the examples. It’s available for most operating systems and architectures.</p>
+<p>Open Powershell from your Windows machine.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PS<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\l</span>inuxUser&gt;<span class="w"> </span>kubectl<span class="w"> </span>--help
+kubectl<span class="w"> </span>controls<span class="w"> </span>the<span class="w"> </span>Kubernetes<span class="w"> </span>cluster<span class="w"> </span>manager.
+
+Find<span class="w"> </span>more<span class="w"> </span>information<span class="w"> </span>at:<span class="w"> </span>https://kubernetes.io/docs/reference/kubectl/
+
+Basic<span class="w"> </span>Commands<span class="w"> </span><span class="o">(</span>Beginner<span class="o">)</span>:
+create<span class="w">          </span>Create<span class="w"> </span>a<span class="w"> </span>resource<span class="w"> </span>from<span class="w"> </span>a<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>from<span class="w"> </span>stdin
+expose<span class="w">          </span>Take<span class="w"> </span>a<span class="w"> </span>replication<span class="w"> </span>controller,<span class="w"> </span>service,<span class="w"> </span>deployment<span class="w"> </span>or<span class="w"> </span>pod<span class="w"> </span>and<span class="w"> </span>expose<span class="w"> </span>it<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>Kubernetes<span class="w"> </span>service
+run<span class="w">             </span>Run<span class="w"> </span>a<span class="w"> </span>particular<span class="w"> </span>image<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>cluster
+<span class="nb">set</span><span class="w">             </span>Set<span class="w"> </span>specific<span class="w"> </span>features<span class="w"> </span>on<span class="w"> </span>objects
+
+Basic<span class="w"> </span>Commands<span class="w"> </span><span class="o">(</span>Intermediate<span class="o">)</span>:
+explain<span class="w">         </span>Get<span class="w"> </span>documentation<span class="w"> </span><span class="k">for</span><span class="w"> </span>a<span class="w"> </span>resource
+get<span class="w">             </span>Display<span class="w"> </span>one<span class="w"> </span>or<span class="w"> </span>many<span class="w"> </span>resources
+edit<span class="w">            </span>Edit<span class="w"> </span>a<span class="w"> </span>resource<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>server
+delete<span class="w">          </span>Delete<span class="w"> </span>resources<span class="w"> </span>by<span class="w"> </span>file<span class="w"> </span>names,<span class="w"> </span>stdin,<span class="w"> </span>resources<span class="w"> </span>and<span class="w"> </span>names,<span class="w"> </span>or<span class="w"> </span>by<span class="w"> </span>resources<span class="w"> </span>and<span class="w"> </span>label<span class="w"> </span>selector
+
+Deploy<span class="w"> </span>Commands:
+rollout<span class="w">         </span>Manage<span class="w"> </span>the<span class="w"> </span>rollout<span class="w"> </span>of<span class="w"> </span>a<span class="w"> </span>resource
+scale<span class="w">           </span>Set<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>size<span class="w"> </span><span class="k">for</span><span class="w"> </span>a<span class="w"> </span>deployment,<span class="w"> </span>replica<span class="w"> </span>set,<span class="w"> </span>or<span class="w"> </span>replication<span class="w"> </span>controller
+autoscale<span class="w">       </span>Auto-scale<span class="w"> </span>a<span class="w"> </span>deployment,<span class="w"> </span>replica<span class="w"> </span>set,<span class="w"> </span>stateful<span class="w"> </span>set,<span class="w"> </span>or<span class="w"> </span>replication<span class="w"> </span>controller
+
+Cluster<span class="w"> </span>Management<span class="w"> </span>Commands:
+certificate<span class="w">     </span>Modify<span class="w"> </span>certificate<span class="w"> </span>resources.
+cluster-info<span class="w">    </span>Display<span class="w"> </span>cluster<span class="w"> </span>information
+top<span class="w">             </span>Display<span class="w"> </span>resource<span class="w"> </span><span class="o">(</span>CPU/memory<span class="o">)</span><span class="w"> </span>usage
+cordon<span class="w">          </span>Mark<span class="w"> </span>node<span class="w"> </span>as<span class="w"> </span>unschedulable
+uncordon<span class="w">        </span>Mark<span class="w"> </span>node<span class="w"> </span>as<span class="w"> </span>schedulable
+drain<span class="w">           </span>Drain<span class="w"> </span>node<span class="w"> </span><span class="k">in</span><span class="w"> </span>preparation<span class="w"> </span><span class="k">for</span><span class="w"> </span>maintenance
+taint<span class="w">           </span>Update<span class="w"> </span>the<span class="w"> </span>taints<span class="w"> </span>on<span class="w"> </span>one<span class="w"> </span>or<span class="w"> </span>more<span class="w"> </span>nodes
+
+Troubleshooting<span class="w"> </span>and<span class="w"> </span>Debugging<span class="w"> </span>Commands:
+describe<span class="w">        </span>Show<span class="w"> </span>details<span class="w"> </span>of<span class="w"> </span>a<span class="w"> </span>specific<span class="w"> </span>resource<span class="w"> </span>or<span class="w"> </span>group<span class="w"> </span>of<span class="w"> </span>resources
+logs<span class="w">            </span>Print<span class="w"> </span>the<span class="w"> </span>logs<span class="w"> </span><span class="k">for</span><span class="w"> </span>a<span class="w"> </span>container<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>pod
+attach<span class="w">          </span>Attach<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>running<span class="w"> </span>container
+<span class="nb">exec</span><span class="w">            </span>Execute<span class="w"> </span>a<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>container
+port-forward<span class="w">    </span>Forward<span class="w"> </span>one<span class="w"> </span>or<span class="w"> </span>more<span class="w"> </span><span class="nb">local</span><span class="w"> </span>ports<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>pod
+proxy<span class="w">           </span>Run<span class="w"> </span>a<span class="w"> </span>proxy<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>Kubernetes<span class="w"> </span>API<span class="w"> </span>server
+cp<span class="w">              </span>Copy<span class="w"> </span>files<span class="w"> </span>and<span class="w"> </span>directories<span class="w"> </span>to<span class="w"> </span>and<span class="w"> </span>from<span class="w"> </span>containers
+auth<span class="w">            </span>Inspect<span class="w"> </span>authorization
+debug<span class="w">           </span>Create<span class="w"> </span>debugging<span class="w"> </span>sessions<span class="w"> </span><span class="k">for</span><span class="w"> </span>troubleshooting<span class="w"> </span>workloads<span class="w"> </span>and<span class="w"> </span>nodes
+
+Advanced<span class="w"> </span>Commands:
+diff<span class="w">            </span>Diff<span class="w"> </span>the<span class="w"> </span>live<span class="w"> </span>version<span class="w"> </span>against<span class="w"> </span>a<span class="w"> </span>would-be<span class="w"> </span>applied<span class="w"> </span>version
+apply<span class="w">           </span>Apply<span class="w"> </span>a<span class="w"> </span>configuration<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>resource<span class="w"> </span>by<span class="w"> </span>file<span class="w"> </span>name<span class="w"> </span>or<span class="w"> </span>stdin
+patch<span class="w">           </span>Update<span class="w"> </span>fields<span class="w"> </span>of<span class="w"> </span>a<span class="w"> </span>resource
+replace<span class="w">         </span>Replace<span class="w"> </span>a<span class="w"> </span>resource<span class="w"> </span>by<span class="w"> </span>file<span class="w"> </span>name<span class="w"> </span>or<span class="w"> </span>stdin
+<span class="nb">wait</span><span class="w">            </span>Experimental:<span class="w"> </span>Wait<span class="w"> </span><span class="k">for</span><span class="w"> </span>a<span class="w"> </span>specific<span class="w"> </span>condition<span class="w"> </span>on<span class="w"> </span>one<span class="w"> </span>or<span class="w"> </span>many<span class="w"> </span>resources
+kustomize<span class="w">       </span>Build<span class="w"> </span>a<span class="w"> </span>kustomization<span class="w"> </span>target<span class="w"> </span>from<span class="w"> </span>a<span class="w"> </span>directory<span class="w"> </span>or<span class="w"> </span>URL.
+
+Settings<span class="w"> </span>Commands:
+label<span class="w">           </span>Update<span class="w"> </span>the<span class="w"> </span>labels<span class="w"> </span>on<span class="w"> </span>a<span class="w"> </span>resource
+annotate<span class="w">        </span>Update<span class="w"> </span>the<span class="w"> </span>annotations<span class="w"> </span>on<span class="w"> </span>a<span class="w"> </span>resource
+completion<span class="w">      </span>Output<span class="w"> </span>shell<span class="w"> </span>completion<span class="w"> </span>code<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>specified<span class="w"> </span>shell<span class="w"> </span><span class="o">(</span>bash,<span class="w"> </span>zsh,<span class="w"> </span>fish,<span class="w"> </span>or<span class="w"> </span>powershell<span class="o">)</span>
+
+Other<span class="w"> </span>Commands:
+alpha<span class="w">           </span>Commands<span class="w"> </span><span class="k">for</span><span class="w"> </span>features<span class="w"> </span><span class="k">in</span><span class="w"> </span>alpha
+api-resources<span class="w">   </span>Print<span class="w"> </span>the<span class="w"> </span>supported<span class="w"> </span>API<span class="w"> </span>resources<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>server
+api-versions<span class="w">    </span>Print<span class="w"> </span>the<span class="w"> </span>supported<span class="w"> </span>API<span class="w"> </span>versions<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>server,<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>form<span class="w"> </span>of<span class="w"> </span><span class="s2">&quot;group/version&quot;</span>
+config<span class="w">          </span>Modify<span class="w"> </span>kubeconfig<span class="w"> </span>files
+plugin<span class="w">          </span>Provides<span class="w"> </span>utilities<span class="w"> </span><span class="k">for</span><span class="w"> </span>interacting<span class="w"> </span>with<span class="w"> </span>plugins
+version<span class="w">         </span>Print<span class="w"> </span>the<span class="w"> </span>client<span class="w"> </span>and<span class="w"> </span>server<span class="w"> </span>version<span class="w"> </span>information
+
+Usage:
+kubectl<span class="w"> </span><span class="o">[</span>flags<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+
+Use<span class="w"> </span><span class="s2">&quot;kubectl &lt;command&gt; --help&quot;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information<span class="w"> </span>about<span class="w"> </span>a<span class="w"> </span>given<span class="w"> </span>command.
+Use<span class="w"> </span><span class="s2">&quot;kubectl options&quot;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>a<span class="w"> </span>list<span class="w"> </span>of<span class="w"> </span>global<span class="w"> </span>command-line<span class="w"> </span>options<span class="w"> </span><span class="o">(</span>applies<span class="w"> </span>to<span class="w"> </span>all<span class="w"> </span>commands<span class="o">)</span>.
+</pre></div>
+</div>
+<p>Verify the cluster with the following command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PS<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\w</span>indows_user&gt;<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes
+NAME<span class="w">             </span>STATUS<span class="w">   </span>ROLES<span class="w">           </span>AGE<span class="w">    </span>VERSION
+docker-desktop<span class="w">   </span>Ready<span class="w">    </span>control-plane<span class="w">   </span>6m2s<span class="w">   </span>v1.25.4
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">kubectl</span></code> configuration file is called config and lives in a hidden directory called <code class="docutils literal notranslate"><span class="pre">kube</span></code> in your home directory <code class="docutils literal notranslate"><span class="pre">$HOME/.kube/config</span></code>. We normally call it the <code class="docutils literal notranslate"><span class="pre">kubeconfig</span></code> file, and it contains definitions for</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Clusters</p></li>
+<li><p>Users (credentials)</p></li>
+<li><p>Contexts</p></li>
+</ol>
+</div></blockquote>
+<p>You can view your <code class="docutils literal notranslate"><span class="pre">kubeconfig</span></code> using the <code class="docutils literal notranslate"><span class="pre">kubectl</span></code> config view command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PS<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\w</span>indows_user&gt;<span class="w"> </span>kubectl<span class="w"> </span>config<span class="w"> </span>view
+apiVersion:<span class="w"> </span>v1
+clusters:
+-<span class="w"> </span>cluster:
+<span class="w">    </span>certificate-authority-data:<span class="w"> </span>DATA+OMITTED
+<span class="w">    </span>server:<span class="w"> </span>https://kubernetes.docker.internal:6443
+name:<span class="w"> </span>docker-desktop
+contexts:
+-<span class="w"> </span>context:
+<span class="w">    </span>cluster:<span class="w"> </span>docker-desktop
+<span class="w">    </span>user:<span class="w"> </span>docker-desktop
+name:<span class="w"> </span>docker-desktop
+current-context:<span class="w"> </span>docker-desktop
+kind:<span class="w"> </span>Config
+preferences:<span class="w"> </span><span class="o">{}</span>
+users:
+-<span class="w"> </span>name:<span class="w"> </span>docker-desktop
+user:
+<span class="w">    </span>client-certificate-data:<span class="w"> </span>REDACTED
+<span class="w">    </span>client-key-data:<span class="w"> </span>REDACTED
+</pre></div>
+</div>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">kubectl</span></code> config current-context to see your current context. The following example shows a system where <code class="docutils literal notranslate"><span class="pre">kubectl</span></code> is configured to use the cluster and user-defined in a context called docker-desktop.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PS<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\w</span>indows_user&gt;<span class="w"> </span>kubectl<span class="w"> </span>config<span class="w"> </span>current-context
+docker-desktop
+</pre></div>
+</div>
+<p>Run a <code class="docutils literal notranslate"><span class="pre">kubectl</span></code> explain pods command to list all possible Pod attributes.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PS<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\w</span>indows_user&gt;<span class="w"> </span>kubectl<span class="w"> </span>explain<span class="w"> </span>pods<span class="w"> </span>--recursive
+KIND:<span class="w">     </span>Pod
+VERSION:<span class="w">  </span>v1
+
+DESCRIPTION:
+<span class="w">    </span>Pod<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>collection<span class="w"> </span>of<span class="w"> </span>containers<span class="w"> </span>that<span class="w"> </span>can<span class="w"> </span>run<span class="w"> </span>on<span class="w"> </span>a<span class="w"> </span>host.<span class="w"> </span>This<span class="w"> </span>resource<span class="w"> </span>is
+<span class="w">    </span>created<span class="w"> </span>by<span class="w"> </span>clients<span class="w"> </span>and<span class="w"> </span>scheduled<span class="w"> </span>onto<span class="w"> </span>hosts.
+
+FIELDS:
+apiVersion<span class="w">   </span>&lt;string&gt;
+kind<span class="w"> </span>&lt;string&gt;
+metadata<span class="w">     </span>&lt;Object&gt;
+<span class="w">    </span>annotations<span class="w">       </span>&lt;map<span class="o">[</span>string<span class="o">]</span>string&gt;
+<span class="w">    </span>creationTimestamp<span class="w"> </span>&lt;string&gt;
+<span class="w">    </span>deletionGracePeriodSeconds<span class="w">        </span>&lt;integer&gt;
+<span class="w">    </span>deletionTimestamp<span class="w"> </span>&lt;string&gt;
+<span class="w">    </span>finalizers<span class="w">        </span>&lt;<span class="o">[]</span>string&gt;
+<span class="w">    </span>generateName<span class="w">      </span>&lt;string&gt;
+<span class="w">    </span>generation<span class="w">        </span>&lt;integer&gt;
+<span class="w">    </span>labels<span class="w">    </span>&lt;map<span class="o">[</span>string<span class="o">]</span>string&gt;
+<span class="w">    </span>managedFields<span class="w">     </span>&lt;<span class="o">[]</span>Object&gt;
+<span class="w">        </span>apiVersion<span class="w">     </span>&lt;string&gt;
+<span class="w">        </span>fieldsType<span class="w">     </span>&lt;string&gt;
+<span class="w">        </span>fieldsV1<span class="w">       </span>&lt;map<span class="o">[</span>string<span class="o">]</span>&gt;
+<span class="w">        </span>manager<span class="w">        </span>&lt;string&gt;
+<span class="w">        </span>operation<span class="w">      </span>&lt;string&gt;
+<span class="w">        </span>subresource<span class="w">    </span>&lt;string&gt;
+<span class="w">        </span><span class="nb">time</span><span class="w">   </span>&lt;string&gt;
+<span class="w">    </span>name<span class="w">      </span>&lt;string&gt;
+<span class="w">    </span>namespace<span class="w"> </span>&lt;string&gt;
+<span class="w">    </span>ownerReferences<span class="w">   </span>&lt;<span class="o">[]</span>Object&gt;
+<span class="w">        </span>apiVersion<span class="w">     </span>&lt;string&gt;
+<span class="w">        </span>blockOwnerDeletion<span class="w">     </span>&lt;boolean&gt;
+<span class="w">        </span>controller<span class="w">     </span>&lt;boolean&gt;
+<span class="w">        </span>kind<span class="w">   </span>&lt;string&gt;
+<span class="w">        </span>name<span class="w">   </span>&lt;string&gt;
+<span class="w">        </span>uid<span class="w">    </span>&lt;string&gt;
+<span class="w">    </span>resourceVersion<span class="w">   </span>&lt;string&gt;
+<span class="w">    </span>selfLink<span class="w">  </span>&lt;string&gt;
+<span class="w">    </span>uid<span class="w">       </span>&lt;string&gt;
+spec<span class="w"> </span>&lt;Object&gt;
+</pre></div>
+</div>
+<p>To find out more about different attributes, you can use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PS<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\w</span>indows_user&gt;<span class="w"> </span>kubectl<span class="w"> </span>explain<span class="w"> </span>pod.metadata
+KIND:<span class="w">     </span>Pod
+VERSION:<span class="w">  </span>v1
+
+RESOURCE:<span class="w"> </span>metadata<span class="w"> </span>&lt;Object&gt;
+
+DESCRIPTION:
+<span class="w">    </span>Standard<span class="w"> </span>object<span class="err">&#39;</span>s<span class="w"> </span>metadata.<span class="w"> </span>More<span class="w"> </span>info:
+<span class="w">    </span>https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+
+<span class="w">    </span>ObjectMeta<span class="w"> </span>is<span class="w"> </span>metadata<span class="w"> </span>that<span class="w"> </span>all<span class="w"> </span>persisted<span class="w"> </span>resources<span class="w"> </span>must<span class="w"> </span>have,<span class="w"> </span>which
+<span class="w">    </span>includes<span class="w"> </span>all<span class="w"> </span>objects<span class="w"> </span>users<span class="w"> </span>must<span class="w"> </span>create.
+</pre></div>
+</div>
+</section>
+<section id="is-there-a-better-way">
+<h2>Is there a better way?<a class="headerlink" href="#is-there-a-better-way" title="Link to this heading"></a></h2>
+<p>Using <code class="docutils literal notranslate"><span class="pre">kubectl</span></code> to create deployment is perfect but for debuging and testing purposes, it is not the best way to do it.</p>
+<p>We use better cli tools, like <code class="docutils literal notranslate"><span class="pre">k9s</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>~/k9s-installation
+<span class="nb">cd</span><span class="w"> </span>~/k9s-installation
+curl<span class="w"> </span>-LO<span class="w"> </span>https://github.com/derailed/k9s/releases/download/v0.27.4/k9s_Linux_amd64.tar.gz
+tar<span class="w"> </span>xf<span class="w"> </span>k9s_Linux_amd64.tar.gz
+sudo<span class="w"> </span>mv<span class="w"> </span>k9s<span class="w"> </span>/usr/local/bin
+<span class="nb">cd</span><span class="w"> </span>..
+rm<span class="w"> </span>-rf<span class="w"> </span>k9s-installation
+</pre></div>
+</div>
+<p>Run <code class="docutils literal notranslate"><span class="pre">k9s</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>k9s
+</pre></div>
+</div>
+</section>
+<section id="creating-our-first-hello-world">
+<h2>Creating our first hello world<a class="headerlink" href="#creating-our-first-hello-world" title="Link to this heading"></a></h2>
+<p>We’ve used the Python Fast API application in the previous chapter. We will use it again to create our first hello world application.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fastapi/
+├──<span class="w"> </span>Dockerfile
+├──<span class="w"> </span>requirements.txt
+└──<span class="w"> </span>app
+<span class="w">    </span>├──<span class="w"> </span>__init__.py
+<span class="w">    </span>└──<span class="w"> </span>main.py
+└──k8s
+<span class="w">    </span>└──<span class="w"> </span>Chart.yaml
+<span class="w">    </span>└──<span class="w"> </span>values.yaml
+<span class="w">    </span>└──<span class="w"> </span>templates
+<span class="w">        </span>└──<span class="w"> </span>deployment.yaml
+<span class="w">        </span>└──<span class="w"> </span>service.yaml
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="0_introduction.html" class="btn btn-neutral float-left" title="9.0 Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="2_helm.html" class="btn btn-neutral float-right" title="9.2 Helm charts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, skillab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

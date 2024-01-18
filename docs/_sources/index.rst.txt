@@ -172,7 +172,11 @@ To be an efficient engineer you need to understand:
 
    9_kubernetes/00_abstract.rst
    9_kubernetes/0_introduction
-
+   9_kubernetes/1_gettingstarted
+   9_kubernetes/2_helm
+   9_kubernetes/3_deployments
+   9_kubernetes/4_argocd
+   9_kubernetes/5_swarm_vs_k8s
 
 .. toctree::
    :hidden:
