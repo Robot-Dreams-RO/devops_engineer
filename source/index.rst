@@ -181,6 +181,15 @@ To be an efficient engineer you need to understand:
 .. toctree::
    :hidden:
    :titlesonly:
+   :caption: Cloud
+
+   11_cloud/0_introduction
+   11_cloud/1_azure
+   11_cloud/2_aws
+
+.. toctree::
+   :hidden:
+   :titlesonly:
    :caption: Project
 
    12_project/introduction
