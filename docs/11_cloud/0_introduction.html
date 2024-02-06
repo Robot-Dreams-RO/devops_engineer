@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.0 Introduction to cloud &mdash; DevOps 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/max_width.css?v=a0fc712e" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11.2 Cloud Agnostic vs Cloud Native vs Cloud Services" href="1_agnostic_native.html" />
+    <link rel="prev" title="9.5 Docker Swarm vs Kubernetes" href="../9_kubernetes/5_swarm_vs_k8s.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DevOps
+              <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Curriculum</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../00_curriculum/curriculum.html">Class Curriculum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to DevOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/0_foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/00_preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/1_devops.html">0.1 Introduction to DevOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/2_roadmap.html">0.2 DevOps Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/3_life_cycle.html">0.3 Software Development Lifecycle Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/4_scrum_agile.html">0.4 SCRUM Agile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/TODO.html">0.5 TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/0_computer_network.html">1.0 Computer and Network Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/1_how_code_works.html">1.1 How code works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/2_environments.html">1.2 Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/3_microservices.html">1.3 Microservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/4_introduction_to_linux.html">1.4 Introduction to Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/5_getting_around.html">1.5 Getting around</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/6_setup_infra.html">1.7 Setup developing infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/0_introduction.html">2.0 Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/1_managing_users_and_groups.html">2.1 Managing Users and Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/2_file_management.html">2.2 File management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/3_managing_software.html">2.3 Managing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/4_service_management.html">2.4 Service Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/5_process_management.html">2.5 Process management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/6_system_logging.html">2.6 System logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/7_linux_file_systems.html">2.7 Linux File Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/8_terminal_tuning.html">2.8 Terminal tuning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/9_networking.html">2.9 Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html#solutions-to-todos">Solutions to TODOs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/0_introduction.html">3.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/1_getting_started.html">3.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/2_data_structures_conditions.html">3.2 Data structures and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/3_to_script_or_to_alias.html">3.3 Working with aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/4_shell_style_guide.html">3.4 Shell Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/5_makefile.html">3.5 Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/6_utilities.html">3.6 Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/0_introduction.html">4.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/1_installation.html">4.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/2_data_structures.html">4.2 Variables and Data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/3_conditions_loops.html">4.3 Loops and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/4_libraries.html">4.4 Libraries and modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/5_functions.html">4.5 Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/6_classes.html">4.6 Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/7_yourfirstcli.html">4.7 Your first CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/8_documentation.html">4.8 Documenting your code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/9_rules.html">4.9 Python Language Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/10_files.html">4.10 Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unit Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/0_introduction.html">5.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/1_working_togheter.html">5.1 Working together on Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/2_bestpractices.html">5.1 Best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DocOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/0_introduction.html">6.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/1_installation.html">6.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/2_sphinx.html">6.2 What is Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/3_deploy_docs.html">6.3 Deploy Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pipelines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/0_introduction.html">7.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/1_getting_started.html">7.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/2_python_cli.html">7.2 Python CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/3_github.html">7.3 GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/4_jenkins_introduction.html">7.4 Introduction to Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/5_jenkins_architecture.html">7.5 Jenkins Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/6_jenkins_getting_started.html">7.6 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/9_best_practices.html">7.7 Continuous Integration Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Containers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/0_introduction.html">8.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/1_installation.html">8.1 Windows installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/2_helloworld.html">8.2 Running “Hello World”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/3_workingwithdocker.html">8.3 Working with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/4_usingdockerfile.html">8.4 Using Dockerfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/5_management.html">8.5 Container management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/6_orchestration.html">8.6 Container orchestration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/7_test.html">8.7 Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kubernetes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/00_abstract.html">9.00 Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/0_introduction.html">9.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/1_gettingstarted.html">9.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/2_helm.html">9.2  Helm charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/3_deployments.html">9.3 Creating a Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/4_argocd.html">9.4 ArgoCD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/5_swarm_vs_k8s.html">9.5 Docker Swarm vs Kubernetes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cloud</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11.0 Introduction to cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_agnostic_native.html">11.2 Cloud Agnostic vs Cloud Native vs Cloud Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_azure.html">11.2 Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_aws.html">11.3 Amazon Web Services</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../12_project/introduction.html">12.0 Project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Craftsman best practices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/0_mentality.html">13.0 Mentality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/1_implementation.html">13.1 Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/2_tools.html">13.2 Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/3_mock_interview.html">13.2 Interview Preparation: DevOps Engineer</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DevOps</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">11.0 Introduction to cloud</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/11_cloud/0_introduction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction-to-cloud">
+<h1>11.0 Introduction to cloud<a class="headerlink" href="#introduction-to-cloud" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="../_images/cloud.png"><img alt="Cloud computing" class="align-center" src="../_images/cloud.png" style="width: 30%;" /></a>
+<section id="what-is-the-cloud">
+<h2>What is the cloud?<a class="headerlink" href="#what-is-the-cloud" title="Link to this heading"></a></h2>
+<p>What is cloud computing?</p>
+<p>Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services, such as computing power, storage, and databases, on an as-needed basis from a cloud provider like Amazon Web Services (AWS).</p>
+<p>Let’s break this down:</p>
+<ul class="simple">
+<li><p><strong>on-demand</strong> - I can request any time, any amount of resources(for which i have quota) and i will get them</p></li>
+<li><p><strong>IT resources</strong> - I can get any type of resources(available) that i need to run my application (virtual machines, databases, storage, etc )</p></li>
+<li><p><strong>over the Internet</strong> - I can run it from anywhere, I need access to the Internet, VPN (most of the services will be available only in a private network) and an account with permissions.</p></li>
+<li><p><strong>pay-as-you-go pricing</strong> - I will pay only for the resources that i use, when I remove them I will stop paying for them.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A computing cloud is a virtualized environment that provides on-demand computing resources such as servers, storage, and applications over the Internet. Cloud computing allows users to access and use these resources without having to own or manage the underlying physical infrastructure.</p>
+</div>
+<p>Cloud computing typically involves a third-party provider, such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform (GCP), which owns and operates the underlying infrastructure, and provides various services to customers on a pay-as-you-go or subscription basis.</p>
+</section>
+<section id="flavors-of-clouds-some-of-the-taste-funny">
+<h2>Flavors of clouds - some of the taste funny<a class="headerlink" href="#flavors-of-clouds-some-of-the-taste-funny" title="Link to this heading"></a></h2>
+<p>There are three main types of cloud computing:</p>
+<ol class="arabic simple">
+<li><p><strong>Public cloud</strong>: computing resources are shared by multiple organizations and are accessible over the public internet.</p></li>
+<li><p><strong>Private cloud</strong>: computing resources are dedicated to a single organization and are typically hosted on-premises or in a private data center.</p></li>
+<li><p><strong>Hybrid cloud</strong>: a combination of public and private clouds that are integrated and share data and applications.</p></li>
+</ol>
+<p>Cloud computing offers many benefits, including scalability, flexibility, cost savings, and ease of use. It has become an essential technology for many businesses and organizations, enabling them to innovate, compete, and operate more efficiently.</p>
+</section>
+<section id="on-premises-vs-cloud">
+<h2>On-premises vs Cloud<a class="headerlink" href="#on-premises-vs-cloud" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On-premises computing refers to the use of computing resources that are owned and managed by an organization. These resources are typically located on the organization’s premises, but they can also be hosted in a private data center.</p>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>On premise</p></th>
+<th class="head"><p>Cloud</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>You own the servers</p></td>
+<td><p>Someone else owns the servers</p></td>
+</tr>
+<tr class="row-odd"><td><p>You update the hardware</p></td>
+<td><p>Someone else updates the hardware</p></td>
+</tr>
+<tr class="row-even"><td><p>You hire the infra guys</p></td>
+<td><p>Someone else hires the infra guys</p></td>
+</tr>
+<tr class="row-odd"><td><p>You pay the rent of the datacenter</p></td>
+<td><p>Someone else pays the rent of the datacenter</p></td>
+</tr>
+<tr class="row-even"><td><p>You have one geographical location</p></td>
+<td><p>You have many geographical locations available</p></td>
+</tr>
+<tr class="row-odd"><td><p>You have to maintain hardware, software and application</p></td>
+<td><p>You have to maintain just application and sometimes software</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../_images/environments.png"><img alt="Cloud computing environments" class="align-center" src="../_images/environments.png" style="width: 90%;" /></a>
+</section>
+<section id="why-use-cloud">
+<h2>Why use cloud<a class="headerlink" href="#why-use-cloud" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>It’s a <strong>fault-tolerant</strong> solution</p>
+<p>In most cases, we have a disaster recovery environment that is not used, it’s there just in case of a disaster. In the cloud, we can use the same environment for production and disaster recovery, and we pay only for the resources we use.</p>
+<p>Example: We have a web application with a database, and we need to have a production environment and backups to this environment (sometimes the backup environment is a separate environment in the same data center), in case that production has a problem we can swap easily with the backup environment. But to be truly fault fault-tolerant we need to have another environment in another physical location.</p>
+<p><code class="docutils literal notranslate"><span class="pre">3-2-1</span></code> Rule:</p>
+<ul class="simple">
+<li><p>3 copies of data</p></li>
+<li><p>2 different media</p></li>
+<li><p>1 offsite copy</p></li>
+</ul>
+<p>The problem with the DR environment is that had to be the same as the production environment, and we pay for it even if we don’t use it. We have to make sure that data is being replicated in the DR environment, and we have to test it from time to time to make sure that it works. That environment will get obsolete, unused, and consumes money even if we don’t use it.</p>
+<p>Now if you think that if the company grows and moves to another market, you need again to have multiple data centers to manage.</p>
+</li>
+<li><p><strong>Scalable</strong></p>
+<p>In the era before the cloud, every time we need more resources we had to endure a requisition and procurement process: convince management that is a good idea, discuss with financial what we can get, select a vendor, create a purchase order, wait to get it approved, wait for the hardware to arrive, install it, configure it, test it, and finally use it. In the cloud, we can scale up and down in minutes, and we pay only for the resources we use.</p>
+<p>Now most of the cloud services have scalability as a service and we only have to configure when to scale up (get bigger machines) or scale out (get more machines).</p>
+<p>Imagine that you’re an e-commerce company and you need to prepare for Black Friday and Christmas, you need to scale up your infrastructure to handle the traffic, and after that, you need to scale down. In the cloud, you can do that in minutes, but before you would buy lots of machines use them for a short while, and then give them around the company (because you want them to remain unused for the year) then you don’t get them back because are used, and again you had to purchase another set next year.</p>
+<p>Of course, our goal is always to have our capacity near to what we need, but due to the nature of the business, we can’t always predict the traffic and we need to be prepared for the worst. So we use bigger machines.</p>
+</li>
+<li><p><strong>Globalization</strong></p>
+<p>When we move to new markets we need to have a data center in that market, and we need to manage it. In the cloud, we can have a data center in every country where the cloud provider has a data center, and we don’t have to manage it. This need sometimes is about performance, sometimes about regulations, and sometimes about latency.</p>
+</li>
+<li><p><strong>Agility</strong></p>
+<p>Trying out new technologies was never as easy, we can consume them as a service in the cloud, or easily build them and we pay only for the time we tried out. If we don’t like it we can just stop using it, and we don’t have to worry about the hardware, software, and licenses.</p>
+<p>Now I can do a test during the afternoon, build the environment, demo it, and then remove it, keep all the information about it, and if I need it again I can just build it again.</p>
+</li>
+<li><p><strong>Cost</strong></p>
+<p>Cost is a funny thing, knowing how much money was invested in a project was sometimes impossible, in the cloud we get an invoice and we can see what we’re spending money. We can also see how much we’re spending on each project, and we can optimize it:</p>
+<ul class="simple">
+<li><p>We trade upfront expenses for variable expenses</p></li>
+<li><p>Stop spenging money on running and maintaining data centers</p></li>
+<li><p>Stop guessing capacity or using overprovisioned resources</p></li>
+<li><p>Benefit from massive economies of scale</p></li>
+<li><p>Increase speed and agility of procurement</p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you’re not paying attention your company will pay money!</p>
+</div>
+</section>
+<section id="services-on-cloud">
+<h2>Services on cloud<a class="headerlink" href="#services-on-cloud" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Infrastructure as a Service</strong></p></li>
+</ol>
+<p>IaaS contains the basic building blocks for cloud IT. It typically provides access to networking features, computers (virtual or on dedicated hardware), and data storage space. IaaS gives you the highest level of flexibility and management control over your IT resources. It is most similar to the existing IT resources with which many IT departments and developers are familiar.</p>
+<p>Examples: Amazon EC2, Google Compute Engine (GCE), Rackspace, Windows Azure, Cisco Metapod, and VMware’s vCloud.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Platform as a Service</strong></p></li>
+</ol>
+<p>PaaS removes the need for you to manage underlying infrastructure (usually hardware and operating systems), and allows you to focus on the deployment and management of your applications. This helps you be more efficient as you don’t need to worry about resource procurement, capacity planning, software maintenance, patching, or any of the other undifferentiated heavy lifting involved in running your application.</p>
+<p>Examples: Amazon S3, Google Cloud Storage, Azure Blob Storage, Rackspace Cloud Files, and Google Cloud SQL, Amazon Lambda, Google App Engine, Azure Functions.</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Software as a Service</strong></p></li>
+</ol>
+<p>SaaS provides you with a complete product that is run and managed by the service provider. In most cases, people referring to SaaS are referring to end-user applications (such as web-based email). With a SaaS offering, you don’t have to think about how the service is maintained or how the underlying infrastructure is managed. You only need to think about how you will use that particular software.</p>
+<p>Example: Email</p>
+</section>
+<section id="cloud-providers">
+<h2>Cloud providers<a class="headerlink" href="#cloud-providers" title="Link to this heading"></a></h2>
+<p>Major cloud providers Q3 2023 according to <code class="docutils literal notranslate"><span class="pre">statista.com</span></code></p>
+<ul class="simple">
+<li><p>Amazon Web Services (AWS) - 32%</p></li>
+<li><p>Microsoft Azure - 23%</p></li>
+<li><p>Google Cloud Platform (GCP) - 11%</p></li>
+<li><p>Alibaba Cloud - 4%</p></li>
+<li><p>IBM Cloud - 3%</p></li>
+<li><p>Salesforce - 3%</p></li>
+<li><p>Oracle Cloud - 2%</p></li>
+<li><p>Tencent Cloud - 2%</p></li>
+<li><p>Others - 20%</p></li>
+</ul>
+</section>
+<section id="moving-to-cloud">
+<h2>Moving to cloud<a class="headerlink" href="#moving-to-cloud" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Moving to the cloud is a process that involves planning, preparation, and execution. It can be a complex and challenging undertaking, but it offers many benefits, including scalability, flexibility, cost savings, and ease of use.</p>
+</div>
+<p>Types of the Cloud:</p>
+<ul class="simple">
+<li><p>Public cloud</p></li>
+<li><p>Private cloud</p></li>
+<li><p>Hybrid cloud (most companies are using this)</p></li>
+</ul>
+<p>Most of the companies are multi-cloud to avoid vendor locking.</p>
+<p>Migration approaches:</p>
+<ul class="simple">
+<li><p><strong>Rehost</strong> (lift and shift) - this is a common first step that involves moving an application to the cloud without making any changes to its architecture. This approach is relatively quick and easy, but it does not take full advantage of the cloud’s capabilities.</p></li>
+<li><p><strong>Refactor</strong> (replatform) - in the approach, we’re checking to see if we can reuse services in the cloud. For example, instead of managing our database, we look if we can consume a database as a service. This approach is more complex and time-consuming than rehosting, but it can provide significant benefits.</p></li>
+<li><p><strong>Rearchitect</strong> (rebuild) - use all the services that the cloud provides - becoming cloud native. This approach is the most complex and time-consuming, but it can provide the greatest benefits.</p></li>
+<li><p><strong>Retire</strong> (sunsetting) - when moving to the cloud we’re looking at all the systems, sometimes we can create one that can be reused by more products, and we can retire the old ones.</p></li>
+<li><p><strong>Rebuild</strong> (replace) - sometimes a decision that we took before was not the best one, but now we can rebuild it in the cloud.</p></li>
+<li><p><strong>Retain</strong> (repurchase) - we’re consuming a service that is not available in the cloud, and we need to keep it, or is available from a vendor that we can continue working (Example: GitHub)</p></li>
+</ul>
+</section>
+<section id="virtualization-and-containerization">
+<h2>Virtualization and containerization<a class="headerlink" href="#virtualization-and-containerization" title="Link to this heading"></a></h2>
+<p>By virtualizing all our applications into containers we can mitigate vendor locking.</p>
+<p>Types of services available in the cloud:</p>
+<ul class="simple">
+<li><p>Computing (virtual machines, containers, serverless)</p></li>
+<li><p>Storage (block, file, object)</p></li>
+<li><p>Networking (virtual networks, load balancers, firewalls)</p></li>
+<li><p>Databases (relational, non-relational, data warehouses)</p></li>
+<li><p>Analytics (big data, data lakes, business intelligence)</p></li>
+<li><p>AI and machine learning (speech recognition, image analysis, natural language processing)</p></li>
+<li><p>Internet of Things (IoT) (device software, device management, analytics, visualization)</p></li>
+<li><p>Management and governance (monitoring, logging, cost management, security)</p></li>
+<li><p>Security, identity, and compliance (identity and access management, certificates, key management, compliance)</p></li>
+<li><p>Developer tools (SDKs, IDEs, CI/CD, testing, deployment, monitoring)</p></li>
+</ul>
+</section>
+<section id="regions-and-availability-zones">
+<h2>Regions and Availability Zones<a class="headerlink" href="#regions-and-availability-zones" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A region is a geographical area on the planet containing at least one, but not more than a few data centers. Regions do not share infrastructure with each other, and are independent. This allows us to provide fault tolerance, stability, and resilience.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../9_kubernetes/5_swarm_vs_k8s.html" class="btn btn-neutral float-left" title="9.5 Docker Swarm vs Kubernetes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1_agnostic_native.html" class="btn btn-neutral float-right" title="11.2 Cloud Agnostic vs Cloud Native vs Cloud Services" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, skillab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

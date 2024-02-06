@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.2 Azure &mdash; DevOps 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/max_width.css?v=a0fc712e" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11.3 Amazon Web Services" href="3_aws.html" />
+    <link rel="prev" title="11.2 Cloud Agnostic vs Cloud Native vs Cloud Services" href="1_agnostic_native.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DevOps
+              <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Curriculum</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../00_curriculum/curriculum.html">Class Curriculum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to DevOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/0_foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/00_preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/1_devops.html">0.1 Introduction to DevOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/2_roadmap.html">0.2 DevOps Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/3_life_cycle.html">0.3 Software Development Lifecycle Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/4_scrum_agile.html">0.4 SCRUM Agile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/TODO.html">0.5 TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/0_computer_network.html">1.0 Computer and Network Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/1_how_code_works.html">1.1 How code works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/2_environments.html">1.2 Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/3_microservices.html">1.3 Microservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/4_introduction_to_linux.html">1.4 Introduction to Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/5_getting_around.html">1.5 Getting around</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/6_setup_infra.html">1.7 Setup developing infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/0_introduction.html">2.0 Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/1_managing_users_and_groups.html">2.1 Managing Users and Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/2_file_management.html">2.2 File management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/3_managing_software.html">2.3 Managing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/4_service_management.html">2.4 Service Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/5_process_management.html">2.5 Process management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/6_system_logging.html">2.6 System logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/7_linux_file_systems.html">2.7 Linux File Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/8_terminal_tuning.html">2.8 Terminal tuning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/9_networking.html">2.9 Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html#solutions-to-todos">Solutions to TODOs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/0_introduction.html">3.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/1_getting_started.html">3.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/2_data_structures_conditions.html">3.2 Data structures and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/3_to_script_or_to_alias.html">3.3 Working with aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/4_shell_style_guide.html">3.4 Shell Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/5_makefile.html">3.5 Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/6_utilities.html">3.6 Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/0_introduction.html">4.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/1_installation.html">4.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/2_data_structures.html">4.2 Variables and Data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/3_conditions_loops.html">4.3 Loops and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/4_libraries.html">4.4 Libraries and modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/5_functions.html">4.5 Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/6_classes.html">4.6 Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/7_yourfirstcli.html">4.7 Your first CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/8_documentation.html">4.8 Documenting your code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/9_rules.html">4.9 Python Language Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/10_files.html">4.10 Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unit Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/0_introduction.html">5.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/1_working_togheter.html">5.1 Working together on Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/2_bestpractices.html">5.1 Best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DocOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/0_introduction.html">6.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/1_installation.html">6.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/2_sphinx.html">6.2 What is Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/3_deploy_docs.html">6.3 Deploy Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pipelines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/0_introduction.html">7.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/1_getting_started.html">7.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/2_python_cli.html">7.2 Python CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/3_github.html">7.3 GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/4_jenkins_introduction.html">7.4 Introduction to Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/5_jenkins_architecture.html">7.5 Jenkins Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/6_jenkins_getting_started.html">7.6 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/9_best_practices.html">7.7 Continuous Integration Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Containers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/0_introduction.html">8.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/1_installation.html">8.1 Windows installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/2_helloworld.html">8.2 Running “Hello World”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/3_workingwithdocker.html">8.3 Working with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/4_usingdockerfile.html">8.4 Using Dockerfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/5_management.html">8.5 Container management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/6_orchestration.html">8.6 Container orchestration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/7_test.html">8.7 Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kubernetes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/00_abstract.html">9.00 Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/0_introduction.html">9.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/1_gettingstarted.html">9.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/2_helm.html">9.2  Helm charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/3_deployments.html">9.3 Creating a Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/4_argocd.html">9.4 ArgoCD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/5_swarm_vs_k8s.html">9.5 Docker Swarm vs Kubernetes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cloud</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="0_introduction.html">11.0 Introduction to cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_agnostic_native.html">11.2 Cloud Agnostic vs Cloud Native vs Cloud Services</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11.2 Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_aws.html">11.3 Amazon Web Services</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../12_project/introduction.html">12.0 Project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Craftsman best practices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/0_mentality.html">13.0 Mentality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/1_implementation.html">13.1 Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/2_tools.html">13.2 Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/3_mock_interview.html">13.2 Interview Preparation: DevOps Engineer</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DevOps</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">11.2 Azure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/11_cloud/2_azure.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="azure">
+<h1>11.2 Azure<a class="headerlink" href="#azure" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Azure is a cloud computing platform and service offered by Microsoft. It provides a wide range of cloud-based services and solutions, including infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS) offerings.</p>
+</div>
+<p>Azure allows businesses and individuals to build, deploy, and manage applications and services in the cloud, using a range of programming languages, frameworks, and tools. Azure supports various operating systems, including Windows, Linux, and macOS, and can be used to develop applications for web, mobile, desktop, and IoT devices.</p>
+<p>Azure provides a comprehensive set of services, including virtual machines, containers, databases, storage, networking, and analytics. It also offers AI and machine learning services, DevOps tools, and integration with other Microsoft services such as Office 365, Dynamics 365, and Power BI.</p>
+<p>Azure provides a global network of data centers and offers high availability and disaster recovery options to ensure the reliability and performance of applications and services. It also provides strong security and compliance capabilities, including built-in encryption, identity and access management, and compliance with various industry standards and regulations.</p>
+<p>Azure is used by a wide range of businesses and organizations, including startups, government agencies, and Fortune 500 companies, to accelerate innovation, improve agility, and reduce costs.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We’re not installing the cloud but we’re installing some tools that will allow us to interact with the cloud.</p>
+</div>
+<section id="install-azure-cli">
+<h2>Install Azure CLI<a class="headerlink" href="#install-azure-cli" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>azcli is a command-line tool for managing Azure resources.</p>
+</div>
+<p>Installation details can be found here <a class="reference external" href="https://learn.microsoft.com/en-us/cli/azure/install-azure-cli">https://learn.microsoft.com/en-us/cli/azure/install-azure-cli</a> for WSL Ubuntu you can run <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-sL</span> <span class="pre">https://aka.ms/InstallAzureCLIDeb</span> <span class="pre">|</span> <span class="pre">sudo</span> <span class="pre">bash</span></code></p>
+</section>
+<section id="install-func">
+<h2>Install func<a class="headerlink" href="#install-func" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>func is a command-line tool for managing Azure Functions.</p>
+</div>
+<p>Installation details can be found here <a class="reference external" href="https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=v4%2Clinux%2Ccsharp%2Cportal%2Cbash">https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=v4%2Clinux%2Ccsharp%2Cportal%2Cbash</a> for WSL Ubuntu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">packages</span><span class="o">.</span><span class="n">microsoft</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">microsoft</span><span class="o">.</span><span class="n">asc</span> <span class="o">|</span> <span class="n">gpg</span> <span class="o">--</span><span class="n">dearmor</span> <span class="o">&gt;</span> <span class="n">microsoft</span><span class="o">.</span><span class="n">gpg</span>
+
+<span class="n">sudo</span> <span class="n">mv</span> <span class="n">microsoft</span><span class="o">.</span><span class="n">gpg</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">trusted</span><span class="o">.</span><span class="n">gpg</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">microsoft</span><span class="o">.</span><span class="n">gpg</span>
+
+<span class="n">sudo</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-$(lsb_release -cs)-prod $(lsb_release -cs) main&quot; &gt; /etc/apt/sources.list.d/dotnetdev.list&#39;</span>
+
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">azure</span><span class="o">-</span><span class="n">functions</span><span class="o">-</span><span class="n">core</span><span class="o">-</span><span class="n">tools</span><span class="o">-</span><span class="mi">4</span>
+</pre></div>
+</div>
+</section>
+<section id="install-terraform">
+<h2>Install Terraform<a class="headerlink" href="#install-terraform" title="Link to this heading"></a></h2>
+<p>You can download the latest version of Terraform from the official website: <a class="reference external" href="https://www.terraform.io/downloads.html">https://www.terraform.io/downloads.html</a> for WSL Ubuntu</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">O</span><span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">apt</span><span class="o">.</span><span class="n">releases</span><span class="o">.</span><span class="n">hashicorp</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">gpg</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">gpg</span> <span class="o">--</span><span class="n">dearmor</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">hashicorp</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="n">gpg</span>
+<span class="n">echo</span> <span class="s2">&quot;deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">hashicorp</span><span class="o">.</span><span class="n">list</span>
+
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">terraform</span>
+</pre></div>
+</div>
+</section>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<p>An example of an Azure Function App that uses Flask and Swagger for API documentation.</p>
+<p>Create a virtual environment and install the required packages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a python virtual environment</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">venv</span>
+
+<span class="c1"># activate the virtual environment</span>
+<span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+
+<span class="c1"># install the required packages</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">source_code</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Create a new Azure Functions project:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">func</span> <span class="n">init</span> <span class="o">--</span><span class="n">worker</span><span class="o">-</span><span class="n">runtime</span> <span class="n">python</span>
+</pre></div>
+</div>
+<p>Create a new Azure Functions HTTP Trigger:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">func</span> <span class="n">new</span> <span class="o">--</span><span class="n">name</span> <span class="n">robot_dreams</span> <span class="o">--</span><span class="n">template</span> <span class="s2">&quot;HTTP trigger&quot;</span>
+</pre></div>
+</div>
+<p>Modify the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file to include the required packages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">azure</span><span class="o">-</span><span class="n">functions</span>
+<span class="n">fastapi</span>
+</pre></div>
+</div>
+<p>To test the function locally, start the Azure Functions Core Tools:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">func</span> <span class="n">start</span>
+</pre></div>
+</div>
+<p>Deploy the function in the previously created environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">func</span> <span class="n">azure</span> <span class="n">functionapp</span> <span class="n">publish</span> <span class="n">func</span><span class="o">-</span><span class="n">robot</span><span class="o">-</span><span class="n">dreams</span><span class="o">-</span><span class="n">deploy</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="1_agnostic_native.html" class="btn btn-neutral float-left" title="11.2 Cloud Agnostic vs Cloud Native vs Cloud Services" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="3_aws.html" class="btn btn-neutral float-right" title="11.3 Amazon Web Services" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, skillab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

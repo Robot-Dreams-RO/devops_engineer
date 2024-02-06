@@ -357,7 +357,7 @@ In this case we will use the official Helm Chart for Harbor: https://github.com/
 
 .. code-block:: bash
 
-    helm install harbor harbor/harbor --namespace harbor --set harborAdminPassword=H@rb0rAdm
+    helm install harbor harbor/harbor --namespace harbor --set harborAdminPassword=password
 
 4. Access Harbor
 

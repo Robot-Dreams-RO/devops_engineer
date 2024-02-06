@@ -200,24 +200,13 @@ To find out more about different attributes, you can use
 
 .. code-block:: bash
 
-    PS C:\Users\windows_user> kubectl explain pod.metadata
-    KIND:     Pod
-    VERSION:  v1
-
-    RESOURCE: metadata <Object>
-
-    DESCRIPTION:
-        Standard object's metadata. More info:
-        https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-
-        ObjectMeta is metadata that all persisted resources must have, which
-        includes all objects users must create.
+    kubectl explain pod.spec
 
 ======================
 Is there a better way?
 ======================
 
-Using ``kubectl`` to create deployment is perfect but for debuging and testing purposes, it is not the best way to do it. 
+Using ``kubectl`` to create deployment is perfect but for debugging and testing purposes, it is not the best way to do it. 
 
 We use better cli tools, like ``k9s``
 

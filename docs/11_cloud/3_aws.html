@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.3 Amazon Web Services &mdash; DevOps 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/max_width.css?v=a0fc712e" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12.0 Project" href="../12_project/introduction.html" />
+    <link rel="prev" title="11.2 Azure" href="2_azure.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DevOps
+              <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Curriculum</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../00_curriculum/curriculum.html">Class Curriculum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to DevOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/0_foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/00_preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/1_devops.html">0.1 Introduction to DevOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/2_roadmap.html">0.2 DevOps Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/3_life_cycle.html">0.3 Software Development Lifecycle Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/4_scrum_agile.html">0.4 SCRUM Agile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/TODO.html">0.5 TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/0_computer_network.html">1.0 Computer and Network Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/1_how_code_works.html">1.1 How code works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/2_environments.html">1.2 Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/3_microservices.html">1.3 Microservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/4_introduction_to_linux.html">1.4 Introduction to Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/5_getting_around.html">1.5 Getting around</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/6_setup_infra.html">1.7 Setup developing infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/0_introduction.html">2.0 Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/1_managing_users_and_groups.html">2.1 Managing Users and Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/2_file_management.html">2.2 File management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/3_managing_software.html">2.3 Managing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/4_service_management.html">2.4 Service Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/5_process_management.html">2.5 Process management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/6_system_logging.html">2.6 System logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/7_linux_file_systems.html">2.7 Linux File Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/8_terminal_tuning.html">2.8 Terminal tuning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/9_networking.html">2.9 Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html#solutions-to-todos">Solutions to TODOs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/0_introduction.html">3.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/1_getting_started.html">3.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/2_data_structures_conditions.html">3.2 Data structures and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/3_to_script_or_to_alias.html">3.3 Working with aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/4_shell_style_guide.html">3.4 Shell Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/5_makefile.html">3.5 Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/6_utilities.html">3.6 Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/0_introduction.html">4.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/1_installation.html">4.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/2_data_structures.html">4.2 Variables and Data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/3_conditions_loops.html">4.3 Loops and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/4_libraries.html">4.4 Libraries and modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/5_functions.html">4.5 Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/6_classes.html">4.6 Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/7_yourfirstcli.html">4.7 Your first CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/8_documentation.html">4.8 Documenting your code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/9_rules.html">4.9 Python Language Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/10_files.html">4.10 Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unit Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/0_introduction.html">5.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/1_working_togheter.html">5.1 Working together on Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/2_bestpractices.html">5.1 Best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DocOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/0_introduction.html">6.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/1_installation.html">6.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/2_sphinx.html">6.2 What is Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/3_deploy_docs.html">6.3 Deploy Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pipelines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/0_introduction.html">7.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/1_getting_started.html">7.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/2_python_cli.html">7.2 Python CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/3_github.html">7.3 GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/4_jenkins_introduction.html">7.4 Introduction to Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/5_jenkins_architecture.html">7.5 Jenkins Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/6_jenkins_getting_started.html">7.6 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/9_best_practices.html">7.7 Continuous Integration Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Containers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/0_introduction.html">8.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/1_installation.html">8.1 Windows installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/2_helloworld.html">8.2 Running “Hello World”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/3_workingwithdocker.html">8.3 Working with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/4_usingdockerfile.html">8.4 Using Dockerfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/5_management.html">8.5 Container management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/6_orchestration.html">8.6 Container orchestration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/7_test.html">8.7 Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kubernetes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/00_abstract.html">9.00 Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/0_introduction.html">9.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/1_gettingstarted.html">9.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/2_helm.html">9.2  Helm charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/3_deployments.html">9.3 Creating a Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/4_argocd.html">9.4 ArgoCD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/5_swarm_vs_k8s.html">9.5 Docker Swarm vs Kubernetes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cloud</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="0_introduction.html">11.0 Introduction to cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_agnostic_native.html">11.2 Cloud Agnostic vs Cloud Native vs Cloud Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_azure.html">11.2 Azure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11.3 Amazon Web Services</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../12_project/introduction.html">12.0 Project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Craftsman best practices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/0_mentality.html">13.0 Mentality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/1_implementation.html">13.1 Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/2_tools.html">13.2 Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/3_mock_interview.html">13.2 Interview Preparation: DevOps Engineer</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DevOps</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">11.3 Amazon Web Services</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/11_cloud/3_aws.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="amazon-web-services">
+<h1>11.3 Amazon Web Services<a class="headerlink" href="#amazon-web-services" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Amazon Web Services (AWS) is a collection of remote computing services (also called web services) that together make up a cloud computing platform, offered over the Internet by Amazon.com. The most central and well-known of these services are Amazon EC2 and Amazon S3. The service is advertised as providing a large computing capacity (potentially many servers) much faster and cheaper than building a physical server farm.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3.12<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+.<span class="w"> </span>ven/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>awscli
+</pre></div>
+</div>
+<section id="hello-world-virtual-machine-vs-cloud-service">
+<h2>Hello world: Virtual Machine vs Cloud Service<a class="headerlink" href="#hello-world-virtual-machine-vs-cloud-service" title="Link to this heading"></a></h2>
+<section id="virtual-machine-elastic-compute-cloud-ec2">
+<h3>Virtual Machine - Elastic Compute Cloud (EC2)<a class="headerlink" href="#virtual-machine-elastic-compute-cloud-ec2" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A virtual machine (VM) is a software-based emulation of a physical computer. AWS provides a web service called Amazon Elastic Compute Cloud (EC2) that allows you to run virtual machines in the cloud.</p>
+</div>
+<p>To create a “Hello, World!” webpage using EC2, you would:</p>
+<ul class="simple">
+<li><p>Launch an EC2 instance (a virtual server) with a web server installed (e.g., Apache or Nginx).</p></li>
+<li><p>Create an HTML file with your “Hello, World!” content.</p></li>
+<li><p>Access your EC2 instance’s public DNS or IP address in a web browser to view your webpage.</p></li>
+</ul>
+<section id="steps">
+<h4>Steps<a class="headerlink" href="#steps" title="Link to this heading"></a></h4>
+<p>Step 1: Set Up an AWS Account</p>
+<blockquote>
+<div><p>Create an AWS Account: If you don’t already have one, go to the AWS website and create an account. You’ll need to provide some basic information and a valid credit card.</p>
+</div></blockquote>
+<p>Step 2: Launch an EC2 Instance</p>
+<blockquote>
+<div><p>Sign in to AWS Management Console: Once your account is set up, sign in to the AWS Management Console.</p>
+<p>Launch an EC2 Instance:</p>
+<ul class="simple">
+<li><p>In the AWS Management Console, find and select “EC2” to open the EC2 dashboard.</p></li>
+<li><p>Click on “Launch Instance” to start the process of creating a new virtual server.</p></li>
+<li><p>Select an Amazon Machine Image (AMI), like Amazon Linux 2, which is free tier eligible.</p></li>
+<li><p>Choose an Instance Type (e.g., t2.micro for the free tier) and then click “Next: Configure Instance Details”.</p></li>
+<li><p>Proceed with the default configurations and click “Next” until you reach “Configure Security Group”.</p></li>
+<li><p>Create a new security group and add rules to allow HTTP (port 80) and SSH (port 22) traffic.</p></li>
+<li><p>Review and launch the instance. AWS will prompt you to create and download a key pair. Save this key pair, as it’s required to SSH into the server.</p></li>
+</ul>
+</div></blockquote>
+<p>Step 3: SSH into Your EC2 Instance</p>
+<blockquote>
+<div><p>Connect to Your Instance: Use an SSH client with the key pair file you downloaded to connect to your EC2 instance. The command generally looks like this: ssh -i /path/to/your-key.pem <a class="reference external" href="mailto:ec2-user&#37;&#52;&#48;your-instance-public-dns">ec2-user<span>&#64;</span>your-instance-public-dns</a>.</p>
+</div></blockquote>
+<p>Step 4: Install a Web Server</p>
+<blockquote>
+<div><p>Update Your Instance: Once connected, update your packages: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">update</span> <span class="pre">-y</span></code>.
+Install a Web Server: Install Apache or Nginx. For Apache: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">httpd</span> <span class="pre">-y</span></code>.
+Start the Web Server: For Apache: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">systemctl</span> <span class="pre">start</span> <span class="pre">httpd.service</span></code>.
+Configure the Web Server to Start on Boot: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">systemctl</span> <span class="pre">enable</span> <span class="pre">httpd.service</span></code>.</p>
+</div></blockquote>
+<p>Step 5: Create Your “Hello World” HTML File</p>
+<blockquote>
+<div><p>Navigate to the Web Root: For Apache, it’s usually /var/www/html.</p>
+<p>Create the HTML File: Use a text editor to create a file named index.html. Here’s a simple HTML for a “Hello World” page:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, World!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is my first webpage hosted on AWS.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Save the file in the web server’s root directory (e.g., /var/www/html).</p>
+</div></blockquote>
+<p>Step 6: Access Your Website</p>
+<blockquote>
+<div><p>Find Your Public DNS/IP: Go back to the EC2 Management Console, select your instance, and find its public DNS or IP address.
+Access in Browser: Enter the public DNS/IP address in a web browser. You should see your “Hello, World!” webpage.</p>
+</div></blockquote>
+<p>Step 7: Additional Configurations</p>
+<blockquote>
+<div><p>You may need to adjust your instance’s security group rules in the AWS Management Console to ensure that the HTTP and HTTPS ports (80 and 443) are open to the public.
+For a production environment, you would also need to consider setting up a domain name, SSL/TLS certificates for HTTPS, and possibly a more complex hosting setup like Elastic Beanstalk or AWS Amplify for scalability and ease of deployment.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="cloud-service-simple-storage-service-s3">
+<h3>Cloud Service - Simple Storage Service (S3)<a class="headerlink" href="#cloud-service-simple-storage-service-s3" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Amazon Simple Storage Service (S3) is a scalable, high-speed, web-based cloud storage service designed for online backup and archiving of data and applications on Amazon Web Services. It’s a simple storage service that offers industry-leading scalability, data availability, security, and performance.</p>
+</div>
+<p>To create a “Hello, World!” webpage using S3, you would:</p>
+<ul class="simple">
+<li><p>Write an HTML file with your “Hello, World!” content.</p></li>
+<li><p>Create an S3 bucket and upload your HTML file.</p></li>
+<li><p>Enable static website hosting for your bucket.</p></li>
+<li><p>Access your website using the S3 bucket’s endpoint URL.</p></li>
+</ul>
+<section id="id1">
+<h4>Steps<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<p>Step 1: Create Your HTML File</p>
+<blockquote>
+<div><p>First, write the HTML for your <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code> page. You can use a text editor like vim or VS Code for this. Here’s a basic example:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, World!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is my first webpage hosted on AWS S3.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Save this file as <code class="docutils literal notranslate"><span class="pre">index.html</span></code>.</p>
+<p>And for <code class="docutils literal notranslate"><span class="pre">error.html</span></code>:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Error<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>404 Not Found<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The requested URL was not found on this server.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Step 2: Set Up an AWS Account</p>
+<blockquote>
+<div><p>If you don’t have an AWS account, go to the AWS website and sign up. You’ll need to provide some basic information and a valid credit card.</p>
+</div></blockquote>
+<p>Step 3: Create an S3 Bucket</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Log in to the AWS Management Console and navigate to the S3 service.</p></li>
+<li><p>Create a new bucket:</p></li>
+<li><p>Click on “Create bucket”.</p></li>
+<li><p>Give your bucket a unique name, which will be part of your website URL (e.g., my-hello-world-website).</p></li>
+<li><p>Select a region.</p></li>
+<li><p>Uncheck “Block all public access” to make the website publicly accessible. Acknowledge the warning that the bucket will be public.</p></li>
+<li><p>Click on “Create bucket”.</p></li>
+</ul>
+</div></blockquote>
+<p>Step 4: Upload Your HTML File</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Open your newly created bucket and click on “Upload”.</p></li>
+<li><p>Upload your <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file.</p></li>
+</ul>
+</div></blockquote>
+<p>Step 5: Enable Static Website Hosting</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>In your bucket, go to the “Properties” tab.</p></li>
+<li><p>Scroll down to “Static website hosting”.</p></li>
+<li><p>Select “Use this bucket to host a website”.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">index.html</span></code> as both the Index document and the Error document.</p></li>
+<li><p>Click “Save”.</p></li>
+</ul>
+</div></blockquote>
+<p>Step 6: Set Bucket Permissions</p>
+<blockquote>
+<div><p>Go to the “Permissions” tab of your bucket.</p>
+</div></blockquote>
+<p>Edit the bucket policy to make the content publicly readable. You can use the following policy, replacing YOUR_BUCKET_NAME with the actual name of your bucket:</p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PublicReadGetObject&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Principal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s3:GetObject&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn:aws:s3:::YOUR_BUCKET_NAME/*&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Click “Save”.</p>
+</div></blockquote>
+<p>Step 7: Access Your Website</p>
+<blockquote>
+<div><p>Find the endpoint URL: Go back to the bucket’s “Properties” tab and look under “Static website hosting” for the Endpoint URL.
+Open the URL in a web browser. You should see your “Hello, World!” webpage.</p>
+</div></blockquote>
+<p>Step 8: DNS Alias</p>
+<blockquote>
+<div><p>To create a DNS alias for your S3-hosted website, you’ll typically use Amazon Route 53, a scalable and highly available Domain Name System (DNS) web service. This process involves purchasing a domain name (if you don’t have one already) and then creating a DNS alias that points to your S3 bucket. Here’s how to do it:</p>
+<ul>
+<li><p>Register a Domain (if you don’t have one)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Go to the AWS Management Console and open the Route 53 console.</p></li>
+<li><p>In Route 53, go to “Registered domains” and click “Register domain”.</p></li>
+<li><p>Follow the instructions to choose a domain name and complete the registration process. Note that this will incur a yearly registration fee.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Create a Hosted Zone</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>In the Route 53 console, go to “Hosted zones”.</p></li>
+<li><p>Click “Create hosted zone”.</p></li>
+<li><p>Enter your domain name in the “Domain Name” field.</p></li>
+<li><p>Choose “Public Hosted Zone”.</p></li>
+<li><p>Click “Create”.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Set Up a DNS Alias for Your S3 Bucket</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>In your hosted zone, click “Create Record”.</p></li>
+<li><p>In the “Record name” field, enter the desired subdomain (e.g., www for www.example.com).</p></li>
+<li><p>In the “Record type” field, select “A - IPv4 address”.</p></li>
+<li><p>Enable the “Alias” toggle.</p></li>
+<li><p>In the “Alias target” field, select your S3 bucket endpoint from the dropdown list. It should appear under “Alias to S3 website endpoint”.</p></li>
+<li><p>Click “Create records”.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Configure Your S3 Bucket to Use the Custom Domain</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Go back to the S3 console and open your bucket.</p></li>
+<li><p>Rename your bucket to match the full domain name (e.g., www.example.com). Note: The bucket name must exactly match the domain or subdomain.</p></li>
+<li><p>Follow the previously mentioned steps to enable static website hosting for your bucket and set the correct permissions.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="2_azure.html" class="btn btn-neutral float-left" title="11.2 Azure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../12_project/introduction.html" class="btn btn-neutral float-right" title="12.0 Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, skillab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

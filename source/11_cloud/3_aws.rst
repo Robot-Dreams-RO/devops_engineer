@@ -1,5 +1,5 @@
 ########################
-11.2 Amazon Web Services
+11.3 Amazon Web Services
 ########################
 
 .. note::
@@ -12,17 +12,27 @@
     . ven/bin/activate
     pip install awscli
 
-===========================================
-Hello world: Cloud Agnostic vs Cloud Native
-===========================================
+=============================================
+Hello world: Virtual Machine vs Cloud Service
+=============================================
 
-++++++++++++++
-Cloud Agnostic
-++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++
+Virtual Machine - Elastic Compute Cloud (EC2)
++++++++++++++++++++++++++++++++++++++++++++++
 
-.. note::
+.. note:: 
+    
+    A virtual machine (VM) is a software-based emulation of a physical computer. AWS provides a web service called Amazon Elastic Compute Cloud (EC2) that allows you to run virtual machines in the cloud.
 
-    Cloud agnostic is a term that refers to a software tool or service that is designed to function in any vendor's cloud computing environment. A cloud-agnostic approach to technology can be beneficial to businesses because it allows them to avoid vendor lock-in, which can occur when a company builds internal workflows or adopts third-party tools that are designed to function optimally with a single cloud provider's services.
+To create a "Hello, World!" webpage using EC2, you would:
+
+- Launch an EC2 instance (a virtual server) with a web server installed (e.g., Apache or Nginx).
+- Create an HTML file with your "Hello, World!" content.
+- Access your EC2 instance's public DNS or IP address in a web browser to view your webpage.
+
+-----
+Steps
+-----
 
 Step 1: Set Up an AWS Account
 
@@ -84,19 +94,28 @@ Step 7: Additional Configurations
     You may need to adjust your instance's security group rules in the AWS Management Console to ensure that the HTTP and HTTPS ports (80 and 443) are open to the public.
     For a production environment, you would also need to consider setting up a domain name, SSL/TLS certificates for HTTPS, and possibly a more complex hosting setup like Elastic Beanstalk or AWS Amplify for scalability and ease of deployment.
 
-++++++++++++
-Cloud Native
-++++++++++++
++++++++++++++++++++++++++++++++++++++++++++
+Cloud Service - Simple Storage Service (S3)
++++++++++++++++++++++++++++++++++++++++++++
 
-.. note::
+.. note:: 
+    
+    Amazon Simple Storage Service (S3) is a scalable, high-speed, web-based cloud storage service designed for online backup and archiving of data and applications on Amazon Web Services. It's a simple storage service that offers industry-leading scalability, data availability, security, and performance.
 
-    Cloud native is a term that refers to applications that are container-based, dynamically orchestrated and microservices-oriented. Cloud-native technologies are used to develop applications built with services packaged in containers, deployed as microservices and managed on elastic infrastructure through agile DevOps processes and continuous delivery workflows.
+To create a "Hello, World!" webpage using S3, you would:
 
+- Write an HTML file with your "Hello, World!" content.
+- Create an S3 bucket and upload your HTML file.
+- Enable static website hosting for your bucket.
+- Access your website using the S3 bucket's endpoint URL.
+
+-----
+Steps
+-----
 
 Step 1: Create Your HTML File
 
-    irst, write the HTML for your "Hello World" page. You can use a text editor like Notepad or VS Code for this. Here's a basic example:
-
+    First, write the HTML for your ``Hello World`` page. You can use a text editor like vim or VS Code for this. Here's a basic example:
 
     .. code-block:: html
 
@@ -111,7 +130,22 @@ Step 1: Create Your HTML File
         </body>
         </html>
 
-    Save this file as index.html.
+    Save this file as ``index.html``.
+
+    And for ``error.html``:
+
+    .. code-block:: html
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Error</title>
+        </head>
+        <body>
+            <h1>404 Not Found</h1>
+            <p>The requested URL was not found on this server.</p>
+        </body>
+        </html>
 
 Step 2: Set Up an AWS Account
 
@@ -119,26 +153,26 @@ Step 2: Set Up an AWS Account
 
 Step 3: Create an S3 Bucket
 
-    Log in to the AWS Management Console and navigate to the S3 service.
-    Create a new bucket:
-    Click on "Create bucket".
-    Give your bucket a unique name, which will be part of your website URL (e.g., my-hello-world-website).
-    Select a region.
-    Uncheck “Block all public access” to make the website publicly accessible. Acknowledge the warning that the bucket will be public.
-    Click on "Create bucket".
+    - Log in to the AWS Management Console and navigate to the S3 service.
+    - Create a new bucket:
+    - Click on "Create bucket".
+    - Give your bucket a unique name, which will be part of your website URL (e.g., my-hello-world-website).
+    - Select a region.
+    - Uncheck “Block all public access” to make the website publicly accessible. Acknowledge the warning that the bucket will be public.
+    - Click on "Create bucket".
 
 Step 4: Upload Your HTML File
 
-    Open your newly created bucket and click on "Upload".
-    Upload your index.html file.
+    - Open your newly created bucket and click on "Upload".
+    - Upload your ``index.html`` file.
 
 Step 5: Enable Static Website Hosting
 
-    In your bucket, go to the “Properties” tab.
-    Scroll down to “Static website hosting”.
-    Select “Use this bucket to host a website”.
-    Set index.html as both the Index document and the Error document.
-    Click “Save”.
+    - In your bucket, go to the “Properties” tab.
+    - Scroll down to “Static website hosting”.
+    - Select “Use this bucket to host a website”.
+    - Set ``index.html`` as both the Index document and the Error document.
+    - Click “Save”.
 
 Step 6: Set Bucket Permissions
 
@@ -170,35 +204,33 @@ Step 7: Access Your Website
 
 Step 8: DNS Alias
 
-
     To create a DNS alias for your S3-hosted website, you'll typically use Amazon Route 53, a scalable and highly available Domain Name System (DNS) web service. This process involves purchasing a domain name (if you don't have one already) and then creating a DNS alias that points to your S3 bucket. Here's how to do it:
 
-    Register a Domain (if you don't have one)
+    - Register a Domain (if you don't have one)
 
-        Go to the AWS Management Console and open the Route 53 console.
-        In Route 53, go to “Registered domains” and click “Register domain”.
-        Follow the instructions to choose a domain name and complete the registration process. Note that this will incur a yearly registration fee.
+        - Go to the AWS Management Console and open the Route 53 console.
+        - In Route 53, go to “Registered domains” and click “Register domain”.
+        - Follow the instructions to choose a domain name and complete the registration process. Note that this will incur a yearly registration fee.
 
-    Create a Hosted Zone
+    - Create a Hosted Zone
 
-        In the Route 53 console, go to “Hosted zones”.
-        Click “Create hosted zone”.
-        Enter your domain name in the “Domain Name” field.
-        Choose “Public Hosted Zone”.
-        Click “Create”.
+        - In the Route 53 console, go to “Hosted zones”.
+        - Click “Create hosted zone”.
+        - Enter your domain name in the “Domain Name” field.
+        - Choose “Public Hosted Zone”.
+        - Click “Create”.
 
-    Set Up a DNS Alias for Your S3 Bucket
+    - Set Up a DNS Alias for Your S3 Bucket
 
-        In your hosted zone, click “Create Record”.
-        In the “Record name” field, enter the desired subdomain (e.g., www for www.example.com).
-        In the “Record type” field, select “A - IPv4 address”.
-        Enable the “Alias” toggle.
-        In the “Alias target” field, select your S3 bucket endpoint from the dropdown list. It should appear under “Alias to S3 website endpoint”.
-        Click “Create records”.
+        - In your hosted zone, click “Create Record”.
+        - In the “Record name” field, enter the desired subdomain (e.g., www for www.example.com).
+        - In the “Record type” field, select “A - IPv4 address”.
+        - Enable the “Alias” toggle.
+        - In the “Alias target” field, select your S3 bucket endpoint from the dropdown list. It should appear under “Alias to S3 website endpoint”.
+        - Click “Create records”.
 
-    Configure Your S3 Bucket to Use the Custom Domain
+    - Configure Your S3 Bucket to Use the Custom Domain
 
-        Go back to the S3 console and open your bucket.
-        Rename your bucket to match the full domain name (e.g., www.example.com). Note: The bucket name must exactly match the domain or subdomain.
-        Follow the previously mentioned steps to enable static website hosting for your bucket and set the correct permissions.
-
+        - Go back to the S3 console and open your bucket.
+        - Rename your bucket to match the full domain name (e.g., www.example.com). Note: The bucket name must exactly match the domain or subdomain.
+        - Follow the previously mentioned steps to enable static website hosting for your bucket and set the correct permissions.

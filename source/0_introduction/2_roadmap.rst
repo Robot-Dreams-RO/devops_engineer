@@ -78,7 +78,7 @@ DevOps Roadmap
 But it's too much! Where to start? What to learn first? What to learn next?
 
 .. image:: ../diagrams/devops_roadmap.png
-  :width: 1500
+  :width: 80%
   :alt: DevOps Roadmap
 
 

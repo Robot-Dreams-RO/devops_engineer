@@ -184,8 +184,9 @@ To be an efficient engineer you need to understand:
    :caption: Cloud
 
    11_cloud/0_introduction
-   11_cloud/1_azure
-   11_cloud/2_aws
+   11_cloud/1_agnostic_native
+   11_cloud/2_azure
+   11_cloud/3_aws
 
 .. toctree::
    :hidden:
@@ -202,3 +203,4 @@ To be an efficient engineer you need to understand:
   13_craftsman_best_practices/0_mentality
   13_craftsman_best_practices/1_implementation
   13_craftsman_best_practices/2_tools
+  13_craftsman_best_practices/3_mock_interview
