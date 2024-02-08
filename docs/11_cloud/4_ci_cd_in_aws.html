@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.4 CI/CD In AWS &mdash; DevOps 1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/max_width.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12.0 Project" href="../12_project/introduction.html" />
+    <link rel="prev" title="11.3 Amazon Web Services" href="3_aws.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DevOps
+              <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Curriculum</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../00_curriculum/curriculum.html">Class Curriculum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to DevOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/0_foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/00_preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/1_devops.html">0.1 Introduction to DevOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/2_roadmap.html">0.2 DevOps Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/3_life_cycle.html">0.3 Software Development Lifecycle Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/4_scrum_agile.html">0.4 SCRUM Agile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/TODO.html">0.5 TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/0_computer_network.html">1.0 Computer and Network Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/1_how_code_works.html">1.1 How code works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/2_environments.html">1.2 Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/3_microservices.html">1.3 Microservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/4_introduction_to_linux.html">1.4 Introduction to Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/5_getting_around.html">1.5 Getting around</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/6_setup_infra.html">1.7 Setup developing infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/0_introduction.html">2.0 Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/1_managing_users_and_groups.html">2.1 Managing Users and Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/2_file_management.html">2.2 File management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/3_managing_software.html">2.3 Managing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/4_service_management.html">2.4 Service Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/5_process_management.html">2.5 Process management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/6_system_logging.html">2.6 System logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/7_linux_file_systems.html">2.7 Linux File Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/8_terminal_tuning.html">2.8 Terminal tuning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/9_networking.html">2.9 Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html#solutions-to-todos">Solutions to TODOs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/0_introduction.html">3.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/1_getting_started.html">3.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/2_data_structures_conditions.html">3.2 Data structures and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/3_to_script_or_to_alias.html">3.3 Working with aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/4_shell_style_guide.html">3.4 Shell Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/5_makefile.html">3.5 Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/6_utilities.html">3.6 Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/0_introduction.html">4.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/1_installation.html">4.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/2_data_structures.html">4.2 Variables and Data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/3_conditions_loops.html">4.3 Loops and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/4_libraries.html">4.4 Libraries and modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/5_functions.html">4.5 Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/6_classes.html">4.6 Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/7_yourfirstcli.html">4.7 Your first CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/8_documentation.html">4.8 Documenting your code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/9_rules.html">4.9 Python Language Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/10_files.html">4.10 Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unit Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/0_introduction.html">5.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/1_working_togheter.html">5.1 Working together on Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/2_bestpractices.html">5.1 Best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DocOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/0_introduction.html">6.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/1_installation.html">6.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/2_sphinx.html">6.2 What is Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/3_deploy_docs.html">6.3 Deploy Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pipelines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/0_introduction.html">7.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/1_getting_started.html">7.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/2_python_cli.html">7.2 Python CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/3_github.html">7.3 GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/4_jenkins_introduction.html">7.4 Introduction to Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/5_jenkins_architecture.html">7.5 Jenkins Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/6_jenkins_getting_started.html">7.6 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/9_best_practices.html">7.7 Continuous Integration Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Containers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/0_introduction.html">8.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/1_installation.html">8.1 Windows installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/2_helloworld.html">8.2 Running “Hello World”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/3_workingwithdocker.html">8.3 Working with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/4_usingdockerfile.html">8.4 Using Dockerfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/5_management.html">8.5 Container management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/6_orchestration.html">8.6 Container orchestration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/7_test.html">8.7 Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kubernetes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/00_abstract.html">9.00 Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/0_introduction.html">9.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/1_gettingstarted.html">9.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/2_helm.html">9.2  Helm charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/3_deployments.html">9.3 Creating a Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/4_argocd.html">9.4 ArgoCD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/5_swarm_vs_k8s.html">9.5 Docker Swarm vs Kubernetes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cloud</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="0_introduction.html">11.0 Introduction to cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_agnostic_native.html">11.2 Cloud Agnostic vs Cloud Native vs Cloud Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_azure.html">11.2 Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_aws.html">11.3 Amazon Web Services</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11.4 CI/CD In AWS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../12_project/introduction.html">12.0 Project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Craftsman best practices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/0_mentality.html">13.0 Mentality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/1_implementation.html">13.1 Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/2_tools.html">13.2 Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/3_mock_interview.html">13.2 Interview Preparation: DevOps Engineer</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DevOps</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">11.4 CI/CD In AWS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/11_cloud/4_ci_cd_in_aws.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ci-cd-in-aws">
+<h1>11.4 CI/CD In AWS<a class="headerlink" href="#ci-cd-in-aws" title="Link to this heading"></a></h1>
+<p>There are 2 ways to do CI/CD in AWS:</p>
+<ul class="simple">
+<li><p>native AWS services</p></li>
+<li><p>third-party tools</p></li>
+</ul>
+<p>The native AWS services are:</p>
+<ul class="simple">
+<li><p>code repository: AWS CodeCommit</p></li>
+<li><p>build service: AWS CodeBuild</p></li>
+<li><p>deployment service: AWS CodeDeploy</p></li>
+<li><p>pipeline service: AWS CodePipeline</p></li>
+<li><p>IaaS: CloudFormation</p></li>
+</ul>
+<p>The third-party tools are:</p>
+<ul class="simple">
+<li><p>code repository: GitHub / GitLab</p></li>
+<li><p>build service: GitHub Actions / GitLab CI</p></li>
+<li><p>deployment service: GitHub Actions / GitLab CI</p></li>
+<li><p>pipeline service: GitHub Actions / GitLab CI</p></li>
+<li><p>IaaS: terraform / openTofu / pulumi / SST</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The third-party tools are more popular and have more features than the native AWS services.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your company is fixed on staying within the AWS ecosystem, then you should use the native AWS services. If your company is wants to get best buck for the money, then you should use the third-party tools. If there is only a small chance to move to another cloud provider, then you should use the third-party tools.</p>
+</div>
+<p>In this course, we’ve always used open source tools that can be used on any cloud provider. We’ve used: GitHub, GitHub Actions, Docker, Kubernetes, Helm.</p>
+<p>The CI/CD in GitHub is not going to change when we move to AWS. We will still use GitHub Actions to build, test, and deploy our applications. The only thing that will change is the deployment target. Instead of deploying to a Kubernetes cluster, we will deploy to AWS.</p>
+<section id="continous-integration">
+<h2>Continous Integration<a class="headerlink" href="#continous-integration" title="Link to this heading"></a></h2>
+<p>Continous integration (CI) will be the same, we will build, test, lint or scan our code using GitHub Actions. The only thing that can change is using custom GitHub runners instead of the default GitHub runners, is order to speed up the build process by having all thye dependencies pre-installed on the runner.</p>
+<p>Example of CI in GitHub actions for a Python microservice:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CI</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">build</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
+<span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python 3.12</span>
+<span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
+<span class="w">      </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.12</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">python -m pip install --upgrade pip</span>
+<span class="w">        </span><span class="no">pip install -r requirements.txt</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Lint with flake8</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">flake8 .</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test with pytest</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">pytest</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Scan with bandit</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">bandit -r .</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Scan with safety</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">safety check --full-report</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Scan with trufflehog</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">trufflehog --regex --entropy=False .</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Scan with snyk</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">snyk test</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Scan with sonarcloud</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">sonar-scanner</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build Docker image</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">docker build -t myapp:latest .</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Push Docker image</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin</span>
+<span class="w">        </span><span class="no">docker push myapp:latest</span>
+</pre></div>
+</div>
+</section>
+<section id="continous-deployment-cd">
+<h2>Continous deployment (CD)<a class="headerlink" href="#continous-deployment-cd" title="Link to this heading"></a></h2>
+<section id="automated-deployment-with-terraform">
+<h3>Automated deployment with Terraform<a class="headerlink" href="#automated-deployment-with-terraform" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>What is terraform?</p>
+<p>Terraform is an open-source infrastructure as code software tool created by HashiCorp. It enables users to define and provision a datacenter infrastructure using a high-level configuration language known as Hashicorp Configuration Language (HCL).</p>
+</div>
+<section id="prerequisites">
+<h4>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h4>
+<p>In order to run terraform we need to install it first. Here is how to install <code class="docutils literal notranslate"><span class="pre">terraform</span></code> on Ubuntu:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>-O-<span class="w"> </span>https://apt.releases.hashicorp.com/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/hashicorp-archive-keyring.gpg
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com </span><span class="k">$(</span>lsb_release<span class="w"> </span>-cs<span class="k">)</span><span class="s2"> main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/hashicorp.list
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>terraform
+
+<span class="c1"># to test it</span>
+terraform<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>We need also to install AWS CLI:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>awscli
+
+<span class="c1"># to test it</span>
+aws<span class="w"> </span>--version
+</pre></div>
+</div>
+</section>
+<section id="iam-identity-and-access-management">
+<h4>IAM - Identity and Access Management<a class="headerlink" href="#iam-identity-and-access-management" title="Link to this heading"></a></h4>
+<p>Create an account on AWS and configure it:</p>
+<blockquote>
+<div><ul>
+<li><p>Step 1: Navigate to IAM Dashboard</p>
+<blockquote>
+<div><p>After signing into the AWS Management Console, open the IAM (Identity and Access Management) service. You can find it by typing “IAM” in the search bar at the top.</p>
+</div></blockquote>
+</li>
+<li><p>Step 2: Create a New IAM User</p>
+<blockquote>
+<div><p>Click on “Users”: On the left sidebar within the IAM dashboard, click on “Users.”
+Click on “Create User”: You’ll see a button or link labeled “Create User.” Click on this to start the user creation process.</p>
+</div></blockquote>
+</li>
+<li><p>Step 3: User Details</p>
+<blockquote>
+<div><p>Enter User Name: Provide a name for the new user. This name should be unique within your AWS account.
+Select AWS Access Type: Choose “Programmatic access” if you want to generate an access key ID and secret access key for using the AWS CLI and SDKs. If you also want the user to be able to log into the AWS Management Console, select “AWS Management Console access” and set a console password.</p>
+</div></blockquote>
+</li>
+<li><p>Step 4: Set Permissions</p>
+<blockquote>
+<div><p>Attach existing policies directly: This option allows you to attach AWS managed and custom policies directly to the user. Choose the policies that grant the necessary permissions for the user to perform their tasks.
+Add user to group: If you have already created groups with specific policies attached, you can add the user to one of these groups.
+Copy permissions from another user: This option allows you to duplicate the permissions from an existing user to the new user.</p>
+</div></blockquote>
+</li>
+<li><p>Step 5: Review and Create</p>
+<blockquote>
+<div><p>Review the details of the user, including the name and permissions. If everything looks correct, click on “Create User.”</p>
+</div></blockquote>
+</li>
+<li><p>Step 6: Security Credentials</p>
+<blockquote>
+<div><p>After the user is created, you will be shown the user’s security credentials, including the access key ID and secret access key. This is the only time you will be shown the secret access key, so make sure to download it or copy it to a secure location.
+If you’ve enabled AWS Management Console access, you’ll also see the sign-in URL for the user.</p>
+</div></blockquote>
+</li>
+<li><p>Step 7: Configure the AWS CLI</p>
+<blockquote>
+<div><p>With the new IAM user’s access key ID and secret access key, you can now configure the AWS CLI on your local machine:</p>
+<p>Open a terminal or command prompt.
+Run the command <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">configure</span></code>.
+When prompted, enter the new IAM user’s access key ID and secret access key. Then, specify your default region name (e.g., europe-central-1) and default output format (e.g., json).</p>
+</div></blockquote>
+</li>
+<li><p>Step 8: Test the configuration</p>
+<blockquote>
+<div><p>To test the configuration, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>aws<span class="w"> </span>s3<span class="w"> </span>ls
+</pre></div>
+</div>
+<p>If the configuration is correct, you should see a list of your S3 buckets.</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="writing-the-terraform-code">
+<h4>Writing the terraform code<a class="headerlink" href="#writing-the-terraform-code" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p>Create a new directory for your terraform code and navigate to it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>aws-ec2-hello-world
+<span class="nb">cd</span><span class="w"> </span>aws-ec2-hello-world
+</pre></div>
+</div>
+<p>Create a new file named <code class="docutils literal notranslate"><span class="pre">index.html</span></code> and add the following code:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, World!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is my first webpage hosted on AWS EC2.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Create a new file named <code class="docutils literal notranslate"><span class="pre">main.tf</span></code> and add the following code:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>provider<span class="w"> </span><span class="s2">&quot;aws&quot;</span><span class="w"> </span><span class="o">{</span>
+<span class="nv">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;eu-central-1&quot;</span>
+<span class="o">}</span>
+
+resource<span class="w"> </span><span class="s2">&quot;tls_private_key&quot;</span><span class="w"> </span><span class="s2">&quot;access_key&quot;</span><span class="w"> </span><span class="o">{</span>
+<span class="nv">algorithm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;RSA&quot;</span>
+<span class="nv">rsa_bits</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="m">2048</span>
+<span class="o">}</span>
+
+output<span class="w"> </span><span class="s2">&quot;private_key&quot;</span><span class="w"> </span><span class="o">{</span>
+<span class="nv">value</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>tls_private_key.access_key.private_key_pem
+<span class="nv">sensitive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span>
+<span class="o">}</span>
+
+resource<span class="w"> </span><span class="s2">&quot;aws_key_pair&quot;</span><span class="w"> </span><span class="s2">&quot;deployer&quot;</span><span class="w"> </span><span class="o">{</span>
+<span class="nv">key_name</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ec2-deployer-key&quot;</span>
+<span class="nv">public_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>tls_private_key.access_key.public_key_openssh
+<span class="o">}</span>
+
+resource<span class="w"> </span><span class="s2">&quot;aws_security_group&quot;</span><span class="w"> </span><span class="s2">&quot;hello_world_sg&quot;</span><span class="w"> </span><span class="o">{</span>
+<span class="nv">name</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;hello_world_sg&quot;</span>
+<span class="nv">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Allow SSH and HTTP&quot;</span>
+
+ingress<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">22</span>
+<span class="w">    </span><span class="nv">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">22</span>
+<span class="w">    </span><span class="nv">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;tcp&quot;</span>
+<span class="w">    </span><span class="nv">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="o">]</span>
+<span class="o">}</span>
+
+ingress<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">80</span>
+<span class="w">    </span><span class="nv">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">80</span>
+<span class="w">    </span><span class="nv">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;tcp&quot;</span>
+<span class="w">    </span><span class="nv">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="o">]</span>
+<span class="o">}</span>
+
+egress<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<span class="w">    </span><span class="nv">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<span class="w">    </span><span class="nv">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;-1&quot;</span>
+<span class="w">    </span><span class="nv">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="o">]</span>
+<span class="o">}</span>
+<span class="o">}</span>
+
+resource<span class="w"> </span><span class="s2">&quot;aws_instance&quot;</span><span class="w"> </span><span class="s2">&quot;hello_world&quot;</span><span class="w"> </span><span class="o">{</span>
+<span class="nv">ami</span><span class="w">                    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ami-03cceb19496c25679&quot;</span>
+<span class="nv">instance_type</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;t2.micro&quot;</span>
+<span class="nv">key_name</span><span class="w">               </span><span class="o">=</span><span class="w"> </span>aws_key_pair.deployer.key_name
+<span class="nv">security_groups</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>aws_security_group.hello_world_sg.name<span class="o">]</span>
+
+<span class="nv">user_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&lt;&lt;-EOF</span>
+<span class="s">            #!/bin/bash</span>
+<span class="s">            sudo yum update -y</span>
+<span class="s">            sudo yum install httpd -y</span>
+<span class="s">            sudo systemctl start httpd.service</span>
+<span class="s">            sudo systemctl enable httpd.service</span>
+<span class="s">            echo &quot;${file(&quot;${path.module}/index.html&quot;)}&quot; &gt; /var/www/html/index.html</span>
+<span class="s">            EOF</span>
+
+<span class="nv">tags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;HelloWorldInstance&quot;</span>
+<span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Run the code:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>terraform<span class="w"> </span>init
+terraform<span class="w"> </span>plan
+terraform<span class="w"> </span>apply
+terraform<span class="w"> </span>output<span class="w"> </span>-raw<span class="w"> </span>private_key<span class="w"> </span>&gt;<span class="w"> </span>key.pem
+chmod<span class="w"> </span><span class="m">400</span><span class="w"> </span>key.pem
+
+<span class="c1"># to destroy the resources</span>
+terraform<span class="w"> </span>destroy
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="deploying-the-code-with-github-actions">
+<h4>Deploying the code with GitHub Actions<a class="headerlink" href="#deploying-the-code-with-github-actions" title="Link to this heading"></a></h4>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Create a new repository on GitHub and push the code to it.</p></li>
+<li><p>Create 2 new secrets in the repository settings: <code class="docutils literal notranslate"><span class="pre">AWS_ACCESS_KEY_ID</span></code> and <code class="docutils literal notranslate"><span class="pre">AWS_SECRET_ACCESS_KEY</span></code>.</p></li>
+<li><p>Create a new file named <code class="docutils literal notranslate"><span class="pre">.github/workflows/deploy.yml</span></code> and add the following code:</p></li>
+</ol>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy S3 Bucket on index.html Change</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;index.html&#39;</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy with Terraform</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout Repository</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Terraform</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hashicorp/setup-terraform@v1</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">terraform_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.7.3</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configure AWS Credentials</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aws-actions/configure-aws-credentials@v1</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">aws-access-key-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.AWS_ACCESS_KEY_ID }}</span>
+<span class="w">          </span><span class="nt">aws-secret-access-key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.AWS_SECRET_ACCESS_KEY }}</span>
+<span class="w">          </span><span class="nt">aws-region</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eu-central-1</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terraform Init</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">terraform init</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terraform Plan</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">terraform plan</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terraform Apply</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">terraform apply -auto-approve</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="3_aws.html" class="btn btn-neutral float-left" title="11.3 Amazon Web Services" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../12_project/introduction.html" class="btn btn-neutral float-right" title="12.0 Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, skillab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

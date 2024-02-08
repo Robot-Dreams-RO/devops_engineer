@@ -187,6 +187,7 @@ To be an efficient engineer you need to understand:
    11_cloud/1_agnostic_native
    11_cloud/2_azure
    11_cloud/3_aws
+   11_cloud/4_ci_cd_in_aws.rst
 
 .. toctree::
    :hidden:
