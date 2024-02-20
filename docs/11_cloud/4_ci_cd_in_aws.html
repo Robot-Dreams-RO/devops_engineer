@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>11.4 CI/CD In AWS &mdash; DevOps 1 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/max_width.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/max_width.css?v=a0fc712e" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -23,7 +25,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12.0 Project" href="../12_project/introduction.html" />
+    <link rel="next" title="11.5 Cloud battle" href="5_cloud_battle.html" />
     <link rel="prev" title="11.3 Amazon Web Services" href="3_aws.html" /> 
 </head>
 
@@ -177,6 +179,8 @@
 <li class="toctree-l1"><a class="reference internal" href="2_azure.html">11.2 Azure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3_aws.html">11.3 Amazon Web Services</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">11.4 CI/CD In AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_cloud_battle.html">11.5 Cloud battle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">TODO</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Project</span></p>
 <ul>
@@ -216,27 +220,41 @@
              
   <section id="ci-cd-in-aws">
 <h1>11.4 CI/CD In AWS<a class="headerlink" href="#ci-cd-in-aws" title="Link to this heading"></a></h1>
-<p>There are 2 ways to do CI/CD in AWS:</p>
+<p>There are 2 ways to implement DevOps methodology in AWS:</p>
 <ul class="simple">
 <li><p>native AWS services</p></li>
 <li><p>third-party tools</p></li>
 </ul>
-<p>The native AWS services are:</p>
-<ul class="simple">
-<li><p>code repository: AWS CodeCommit</p></li>
-<li><p>build service: AWS CodeBuild</p></li>
-<li><p>deployment service: AWS CodeDeploy</p></li>
-<li><p>pipeline service: AWS CodePipeline</p></li>
-<li><p>IaaS: CloudFormation</p></li>
-</ul>
-<p>The third-party tools are:</p>
-<ul class="simple">
-<li><p>code repository: GitHub / GitLab</p></li>
-<li><p>build service: GitHub Actions / GitLab CI</p></li>
-<li><p>deployment service: GitHub Actions / GitLab CI</p></li>
-<li><p>pipeline service: GitHub Actions / GitLab CI</p></li>
-<li><p>IaaS: terraform / openTofu / pulumi / SST</p></li>
-</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Code Repository</p></td>
+<td><p>AWS CodeCommit</p></td>
+<td><p>GitHub / GitLab</p></td>
+</tr>
+<tr class="row-odd"><td><p>Build Service</p></td>
+<td><p>AWS CodeBuild</p></td>
+<td><p>GitHub Actions / GitLab CI</p></td>
+</tr>
+<tr class="row-even"><td><p>Deployment Service</p></td>
+<td><p>AWS CodeDeploy</p></td>
+<td><p>GitHub Actions / GitLab CI</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pipeline Service</p></td>
+<td><p>AWS CodePipeline</p></td>
+<td><p>GitHub Actions / GitLab CI</p></td>
+</tr>
+<tr class="row-even"><td><p>IaaS</p></td>
+<td><p>AWS CloudFormation</p></td>
+<td><p>terraform / openTofu / pulumi</p></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The third-party tools are more popular and have more features than the native AWS services.</p>
@@ -564,7 +582,7 @@ terraform<span class="w"> </span>destroy
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="3_aws.html" class="btn btn-neutral float-left" title="11.3 Amazon Web Services" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../12_project/introduction.html" class="btn btn-neutral float-right" title="12.0 Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="5_cloud_battle.html" class="btn btn-neutral float-right" title="11.5 Cloud battle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

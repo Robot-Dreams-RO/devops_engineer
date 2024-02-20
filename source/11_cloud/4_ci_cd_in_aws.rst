@@ -2,26 +2,20 @@
 11.4 CI/CD In AWS
 #################
 
-There are 2 ways to do CI/CD in AWS:
+There are 2 ways to implement DevOps methodology in AWS:
 
 - native AWS services
 - third-party tools
 
-The native AWS services are:
-
-- code repository: AWS CodeCommit
-- build service: AWS CodeBuild
-- deployment service: AWS CodeDeploy
-- pipeline service: AWS CodePipeline
-- IaaS: CloudFormation
-
-The third-party tools are:
-
-- code repository: GitHub / GitLab 
-- build service: GitHub Actions / GitLab CI
-- deployment service: GitHub Actions / GitLab CI
-- pipeline service: GitHub Actions / GitLab CI
-- IaaS: terraform / openTofu / pulumi / SST
+==================  ====================  =============================
+                    Native AWS Services   Third-Party Tools
+==================  ====================  =============================
+Code Repository     AWS CodeCommit        GitHub / GitLab              
+Build Service       AWS CodeBuild         GitHub Actions / GitLab CI   
+Deployment Service  AWS CodeDeploy        GitHub Actions / GitLab CI   
+Pipeline Service    AWS CodePipeline      GitHub Actions / GitLab CI   
+IaaS                AWS CloudFormation    terraform / openTofu / pulumi
+==================  ====================  =============================
 
 .. note::
 

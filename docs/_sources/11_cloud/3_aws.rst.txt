@@ -8,6 +8,10 @@
 
 .. code-block:: bash
 
+    sudo apt-get update
+    sudo apt-get install awscli
+
+    # or
     python3.12 -m venv venv
     . ven/bin/activate
     pip install awscli
@@ -234,3 +238,4 @@ Step 8: DNS Alias
         - Go back to the S3 console and open your bucket.
         - Rename your bucket to match the full domain name (e.g., www.example.com). Note: The bucket name must exactly match the domain or subdomain.
         - Follow the previously mentioned steps to enable static website hosting for your bucket and set the correct permissions.
+

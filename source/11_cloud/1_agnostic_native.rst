@@ -7,7 +7,7 @@
     As many things in the IT world, the cloud computing world is full of buzzwords and terms that are often used interchangeably, but they have different meanings. In this section we will clarify the differences between cloud agnostic, cloud native and cloud services.
 
 
-.. image:: ../diagrams/cloud.drawio.png
+.. image:: ../diagrams/cloud-terminologies.png
    :width: 80%
    :align: center
    :alt: Cloud buzzwords

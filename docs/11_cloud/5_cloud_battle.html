@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.5 Cloud battle &mdash; DevOps 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/max_width.css?v=a0fc712e" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TODO" href="TODO.html" />
+    <link rel="prev" title="11.4 CI/CD In AWS" href="4_ci_cd_in_aws.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DevOps
+              <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Curriculum</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../00_curriculum/curriculum.html">Class Curriculum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction to DevOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/0_foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/00_preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/1_devops.html">0.1 Introduction to DevOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/2_roadmap.html">0.2 DevOps Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/3_life_cycle.html">0.3 Software Development Lifecycle Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/4_scrum_agile.html">0.4 SCRUM Agile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_introduction/TODO.html">0.5 TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/0_computer_network.html">1.0 Computer and Network Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/1_how_code_works.html">1.1 How code works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/2_environments.html">1.2 Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/3_microservices.html">1.3 Microservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/4_introduction_to_linux.html">1.4 Introduction to Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/5_getting_around.html">1.5 Getting around</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/6_setup_infra.html">1.7 Setup developing infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_environments/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/0_introduction.html">2.0 Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/1_managing_users_and_groups.html">2.1 Managing Users and Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/2_file_management.html">2.2 File management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/3_managing_software.html">2.3 Managing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/4_service_management.html">2.4 Service Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/5_process_management.html">2.5 Process management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/6_system_logging.html">2.6 System logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/7_linux_file_systems.html">2.7 Linux File Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/8_terminal_tuning.html">2.8 Terminal tuning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/9_networking.html">2.9 Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_linux/TODO.html#solutions-to-todos">Solutions to TODOs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scripting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/0_introduction.html">3.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/1_getting_started.html">3.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/2_data_structures_conditions.html">3.2 Data structures and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/3_to_script_or_to_alias.html">3.3 Working with aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/4_shell_style_guide.html">3.4 Shell Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/5_makefile.html">3.5 Makefile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/6_utilities.html">3.6 Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_scripting/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/0_introduction.html">4.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/1_installation.html">4.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/2_data_structures.html">4.2 Variables and Data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/3_conditions_loops.html">4.3 Loops and conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/4_libraries.html">4.4 Libraries and modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/5_functions.html">4.5 Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/6_classes.html">4.6 Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/7_yourfirstcli.html">4.7 Your first CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/8_documentation.html">4.8 Documenting your code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/9_rules.html">4.9 Python Language Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/10_files.html">4.10 Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/11_rest_api.html">4.11 REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/12_comprehensions.html">4.12 Comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/13_lambda.html">4.13 Lambda Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/14_testing.html">4.14 Testing and Unit Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/15_packaging.html">4.15 Packaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_python/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/0_introduction.html">5.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/1_working_togheter.html">5.1 Working together on Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/2_bestpractices.html">5.1 Best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_git/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DocOps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/0_introduction.html">6.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/1_installation.html">6.1 Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/2_sphinx.html">6.2 What is Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/3_deploy_docs.html">6.3 Deploy Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_docs_as_code/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Pipelines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/0_introduction.html">7.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/1_getting_started.html">7.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/2_python_cli.html">7.2 Python CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/3_github.html">7.3 GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/4_jenkins_introduction.html">7.4 Introduction to Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/5_jenkins_architecture.html">7.5 Jenkins Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/6_jenkins_getting_started.html">7.6 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/9_best_practices.html">7.7 Continuous Integration Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_pipelines/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Containers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/0_introduction.html">8.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/1_installation.html">8.1 Windows installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/2_helloworld.html">8.2 Running “Hello World”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/3_workingwithdocker.html">8.3 Working with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/4_usingdockerfile.html">8.4 Using Dockerfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/5_management.html">8.5 Container management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/6_orchestration.html">8.6 Container orchestration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/7_test.html">8.7 Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_containers/TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Kubernetes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/00_abstract.html">9.00 Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/0_introduction.html">9.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/1_gettingstarted.html">9.1 Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/2_helm.html">9.2  Helm charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/3_deployments.html">9.3 Creating a Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/4_argocd.html">9.4 ArgoCD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_kubernetes/5_swarm_vs_k8s.html">9.5 Docker Swarm vs Kubernetes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cloud</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="0_introduction.html">11.0 Introduction to cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_agnostic_native.html">11.2 Cloud Agnostic vs Cloud Native vs Cloud Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_azure.html">11.2 Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_aws.html">11.3 Amazon Web Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_ci_cd_in_aws.html">11.4 CI/CD In AWS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11.5 Cloud battle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">TODO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../12_project/introduction.html">12.0 Project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Craftsman best practices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/0_mentality.html">13.0 Mentality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/1_implementation.html">13.1 Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/2_tools.html">13.2 Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13_craftsman_best_practices/3_mock_interview.html">13.2 Interview Preparation: DevOps Engineer</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DevOps</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">11.5 Cloud battle</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/11_cloud/5_cloud_battle.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cloud-battle">
+<h1>11.5 Cloud battle<a class="headerlink" href="#cloud-battle" title="Link to this heading"></a></h1>
+<section id="financial-data">
+<h2>Financial data<a class="headerlink" href="#financial-data" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Founded</p></td>
+<td><p>March 2006(17 years ago)</p></td>
+<td><p>October 2008(15 years ago)</p></td>
+<td><p>April 2008(15 years ago)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Market share(Q4 2023)</p></td>
+<td><p><strong>32%</strong></p></td>
+<td><p>24%</p></td>
+<td><p>11%</p></td>
+</tr>
+<tr class="row-even"><td><p>Revenue (Q4 2023)</p></td>
+<td><p>$24.2 billion</p></td>
+<td><p>$25.9 billion</p></td>
+<td><p>$9.2 billion</p></td>
+</tr>
+<tr class="row-odd"><td><p>Revenue (2023)</p></td>
+<td><p>$90.8 billion</p></td>
+<td><p>$96.8 billion</p></td>
+<td><p>$33.7 billion</p></td>
+</tr>
+<tr class="row-even"><td><p>Sales growth(2023)</p></td>
+<td><p>13%</p></td>
+<td><p>19%</p></td>
+<td><p>26%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Operating income(2023)</p></td>
+<td><p>$7.2 billion</p></td>
+<td><p>$12.5 billion</p></td>
+<td><p><strong>$864 milion</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Parent company revenue(2023)</p></td>
+<td><p><strong>$170 billion</strong></p></td>
+<td><p>$62 billion</p></td>
+<td><p>$86 billion</p></td>
+</tr>
+</tbody>
+</table>
+<p>From: <a class="reference external" href="https://www.crn.com/news/cloud/2024/aws-vs-microsoft-vs-google-cloud-earnings-q4-2023-face-off">https://www.crn.com/news/cloud/2024/aws-vs-microsoft-vs-google-cloud-earnings-q4-2023-face-off</a></p>
+<ul class="simple">
+<li><p>Microsoft Azure includes all cloud services, including Azure, Microsoft 365, Dynamics 365, and LinkedIn under the “Intelligent Cloud” segment.</p></li>
+</ul>
+</section>
+<section id="cloud-services">
+<h2>Cloud services<a class="headerlink" href="#cloud-services" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Compute</p></td>
+<td><p>Amazon EC2</p></td>
+<td><p>Azure Virtual Machines</p></td>
+<td><p>Google Compute Engine</p></td>
+</tr>
+<tr class="row-odd"><td><p>Serverless</p></td>
+<td><p>AWS Lambda</p></td>
+<td><p>Azure Functions</p></td>
+<td><p>Google Cloud Functions</p></td>
+</tr>
+<tr class="row-even"><td><p>Storage</p></td>
+<td><p>Amazon S3</p></td>
+<td><p>Azure Blob Storage</p></td>
+<td><p>Google Cloud Storage</p></td>
+</tr>
+<tr class="row-odd"><td><p>Database(RDBMS)</p></td>
+<td><p>Amazon RDS</p></td>
+<td><p>Azure SQL Database</p></td>
+<td><p>Google Cloud SQL</p></td>
+</tr>
+<tr class="row-even"><td><p>Database(NoSQL)</p></td>
+<td><p>Amazon DynamoDB</p></td>
+<td><p>Azure Cosmos DB</p></td>
+<td><p>Google Cloud Bigtable</p></td>
+</tr>
+<tr class="row-odd"><td><p>Networking</p></td>
+<td><p>Amazon VPC</p></td>
+<td><p>Azure Virtual Network</p></td>
+<td><p>Google Virtual Private Cloud</p></td>
+</tr>
+<tr class="row-even"><td><p>Kubernetes</p></td>
+<td><p>Amazon EKS</p></td>
+<td><p>Azure Kubernetes Service</p></td>
+<td><p>Google Kubernetes Engine</p></td>
+</tr>
+<tr class="row-odd"><td><p>Machine Learning</p></td>
+<td><p>Amazon SageMaker</p></td>
+<td><p>Azure Machine Learning</p></td>
+<td><p>Google AI Platform</p></td>
+</tr>
+<tr class="row-even"><td><p>CI/CD</p></td>
+<td><p>AWS CodePipeline</p></td>
+<td><p>Azure DevOps</p></td>
+<td><p>Google Cloud Build</p></td>
+</tr>
+<tr class="row-odd"><td><p>Monitoring</p></td>
+<td><p>Amazon CloudWatch</p></td>
+<td><p>Azure Monitor</p></td>
+<td><p>Google Cloud Monitoring</p></td>
+</tr>
+<tr class="row-even"><td><p>Identity</p></td>
+<td><p>AWS IAM</p></td>
+<td><p>Azure Active Directory(Entra ID)</p></td>
+<td><p>Google Cloud Identity</p></td>
+</tr>
+<tr class="row-odd"><td><p>Domain Name System</p></td>
+<td><p>Amazon Route 53</p></td>
+<td><p>Azure DNS</p></td>
+<td><p>Google Cloud DNS</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="devops-implementation">
+<h2>DevOps Implementation<a class="headerlink" href="#devops-implementation" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>AWS</p></th>
+<th class="head"><p>Azure</p></th>
+<th class="head"><p>GCP                                                                                                  |</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>CI/CD Tools</strong></p></td>
+<td><p>AWS CodePipeline for CI/CD. AWS CodeBuild for build services.</p></td>
+<td><p>Azure Pipelines for CI/CD, integrates with GitHub Actions.</p></td>
+<td><p>Cloud Build for CI/CD, integration with popular tools like GitHub, GitLab.                          |</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Source Control</strong></p></td>
+<td><p>AWS CodeCommit, a managed source control service.</p></td>
+<td><p>Azure Repos provides Git repositories for source control.</p></td>
+<td><p>Cloud Source Repositories, fully-featured, scalable, private Git repositories.                      |</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Monitoring</strong></p></td>
+<td><p>Amazon CloudWatch for monitoring and observability.</p></td>
+<td><p>Azure Monitor for full-stack monitoring.</p></td>
+<td><p>Google Operations (formerly Stackdriver) for monitoring, logging, and diagnostics.                   |</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Logging</strong></p></td>
+<td><p>AWS CloudTrail for tracking user activity and API usage.</p></td>
+<td><p>Azure Log Analytics for log-based data querying and analysis.</p></td>
+<td><p>Cloud Logging for storing, searching, analyzing, monitoring, and alerting on log data.              |</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Configuration Management</strong></p></td>
+<td><p>AWS Systems Manager for viewing and controlling infrastructure.</p></td>
+<td><p>Azure Automation for automating tasks and configuration management.</p></td>
+<td><p>Cloud Deployment Manager for resource management and configuration.                                  |</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Infrastructure as Code (IaC)</strong></p></td>
+<td><p>AWS CloudFormation for creating and managing resources with templates.</p></td>
+<td><p>Azure Resource Manager (ARM) templates for declarative resource deployment.</p></td>
+<td><p>Google Cloud Deployment Manager for infrastructure management through code.                          |</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Serverless Computing</strong></p></td>
+<td><p>AWS Lambda for running code without provisioning servers.</p></td>
+<td><p>Azure Functions for event-driven programming.</p></td>
+<td><p>Cloud Functions for event-driven serverless applications.                                            |</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Container Management</strong></p></td>
+<td><p>Amazon Elastic Kubernetes Service (EKS) for Kubernetes management. Amazon ECS for container orchestration.</p></td>
+<td><p>Azure Kubernetes Service (AKS) for Kubernetes.Azure Container Instances for container deployment.</p></td>
+<td><p>Google Kubernetes Engine (GKE) for Kubernetes management, Cloud Run for stateless containers.        |</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Security &amp; Compliance</strong></p></td>
+<td><p>AWS Identity and Access Management (IAM) for fine-grained access control.Comprehensive compliance certifications.</p></td>
+<td><p>Azure Security Center for unified security management. Extensive compliance offerings.</p></td>
+<td><p>Cloud Identity &amp; Access Management (IAM) for resource access control. Strong security features.      |</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Developer Tools</strong></p></td>
+<td><p>Broad set of tools including AWS CLI, SDKs, and IDE integrations.</p></td>
+<td><p>Visual Studio integration, Azure CLI, SDKs.</p></td>
+<td><p>Cloud SDK, command-line tools, and IDE plugins.                                                      |</p></td>
+</tr>
+</tbody>
+</table>
+<section id="analysis">
+<h3>Analysis<a class="headerlink" href="#analysis" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>CI/CD Tools</strong>: All three providers offer robust CI/CD tools designed to automate the software release process. AWS CodePipeline and Azure Pipelines both support complex workflows, while GCP’s Cloud Build provides flexibility and integration with third-party options.</p></li>
+<li><p><strong>Monitoring and Logging</strong>: AWS CloudWatch and CloudTrail offer comprehensive monitoring and logging, Azure’s solutions integrate deeply with its ecosystem for a unified monitoring experience, and GCP’s Operations suite provides advanced logging and monitoring features with cross-platform support.</p></li>
+<li><p><strong>Infrastructure as Code (IaC)</strong>: AWS CloudFormation, Azure Resource Manager templates, and GCP’s Deployment Manager each provide a powerful way to manage infrastructure using code, enabling DevOps teams to automate and replicate environments easily.</p></li>
+<li><p><strong>Serverless and Containers</strong>: Serverless computing and container management are well-supported across all platforms, with each offering their managed Kubernetes services (EKS, AKS, GKE) and serverless solutions (Lambda, Functions, Cloud Functions) that cater to different application architectures and scaling needs.</p></li>
+<li><p><strong>Security and Compliance</strong>: AWS, Azure, and GCP prioritize security and compliance, offering tools and features to help maintain a secure and compliant cloud environment. Their services include identity and access management, threat detection, and a wide range of compliance certifications.</p></li>
+</ul>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>AWS, Azure, and GCP each provide a comprehensive suite of cloud services and DevOps tools, catering to a wide range of use cases and application architectures.</p>
+<p>The choice of cloud provider depends on specific requirements, such as existing infrastructure, application needs, and organizational preferences.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="4_ci_cd_in_aws.html" class="btn btn-neutral float-left" title="11.4 CI/CD In AWS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="TODO.html" class="btn btn-neutral float-right" title="TODO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, skillab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,6 +1,10 @@
+terraform {
+}
+
 provider "aws" {
   region = "eu-central-1"
 }
+
 
 resource "tls_private_key" "access_key" {
   algorithm = "RSA"
@@ -49,14 +53,7 @@ resource "aws_instance" "hello_world" {
   key_name               = aws_key_pair.deployer.key_name
   security_groups        = [aws_security_group.hello_world_sg.name]
 
-  user_data = <<-EOF
-              #!/bin/bash
-              sudo yum update -y
-              sudo yum install httpd -y
-              sudo systemctl start httpd.service
-              sudo systemctl enable httpd.service
-              echo "${file("${path.module}/index.html")}" > /var/www/html/index.html
-              EOF
+  user_data = file("${path.module}/install_wordpress.sh")
 
   tags = {
     Name = "HelloWorldInstance"

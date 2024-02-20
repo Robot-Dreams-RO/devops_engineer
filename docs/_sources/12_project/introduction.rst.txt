@@ -94,17 +94,12 @@ Phase 2 requirements
 
 1. After course 18:
 
-    - Write a Helm Chart for your chatbot
+    - Write a Helm Chart for your chatbot to deploy it on Kubernetes.
 
 1. After course 20:
 
-    - Run the Helm Chart in Kubernetes in cloud
+    - Run the Terraform to deploy the chatbot in the cloud.
 
 1. After course 22:
 
     - Configure the CD pipeline that automatically deploys the application to the cloud if all unit tests are passed
-
-1. After course 23:
-    - Write an Ansible playbook that:
-        - Configure the virtual machine
-        - Deploy the chatbot on the cloud using Kubernetes or Azure Functions
